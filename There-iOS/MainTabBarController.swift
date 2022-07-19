@@ -24,7 +24,7 @@ class MainTabBarController: UITabBarController {
         
         let homeTabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
         let searchTabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 1)
-        let chatTabBarItem = UITabBarItem(title: "채팅", image: UIImage(systemName: "messagex"), tag: 2)
+        let chatTabBarItem = UITabBarItem(title: "채팅", image: UIImage(systemName: "message"), tag: 2)
         let mypageTabBarItem = UITabBarItem(title: "마이페이지", image: UIImage(systemName: "person"), tag: 3)
         let moreTabBarItem = UITabBarItem(title: "기타", image: UIImage(systemName: "ellipsis"), tag: 4)
         

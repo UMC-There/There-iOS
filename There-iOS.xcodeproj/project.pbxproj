@@ -19,8 +19,23 @@
 		0749CE252882CB9F002B8D36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE232882CB9F002B8D36 /* Main.storyboard */; };
 		0749CE272882CBA2002B8D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE262882CBA2002B8D36 /* Assets.xcassets */; };
 		0749CE2A2882CBA2002B8D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE282882CBA2002B8D36 /* LaunchScreen.storyboard */; };
-		2D7A32E3B43F06C9AAA235B2 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; };
+		0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; };
+		0759B2F62886A994005B9018 /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0759B2F72886A994005B9018 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0759B2F62886A994005B9018 /* Pods_There_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0712BC9628868D770017A81F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7A32E3B43F06C9AAA235B2 /* Pods_There_iOS.framework in Frameworks */,
+				0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +136,7 @@
 				0749CE172882CB9F002B8D36 /* Frameworks */,
 				0749CE182882CB9F002B8D36 /* Resources */,
 				A5F0D59B2A1EA53F0CA6F7E3 /* [CP] Embed Pods Frameworks */,
+				0759B2F72886A994005B9018 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,11 +397,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9798SFTRTN;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "There-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -410,11 +428,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9798SFTRTN;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "There-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
