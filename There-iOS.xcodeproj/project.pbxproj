@@ -21,6 +21,7 @@
 		0749CE2A2882CBA2002B8D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE282882CBA2002B8D36 /* LaunchScreen.storyboard */; };
 		0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; };
 		0759B2F62886A994005B9018 /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0759B2F92886AF9B005B9018 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		0749CE262882CBA2002B8D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0749CE292882CBA2002B8D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0749CE2B2882CBA2002B8D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		67AA3DBED054395C30105591 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33568F03BF2FAD6BC98DC5C /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				0712BC9C28868DA00017A81F /* MypageViewController.swift */,
 				0712BC9E28868DD20017A81F /* MoreViewController.swift */,
 				0712BCA0288698AD0017A81F /* MainTabBarController.swift */,
+				0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */,
 			);
 			path = "There-iOS";
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				0749CE202882CB9F002B8D36 /* SceneDelegate.swift in Sources */,
 				0712BC9F28868DD20017A81F /* MoreViewController.swift in Sources */,
 				0712BC9B28868D970017A81F /* ChatViewController.swift in Sources */,
+				0759B2F92886AF9B005B9018 /* BaseNavigationController.swift in Sources */,
 				0712BC9728868D770017A81F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,7 @@ class MainTabBarController: UITabBarController {
 
         self.tabBar.backgroundColor = UIColor.white
         
-        let homeNC = UINavigationController.init(rootViewController: HomeViewController(title: "홈", bgColor: UIColor.white))
+        let homeNC = UINavigationController.init(rootViewController: HomeViewController(bgColor: UIColor.white))
         let searchNC = UINavigationController.init(rootViewController: SearchViewController(title: "검색", bgColor: UIColor.white))
         let chatNC = UINavigationController.init(rootViewController: ChatViewController(title: "채팅", bgColor: UIColor.white))
         let mypageNC = UINavigationController.init(rootViewController: MypageViewController(title: "마이페이지", bgColor: UIColor.white))
@@ -37,16 +37,5 @@ class MainTabBarController: UITabBarController {
         
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
