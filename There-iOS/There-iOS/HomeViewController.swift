@@ -47,8 +47,8 @@ class HomeViewController: UIViewController {
             $0.clipsToBounds = true
             $0.tintColor = .darkGray
         }.snp.makeConstraints{
-            $0.height.equalTo(30.0)
-            $0.width.equalTo(30.0)
+            $0.height.equalTo(20.0)
+            $0.width.equalTo(20.0)
         }
             return btn
         }()
@@ -59,8 +59,8 @@ class HomeViewController: UIViewController {
             $0.clipsToBounds = true
             $0.tintColor = .darkGray
         }.snp.makeConstraints{
-            $0.height.equalTo(30.0)
-            $0.width.equalTo(30.0)
+            $0.height.equalTo(20.0)
+            $0.width.equalTo(20.0)
         }
             return btn
         }()
@@ -72,8 +72,8 @@ class HomeViewController: UIViewController {
             $0.clipsToBounds = true
             $0.tintColor = .darkGray
         }.snp.makeConstraints{
-            $0.height.equalTo(30.0)
-            $0.width.equalTo(30.0)
+            $0.height.equalTo(20.0)
+            $0.width.equalTo(20.0)
         }
             return btn
         }()
@@ -140,6 +140,7 @@ class HomeViewController: UIViewController {
             $0.right.equalToSuperview().offset(-25.0)
             
         }
+
         return stackView
     }()
     
