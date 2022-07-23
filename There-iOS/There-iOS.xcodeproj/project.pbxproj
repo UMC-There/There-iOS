@@ -54,12 +54,6 @@
 		0749CE292882CBA2002B8D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0749CE2B2882CBA2002B8D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		2F3F78DD2887E0D200315FA0 /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
-		2F3F78DE2887E0D200315FA0 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
-		2F3F78DF2887E0D200315FA0 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
-		2F3F78E02887E0D200315FA0 /* PortfolioCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioCollectionViewCell.xib; sourceTree = "<group>"; };
-		2F3F78E12887E0D200315FA0 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
-		2F3F78E22887E0D200315FA0 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		67AA3DBED054395C30105591 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33568F03BF2FAD6BC98DC5C /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +71,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07319878288C1FC700C2C068 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		0749CE112882CB9E002B8D36 = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +99,7 @@
 		0749CE1C2882CB9F002B8D36 /* There-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2F3F78DC2887E0D200315FA0 /* MyPageCell */,
+				07319878288C1FC700C2C068 /* Extension */,
 				0749CE1D2882CB9F002B8D36 /* AppDelegate.swift */,
 				0749CE1F2882CB9F002B8D36 /* SceneDelegate.swift */,
 				0749CE212882CB9F002B8D36 /* ViewController.swift */,
@@ -115,19 +116,6 @@
 				0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */,
 			);
 			path = "There-iOS";
-			sourceTree = "<group>";
-		};
-		2F3F78DC2887E0D200315FA0 /* MyPageCell */ = {
-			isa = PBXGroup;
-			children = (
-				2F3F78DD2887E0D200315FA0 /* PortfolioCollectionViewCell.swift */,
-				2F3F78DE2887E0D200315FA0 /* ProfileCollectionViewCell.xib */,
-				2F3F78DF2887E0D200315FA0 /* PostCollectionViewCell.swift */,
-				2F3F78E02887E0D200315FA0 /* PortfolioCollectionViewCell.xib */,
-				2F3F78E12887E0D200315FA0 /* PostCollectionViewCell.xib */,
-				2F3F78E22887E0D200315FA0 /* ProfileCollectionViewCell.swift */,
-			);
-			path = MyPageCell;
 			sourceTree = "<group>";
 		};
 		5DB207E99A1CE5A8E118618B /* Pods */ = {
@@ -421,6 +409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9798SFTRTN;
+				EXCLUDED_ARCHS = arm64;
 				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "There-iOS/Info.plist";
@@ -452,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9798SFTRTN;
+				EXCLUDED_ARCHS = arm64;
 				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "There-iOS/Info.plist";

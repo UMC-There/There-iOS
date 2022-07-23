@@ -21,12 +21,11 @@ class MainTabBarController: UITabBarController {
         let moreNC = UINavigationController.init(rootViewController: MoreViewController(title: "기타", bgColor: UIColor.white))
         
         self.viewControllers = [homeNC, searchNC, chatNC, mypageNC, moreNC]
-        
-        let homeTabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
-        let searchTabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 1)
-        let chatTabBarItem = UITabBarItem(title: "채팅", image: UIImage(systemName: "message"), tag: 2)
-        let mypageTabBarItem = UITabBarItem(title: "마이페이지", image: UIImage(systemName: "person"), tag: 3)
-        let moreTabBarItem = UITabBarItem(title: "기타", image: UIImage(systemName: "ellipsis"), tag: 4)
+        let homeTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), tag: 0)
+        let searchTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 1)
+        let chatTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "message"), tag: 2)
+        let mypageTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person"), tag: 3)
+        let moreTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "ellipsis"), tag: 4)
         
         homeNC.tabBarItem = homeTabBarItem
         searchNC.tabBarItem = searchTabBarItem
