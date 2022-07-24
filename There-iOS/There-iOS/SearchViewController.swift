@@ -10,12 +10,13 @@ import Then
 import Foundation
 
 class SearchViewController: UIViewController {
-    
 
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
     }
+    
+    // MARK: Property
     
     let tableView = UITableView(frame: .zero, style: .insetGrouped)
     var data = ["chaeyeon", "day6", "wonpil", "dowoon", "youngk", "sungjin", "saranghae"]
@@ -26,6 +27,8 @@ class SearchViewController: UIViewController {
         let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
         return isActive&&isSearchBarHasText
     }
+    
+    // MARK: Function
     
     func setupSearchController() {
         let searchController = UISearchController(searchResultsController: nil)
@@ -65,6 +68,8 @@ class SearchViewController: UIViewController {
 
 
 }
+
+// MARK: Extension
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
