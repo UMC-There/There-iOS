@@ -19,6 +19,13 @@ class SearchViewController: UIViewController {
     
     let tableView = UITableView(frame: .zero, style: .insetGrouped)
     var data = ["chaeyeon", "day6", "wonpil", "dowoon", "youngk", "sungjin", "saranghae"]
+    var filteredData: [String] = []
+    var isFiltering: Bool {
+        let searchController = self.navigationItem.searchController
+        let isActive = searchController?.isActive ?? false
+        let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
+        return isActive&&isSearchBarHasText
+    }
     
     func setupSearchController() {
         let searchController = UISearchController(searchResultsController: nil)
@@ -61,12 +68,16 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return self.isFiltering ? self.filteredData.count : self.data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: .none)
-        cell.textLabel?.text = self.data[indexPath.row]
+        if isFiltering {
+            cell.textLabel?.text = self.filteredData[indexPath.row]
+        } else {
+            cell.textLabel?.text = self.data[indexPath.row]
+        }
         return cell
     }
         
@@ -75,6 +86,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        dump(searchController.searchBar.text)
+        guard let text = searchController.searchBar.text else {return}
+        self.filteredData = self.data.filter { $0.lowercased().hasPrefix(text)}
+        
+        dump(filteredData)
+        self.tableView.reloadData()
     }
 }
