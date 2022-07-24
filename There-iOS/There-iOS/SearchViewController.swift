@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
     
     let tableView = UITableView(frame: .zero, style: .insetGrouped)
     var data = ["chaeyeon", "day6", "wonpil", "dowoon", "youngk", "sungjin", "saranghae"]
+    var sub = ["hamburger", "hungry", "myday", "super", "dupa", "hi" ,"hello"]
     var filteredData: [String] = []
     var isFiltering: Bool {
         let searchController = self.navigationItem.searchController
@@ -51,7 +52,7 @@ class SearchViewController: UIViewController {
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            self.tableView.topAnchor.constraint(equalTo: self.safeView.topAnchor),
+            self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
             self.tableView.bottomAnchor.constraint(equalTo: self.safeView.bottomAnchor),
             self.tableView.leadingAnchor.constraint(equalTo: self.safeView.leadingAnchor),
             self.tableView.trailingAnchor.constraint(equalTo: self.safeView.trailingAnchor)
@@ -78,10 +79,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: .none)
+        cell.imageView!.image = UIImage(named: "1")
+        cell.imageView!.layer.cornerRadius = CGFloat(22)
+        cell.imageView!.clipsToBounds = true
         if isFiltering {
             cell.textLabel?.text = self.filteredData[indexPath.row]
+            cell.detailTextLabel?.text = self.sub[indexPath.row]
         } else {
             cell.textLabel?.text = self.data[indexPath.row]
+            cell.detailTextLabel?.text = self.sub[indexPath.row]
         }
         return cell
     }
@@ -91,7 +97,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else {return}
+        guard let text = searchController.searchBar.text?.lowercased() else {return}
         self.filteredData = self.data.filter { $0.lowercased().hasPrefix(text)}
         
         dump(filteredData)

@@ -13,10 +13,22 @@ class MoreViewController: UIViewController {
             self.init()
             self.title = title
             self.view.backgroundColor = bgColor
-        }
+    }
+    
+    var stackView: UIStackView!
+    
+    func setupPostStackView() {
+        
+    }
+    func setEntireStackView() {
+        self.stackView = UIStackView(arrangedSubviews: [])
+        self.stackView.axis = .vertical
+        self.stackView.distribution = .equalCentering
+        self.stackView.alignment = .leading
+        self.stackView.spacing = 10
+    }
     override func viewDidLoad() {
             super.viewDidLoad()
-            // Do any additional setup after loading the view.
         }
 
   
