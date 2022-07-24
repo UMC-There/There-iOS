@@ -119,7 +119,7 @@ class HomeViewController: UIViewController {
         self.view.addSubview(self.stackView)
         
         self.stackView.topAnchor.constraint(equalTo: self.safeView.topAnchor).isActive = true
-        self.stackView.leadingAnchor.constraint(equalTo: self.safeView.leadingAnchor, constant: 20).isActive = true
+        self.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
         self.view.bottomAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: 250).isActive = true
         self.view.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor, constant: 20).isActive = true
         
