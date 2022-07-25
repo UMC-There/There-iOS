@@ -18,7 +18,7 @@ class MainTabBarController: UITabBarController {
         let searchNC = UINavigationController.init(rootViewController: SearchViewController(bgColor: UIColor.white))
         let chatNC = UINavigationController.init(rootViewController: ChatViewController(title: "채팅", bgColor: UIColor.white))
         let mypageNC = UINavigationController.init(rootViewController: MypageViewController(title: "마이페이지", bgColor: UIColor.white))
-        let moreNC = UINavigationController.init(rootViewController: MoreViewController(title: "기타", bgColor: UIColor.white))
+        let moreNC = UINavigationController.init(rootViewController: MoreViewController(bgColor: UIColor.white))
         
         self.viewControllers = [homeNC, searchNC, chatNC, mypageNC, moreNC]
         let homeTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), tag: 0)
