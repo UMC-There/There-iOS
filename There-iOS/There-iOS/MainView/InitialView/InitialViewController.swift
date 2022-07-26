@@ -7,9 +7,11 @@
 
 import UIKit
 import Then
+import SnapKit
 
 class InitialViewController: UIViewController {
 
+    // MARK: - Init
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
@@ -17,19 +19,39 @@ class InitialViewController: UIViewController {
     
     private let loginBtn = CustomButton(text: "로그인", bgColor: UIColor.rgb(red: 0, green: 0, blue: 0),
                                         titleColor: UIColor.rgb(red: 255, green: 255, blue: 255))
-    private let registerBtn = CustomButton(text: "회원가입", bgColor: UIColor.rgb(red: 255, green: 255, blue: 255),
+    private let signUpBtn = CustomButton(text: "회원가입", bgColor: UIColor.rgb(red: 255, green: 255, blue: 255),
                                            titleColor: UIColor.black)
     
+    
+    private let containerView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "VC2"
+        label.textColor = .black
+        return label
+      }()
+    
+    
+    // MARK: - Function
     @objc
-    func btnClicked(_ sender: CustomButton?) {
+    func buttonClicked(_ sender: CustomButton?) {
         if sender == loginBtn {
-            let loginView = LoginViewController(bgColor: .white)
-            loginView.modalPresentationStyle = .fullScreen
-            self.present(loginView, animated: false, completion: nil)
+            let loginView = LoginViewController(bgColor: UIColor.white)
+//            loginView.modalPresentationStyle = .fullScreen
+            navigationController?.pushViewController(loginView, animated: true)
         }else {
-            
+            let signUpView = SignUpViewController(bgColor: UIColor.white)
+            signUpView.modalPresentationStyle = .fullScreen
+            self.present(signUpView, animated: false, completion: nil)
         }
     }
+
+    //          이전 화면 돌아가는 버튼 클릭시 실행
+//    func popViewController(animated: Bool) -> UIViewController?{}
             
     func setLayout() {
 //        loginBtn.then {
@@ -38,7 +60,7 @@ class InitialViewController: UIViewController {
         loginBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         loginBtn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 100).isActive = true
         
-        registerBtn.snp.makeConstraints {
+        signUpBtn.snp.makeConstraints {
             $0.top.equalTo(loginBtn.snp.bottom).offset(20)
             $0.centerX.equalToSuperview()
         }
@@ -47,10 +69,10 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(loginBtn)
-        self.view.addSubview(registerBtn)
+        self.view.addSubview(signUpBtn)
         setLayout()
         
-        loginBtn.addTarget(self, action: #selector(btnClicked), for: .touchUpInside)
+        loginBtn.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
         
     }
 

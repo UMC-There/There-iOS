@@ -8,6 +8,8 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController {
+     
+    
 
 //    private var backButtonImage: UIImage? {
 //        //edge에 -값을 주면 해당 edge 반대방향으로 이동

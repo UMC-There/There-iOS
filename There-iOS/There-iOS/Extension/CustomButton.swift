@@ -26,14 +26,12 @@ class CustomButton: UIButton {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.widthAnchor.constraint(equalToConstant: 350).isActive = true
         self.heightAnchor.constraint(equalToConstant: 60).isActive = true
-
   
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         self.setTitle(text, for: .normal)
         self.setTitleColor(titleColor, for: .normal)
         self.backgroundColor = bgColor
      
-        
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 10.0
         self.layer.masksToBounds = true

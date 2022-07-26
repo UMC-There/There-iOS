@@ -10,22 +10,21 @@ import SnapKit
 import Then
 
 class HomeViewController: UIViewController {
-
     
-    // MARK: Initialization
+    // MARK: - Init
     convenience init(bgColor: UIColor) {
-            self.init()
-            view.backgroundColor = bgColor
-        }
+        self.init()
+        view.backgroundColor = bgColor
+    }
 
-    // MARK: Property
+    // MARK: - Property
     var stackView: UIStackView!
     var userInfoStackView: UIStackView!
     var iconsStackView: UIStackView!
         
     let postImage = UIImageView(image: UIImage(named: "1"))
     
-    // MARK: Function
+    // MARK: - Function
     func setUserInfoStackView() {
         
         let userImage = UIImageView(image: UIImage(systemName:"person.circle.fill"))
