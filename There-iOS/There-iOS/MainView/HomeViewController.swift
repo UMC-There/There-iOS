@@ -122,13 +122,11 @@ class HomeViewController: UIViewController {
         self.stackView.leadingAnchor.constraint(equalTo: self.safeView.leadingAnchor, constant: 20).isActive = true
         self.view.bottomAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: 250).isActive = true
         self.view.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor, constant: 20).isActive = true
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setEntireStackView()
-    
     }
 
 }

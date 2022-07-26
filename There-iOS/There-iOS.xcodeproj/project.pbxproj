@@ -21,6 +21,7 @@
 		0749CE252882CB9F002B8D36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE232882CB9F002B8D36 /* Main.storyboard */; };
 		0749CE272882CBA2002B8D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE262882CBA2002B8D36 /* Assets.xcassets */; };
 		0749CE2A2882CBA2002B8D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE282882CBA2002B8D36 /* LaunchScreen.storyboard */; };
+		0756104C288FBAF9001C0EA7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0756104B288FBAF9001C0EA7 /* CustomButton.swift */; };
 		0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; };
 		0759B2F62886A994005B9018 /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0759B2F92886AF9B005B9018 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */; };
@@ -62,8 +63,10 @@
 		0749CE262882CBA2002B8D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0749CE292882CBA2002B8D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0749CE2B2882CBA2002B8D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0756104B288FBAF9001C0EA7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		07D89EAD288E8FA2001A4281 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		07D89EAF288E8FB6001A4281 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		07D89EB1288E9009001A4281 /* ViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
 		07D89EB3288EA601001A4281 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		07D89EB5288EA951001A4281 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 			children = (
 				07319879288C256E00C2C068 /* CustomTextField.swift */,
 				0731987B288C262300C2C068 /* UIKitExtension.swift */,
+				0756104B288FBAF9001C0EA7 /* CustomButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -130,7 +134,7 @@
 		07D89EA9288E8EDB001A4281 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				07D89EAA288E8F0B001A4281 /* LoginView */,
+				07D89EAA288E8F0B001A4281 /* InitialView */,
 				0712BC9628868D770017A81F /* HomeViewController.swift */,
 				0712BC9828868D880017A81F /* SearchViewController.swift */,
 				0712BC9A28868D970017A81F /* ChatViewController.swift */,
@@ -145,13 +149,13 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		07D89EAA288E8F0B001A4281 /* LoginView */ = {
+		07D89EAA288E8F0B001A4281 /* InitialView */ = {
 			isa = PBXGroup;
 			children = (
 				07D89EAC288E8F2F001A4281 /* SignUp */,
 				07D89EAB288E8F16001A4281 /* Login */,
 			);
-			path = LoginView;
+			path = InitialView;
 			sourceTree = "<group>";
 		};
 		07D89EAB288E8F16001A4281 /* Login */ = {
@@ -305,6 +309,7 @@
 			files = (
 				07D89EB6288EA951001A4281 /* TileCollectionViewCell.swift in Sources */,
 				0712BC9928868D880017A81F /* SearchViewController.swift in Sources */,
+				0756104C288FBAF9001C0EA7 /* CustomButton.swift in Sources */,
 				0731987A288C256E00C2C068 /* CustomTextField.swift in Sources */,
 				0749CE222882CB9F002B8D36 /* ViewController.swift in Sources */,
 				0712BCA1288698AD0017A81F /* MainTabBarController.swift in Sources */,

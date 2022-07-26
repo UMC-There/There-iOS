@@ -22,8 +22,8 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private let viewModels: [CollectionTableViewCellViewModel] = [
         CollectionTableViewCellViewModel(viewModels: [
-            TileCollectionViewCellViewModel(name: "Apple", backgroundColor: .systemBlue),
-            TileCollectionViewCellViewModel(name: "Microsoft", backgroundColor: .systemRed),
+            TileCollectionViewCellViewModel(name: "Apple", backgroundColor: .systemRed),
+            TileCollectionViewCellViewModel(name: "Microsoft", backgroundColor: .systemBlue),
             TileCollectionViewCellViewModel(name: "Kakao", backgroundColor: .systemYellow),
             TileCollectionViewCellViewModel(name: "Naver", backgroundColor: .systemGreen),
             TileCollectionViewCellViewModel(name: "Facebook", backgroundColor: .systemGray),
