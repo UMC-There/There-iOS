@@ -11,16 +11,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else {return}
-    
-        let mainTC = MainTabBarController()
-//        let navigationController = BaseNavigationController(rootViewController: mainTC)
-//        window?.rootViewController = main
-        window?.rootViewController = mainTC
-        window?.makeKeyAndVisible()
         window?.windowScene = windowScene
+        window?.rootViewController = InitialViewController(bgColor: UIColor.white)
+        window?.makeKeyAndVisible()
+        
+// version 1
+        
+//        let mainTC = MainTabBarController()
+////        let navigationController = BaseNavigationController(rootViewController: mainTC)
+////        window?.rootViewController = main
+//        window?.rootViewController = mainTC
+
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

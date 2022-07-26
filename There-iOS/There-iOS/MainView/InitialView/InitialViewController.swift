@@ -1,14 +1,14 @@
 //
-//  ChatViewController.swift
+//  LoginViewController.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/19.
+//  Created by 양채연 on 2022/07/26.
 //
 
 import UIKit
 import Then
 
-class ChatViewController: UIViewController {
+class InitialViewController: UIViewController {
 
     convenience init(bgColor: UIColor) {
         self.init()
@@ -18,9 +18,19 @@ class ChatViewController: UIViewController {
     private let loginBtn = CustomButton(text: "로그인", bgColor: UIColor.rgb(red: 0, green: 0, blue: 0),
                                         titleColor: UIColor.rgb(red: 255, green: 255, blue: 255))
     private let registerBtn = CustomButton(text: "회원가입", bgColor: UIColor.rgb(red: 255, green: 255, blue: 255),
-                                           titleColor: UIColor.rgb(red: 0, green: 0, blue: 0))
-        
+                                           titleColor: UIColor.black)
     
+    @objc
+    func btnClicked(_ sender: CustomButton?) {
+        if sender == loginBtn {
+            let loginView = LoginViewController(bgColor: .white)
+            loginView.modalPresentationStyle = .fullScreen
+            self.present(loginView, animated: false, completion: nil)
+        }else {
+            
+        }
+    }
+            
     func setLayout() {
 //        loginBtn.then {
 //            $0.translatesAutoresizingMaskIntoConstraints = false
@@ -39,8 +49,10 @@ class ChatViewController: UIViewController {
         self.view.addSubview(loginBtn)
         self.view.addSubview(registerBtn)
         setLayout()
-    
+        
+        loginBtn.addTarget(self, action: #selector(btnClicked), for: .touchUpInside)
+        
     }
 
-
 }
+
