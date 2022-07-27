@@ -120,11 +120,11 @@
 		2F3F78DC2887E0D200315FA0 /* MyPageCell */ = {
 			isa = PBXGroup;
 			children = (
-				2F3F78DD2887E0D200315FA0 /* PortfolioCollectionViewCell.swift */,
-				2F3F78DE2887E0D200315FA0 /* ProfileCollectionViewCell.xib */,
+				2F3F78E12887E0D200315FA0 /* PostCollectionViewCell.xib */,
 				2F3F78DF2887E0D200315FA0 /* PostCollectionViewCell.swift */,
 				2F3F78E02887E0D200315FA0 /* PortfolioCollectionViewCell.xib */,
-				2F3F78E12887E0D200315FA0 /* PostCollectionViewCell.xib */,
+				2F3F78DD2887E0D200315FA0 /* PortfolioCollectionViewCell.swift */,
+				2F3F78DE2887E0D200315FA0 /* ProfileCollectionViewCell.xib */,
 				2F3F78E22887E0D200315FA0 /* ProfileCollectionViewCell.swift */,
 			);
 			path = MyPageCell;

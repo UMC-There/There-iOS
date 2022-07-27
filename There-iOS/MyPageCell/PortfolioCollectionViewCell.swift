@@ -13,9 +13,7 @@ class PortfolioCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var portImageView: UIImageView!
     @IBOutlet weak var portTitleLabel: UILabel!
     @IBOutlet weak var portCountLabel: UILabel!
-    @IBOutlet weak var viewerCountLabel: UILabel!
     @IBOutlet weak var likeCountLabel: UILabel!
-    @IBOutlet weak var commentCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
