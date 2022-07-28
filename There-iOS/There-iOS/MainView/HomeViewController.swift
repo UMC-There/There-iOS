@@ -10,22 +10,21 @@ import SnapKit
 import Then
 
 class HomeViewController: UIViewController {
-
     
-    // MARK: Initialization
+    // MARK: - Init
     convenience init(bgColor: UIColor) {
-            self.init()
-            view.backgroundColor = bgColor
-        }
+        self.init()
+        view.backgroundColor = bgColor
+    }
 
-    // MARK: Property
+    // MARK: - Property
     var stackView: UIStackView!
     var userInfoStackView: UIStackView!
     var iconsStackView: UIStackView!
         
     let postImage = UIImageView(image: UIImage(named: "1"))
     
-    // MARK: Function
+    // MARK: - Function
     func setUserInfoStackView() {
         
         let userImage = UIImageView(image: UIImage(systemName:"person.circle.fill"))
@@ -119,16 +118,14 @@ class HomeViewController: UIViewController {
         self.view.addSubview(self.stackView)
         
         self.stackView.topAnchor.constraint(equalTo: self.safeView.topAnchor).isActive = true
-        self.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+        self.stackView.leadingAnchor.constraint(equalTo: self.safeView.leadingAnchor, constant: 20).isActive = true
         self.view.bottomAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: 250).isActive = true
         self.view.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor, constant: 20).isActive = true
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setEntireStackView()
-    
     }
 
 }
