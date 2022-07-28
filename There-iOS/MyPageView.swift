@@ -1,24 +1,19 @@
 //
-//  MypageViewController.swift
+//  MyPageView.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/19.
+//  Created by 이민아 on 2022/07/20.
 //
 
 import UIKit
 
-class MypageViewController: UIViewController {
+class MyPageView: UIView {
 
-    convenience init(title: String, bgColor: UIColor) {
-            self.init()
-            self.title = title
-        self.view.backgroundColor = bgColor
-        }
-    
+    //상단바
     lazy var userName: UILabel = {
         let name = UILabel()
         name.textColor = .black
-        name.text = "계정명"
+        name.text = "계정명" //서버연동
         name.layoutMargins = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 10)
         name.snp.makeConstraints {
             $0.width.equalTo(100).priority(999)
@@ -27,9 +22,9 @@ class MypageViewController: UIViewController {
         return name
     }()
     
-    lazy var menuBtn: UIImageView = {
-        let more = UIImageView(image: UIImage(systemName: "text.justifyleft"))
-        more.then {
+    lazy var addBtn: UIImageView = {
+        let add = UIImageView(image: UIImage(systemName: "plus"))
+        add.then {
             $0.contentMode = .scaleAspectFit
             $0.clipsToBounds = true
             $0.tintColor = .darkGray
@@ -37,12 +32,12 @@ class MypageViewController: UIViewController {
 //                $0.height.equalTo(60.0)
             $0.width.equalTo(30.0)
         }
-        return more
+        return add
     }()
     
     
-    lazy var userInfoStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [userName, menuBtn])
+    lazy var TopStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [userName, addBtn])
         stackView.axis = .horizontal // default
         stackView.distribution = .fill // default
         stackView.alignment = .fill // default
@@ -57,11 +52,9 @@ class MypageViewController: UIViewController {
         return stackView
     }()
     
-    override func viewDidLoad() {
-            super.viewDidLoad()
-            // Do any additional setup after loading the view.
-        }
+    
+    //profile cell 등록
+    MypageView.register(UINib(nibName: "ProfileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ProfileCollectionViewCell.identifier)
     
 
- 
 }

@@ -22,6 +22,8 @@
 		0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; };
 		0759B2F62886A994005B9018 /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0759B2F92886AF9B005B9018 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */; };
+		2F6296642891A3B500331A53 /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6296632891A3B500331A53 /* ProfileDataView.swift */; };
+		2F62966F28926EE700331A53 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62966E28926EE700331A53 /* PostCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,11 +57,9 @@
 		0749CE2B2882CBA2002B8D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		2F3F78DD2887E0D200315FA0 /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
-		2F3F78DE2887E0D200315FA0 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
-		2F3F78DF2887E0D200315FA0 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F3F78E02887E0D200315FA0 /* PortfolioCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioCollectionViewCell.xib; sourceTree = "<group>"; };
-		2F3F78E12887E0D200315FA0 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
-		2F3F78E22887E0D200315FA0 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F6296632891A3B500331A53 /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
+		2F62966E28926EE700331A53 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		67AA3DBED054395C30105591 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33568F03BF2FAD6BC98DC5C /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				0712BC9628868D770017A81F /* HomeViewController.swift */,
 				0712BC9828868D880017A81F /* SearchViewController.swift */,
 				0712BC9A28868D970017A81F /* ChatViewController.swift */,
-				0712BC9C28868DA00017A81F /* MypageViewController.swift */,
+				2F6296672891AF1900331A53 /* MyPage */,
 				0712BC9E28868DD20017A81F /* MoreViewController.swift */,
 				0712BCA0288698AD0017A81F /* MainTabBarController.swift */,
 				0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */,
@@ -120,14 +120,20 @@
 		2F3F78DC2887E0D200315FA0 /* MyPageCell */ = {
 			isa = PBXGroup;
 			children = (
-				2F3F78DD2887E0D200315FA0 /* PortfolioCollectionViewCell.swift */,
-				2F3F78DE2887E0D200315FA0 /* ProfileCollectionViewCell.xib */,
-				2F3F78DF2887E0D200315FA0 /* PostCollectionViewCell.swift */,
 				2F3F78E02887E0D200315FA0 /* PortfolioCollectionViewCell.xib */,
-				2F3F78E12887E0D200315FA0 /* PostCollectionViewCell.xib */,
-				2F3F78E22887E0D200315FA0 /* ProfileCollectionViewCell.swift */,
+				2F3F78DD2887E0D200315FA0 /* PortfolioCollectionViewCell.swift */,
 			);
 			path = MyPageCell;
+			sourceTree = "<group>";
+		};
+		2F6296672891AF1900331A53 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				0712BC9C28868DA00017A81F /* MypageViewController.swift */,
+				2F6296632891A3B500331A53 /* ProfileDataView.swift */,
+				2F62966E28926EE700331A53 /* PostCollectionViewCell.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		5DB207E99A1CE5A8E118618B /* Pods */ = {
@@ -270,6 +276,8 @@
 				0749CE1E2882CB9F002B8D36 /* AppDelegate.swift in Sources */,
 				0749CE202882CB9F002B8D36 /* SceneDelegate.swift in Sources */,
 				0712BC9F28868DD20017A81F /* MoreViewController.swift in Sources */,
+				2F6296642891A3B500331A53 /* ProfileDataView.swift in Sources */,
+				2F62966F28926EE700331A53 /* PostCollectionViewCell.swift in Sources */,
 				0712BC9B28868D970017A81F /* ChatViewController.swift in Sources */,
 				0759B2F92886AF9B005B9018 /* BaseNavigationController.swift in Sources */,
 				0712BC9728868D770017A81F /* HomeViewController.swift in Sources */,
