@@ -22,6 +22,7 @@
 		0749CE2A2882CBA2002B8D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE282882CBA2002B8D36 /* LaunchScreen.storyboard */; };
 		0756104C288FBAF9001C0EA7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0756104B288FBAF9001C0EA7 /* CustomButton.swift */; };
 		0756104E288FD908001C0EA7 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0756104D288FD908001C0EA7 /* InitialViewController.swift */; };
+		075610502890025E001C0EA7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0756104F2890025E001C0EA7 /* NavigationViewController.swift */; };
 		0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; };
 		0759B2F62886A994005B9018 /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0759B2F92886AF9B005B9018 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */; };
@@ -64,6 +65,7 @@
 		0749CE2B2882CBA2002B8D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0756104B288FBAF9001C0EA7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0756104D288FD908001C0EA7 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		0756104F2890025E001C0EA7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		07D89EAD288E8FA2001A4281 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07D89EAF288E8FB6001A4281 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				07D89EB1288E9009001A4281 /* ViewPager.swift */,
 				07D89EB3288EA601001A4281 /* CollectionTableViewCell.swift */,
 				07D89EB5288EA951001A4281 /* TileCollectionViewCell.swift */,
+				0756104F2890025E001C0EA7 /* NavigationViewController.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				0712BCA1288698AD0017A81F /* MainTabBarController.swift in Sources */,
 				0712BC9D28868DA00017A81F /* MypageViewController.swift in Sources */,
 				0749CE1E2882CB9F002B8D36 /* AppDelegate.swift in Sources */,
+				075610502890025E001C0EA7 /* NavigationViewController.swift in Sources */,
 				0731987C288C262300C2C068 /* UIKitExtension.swift in Sources */,
 				07D89EB4288EA601001A4281 /* CollectionTableViewCell.swift in Sources */,
 				0749CE202882CB9F002B8D36 /* SceneDelegate.swift in Sources */,
