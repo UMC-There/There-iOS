@@ -69,16 +69,79 @@ class MypageViewController: UIViewController{
 
     private let followerDataView = ProfileDataView(title:"팔로워", count:1111)
     private let followingDataView = ProfileDataView(title:"팔로우", count:12)
- 
+    
+    
+    private let segmentedControl: UISegmentedControl = {
+        let postSectionImage = UIImage(systemName: "square.grid.2x2")
+        let porfolSectionImage = UIImage(systemName: "folder")
+        
+        let control = UISegmentedControl(items:[postSectionImage ?? UIImage(),porfolSectionImage! ])
+       control.translatesAutoresizingMaskIntoConstraints = false
+       return control
+     }()
+    
+     let firstView: UIView = {
+       let view = UIView()
+       view.backgroundColor = .green
+       view.translatesAutoresizingMaskIntoConstraints = false
+       return view
+     }()
+    
+     let secondView: UIView = {
+       let view = UIView()
+       view.backgroundColor = .yellow
+       view.translatesAutoresizingMaskIntoConstraints = false
+       return view
+     }()
+     
+     var shouldHideFirstView: Bool? {
+       didSet {
+         guard let shouldHideFirstView = self.shouldHideFirstView else { return }
+         self.firstView.isHidden = shouldHideFirstView
+         self.secondView.isHidden = !self.firstView.isHidden
+       }
+     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
         setUpLayOut()
+        self.view.addSubview(self.segmentedControl)
+        self.view.addSubview(self.firstView)
+        self.view.addSubview(self.secondView)
+         
         
-        }
+        NSLayoutConstraint.activate([
+            self.firstView.leftAnchor.constraint(equalTo: self.segmentedControl.leftAnchor),
+            self.firstView.rightAnchor.constraint(equalTo: self.segmentedControl.rightAnchor),
+            self.firstView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -80),
+            self.firstView.topAnchor.constraint(equalTo: self.segmentedControl.bottomAnchor, constant: 16),
+            ])
+        NSLayoutConstraint.activate([
+            self.secondView.leftAnchor.constraint(equalTo: self.firstView.leftAnchor),
+            self.secondView.rightAnchor.constraint(equalTo: self.firstView.rightAnchor),
+            self.secondView.bottomAnchor.constraint(equalTo: self.firstView.bottomAnchor),
+            self.secondView.topAnchor.constraint(equalTo: self.firstView.topAnchor),
+            ])
+        
+            
+        self.segmentedControl.addTarget(self, action: #selector(didChangeValue(segment:)), for: .valueChanged)
+            
+        self.segmentedControl.selectedSegmentIndex = 0
+        self.didChangeValue(segment: self.segmentedControl)
+          }
+         
+          
+    @objc private func didChangeValue(segment: UISegmentedControl) {
+            self.shouldHideFirstView = segment.selectedSegmentIndex != 0
+          }
+      
 
 }
+
+
+
 
 
 private extension MypageViewController{
@@ -109,8 +172,7 @@ private extension MypageViewController{
         print("post작성화면으로 넘어가기")
     }
          */
-        }
-    
+    }
     
     func setUpLayOut(){
         let buttonStackView = UIStackView(arrangedSubviews: [artistNoteButton,EditProfileButton])
@@ -122,7 +184,7 @@ private extension MypageViewController{
         
     
         
-        [profileImageView, nameLabel, dataStackView, descriptionLabel, buttonStackView].forEach{view.addSubview($0)}
+        [profileImageView, nameLabel, dataStackView, descriptionLabel, buttonStackView, segmentedControl].forEach{view.addSubview($0)}
         
         let inset: CGFloat = 16.0
         
@@ -156,7 +218,19 @@ private extension MypageViewController{
             $0.leading.equalTo(descriptionLabel.snp.leading)
             $0.trailing.equalTo(descriptionLabel.snp.trailing)
         }
+        
+        segmentedControl.snp.makeConstraints{
+            $0.top.equalTo(buttonStackView.snp.bottom).offset(6.0)
+            $0.leading.equalTo(descriptionLabel.snp.leading)
+            $0.trailing.equalTo(descriptionLabel.snp.trailing)
+        }
+        
+       
     }
+    
+ 
+    
+
 }
 
     
