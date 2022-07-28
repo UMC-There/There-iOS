@@ -72,6 +72,7 @@ class MypageViewController: UIViewController{
     
     
     private let segmentedControl: UISegmentedControl = {
+        
         let postSectionImage = UIImage(systemName: "square.grid.2x2")
         let porfolSectionImage = UIImage(systemName: "folder")
         
@@ -80,11 +81,19 @@ class MypageViewController: UIViewController{
        return control
      }()
     
-     let firstView: UIView = {
-       let view = UIView()
-       view.backgroundColor = .green
-       view.translatesAutoresizingMaskIntoConstraints = false
-       return view
+    private lazy var PostCollectionView: UICollectionView = {
+         let layout = UICollectionViewFlowLayout()
+         layout.minimumLineSpacing = 0.5
+         layout.minimumInteritemSpacing = 0.5
+         
+         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+         collectionView.backgroundColor = .systemBackground
+         collectionView.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: "PostCollectionViewCell")
+         collectionView.dataSource = self
+         collectionView.delegate = self
+
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+         return collectionView
      }()
     
      let secondView: UIView = {
@@ -97,8 +106,8 @@ class MypageViewController: UIViewController{
      var shouldHideFirstView: Bool? {
        didSet {
          guard let shouldHideFirstView = self.shouldHideFirstView else { return }
-         self.firstView.isHidden = shouldHideFirstView
-         self.secondView.isHidden = !self.firstView.isHidden
+         self.PostCollectionView.isHidden = shouldHideFirstView
+         self.secondView.isHidden = !self.PostCollectionView.isHidden
        }
      }
     
@@ -108,21 +117,21 @@ class MypageViewController: UIViewController{
         setUpNavigationBar()
         setUpLayOut()
         self.view.addSubview(self.segmentedControl)
-        self.view.addSubview(self.firstView)
+        self.view.addSubview(self.PostCollectionView)
         self.view.addSubview(self.secondView)
          
         
         NSLayoutConstraint.activate([
-            self.firstView.leftAnchor.constraint(equalTo: self.segmentedControl.leftAnchor),
-            self.firstView.rightAnchor.constraint(equalTo: self.segmentedControl.rightAnchor),
-            self.firstView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -80),
-            self.firstView.topAnchor.constraint(equalTo: self.segmentedControl.bottomAnchor, constant: 16),
+            self.PostCollectionView.leftAnchor.constraint(equalTo: self.segmentedControl.leftAnchor),
+            self.PostCollectionView.rightAnchor.constraint(equalTo: self.segmentedControl.rightAnchor),
+            self.PostCollectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -80),
+            self.PostCollectionView.topAnchor.constraint(equalTo: self.segmentedControl.bottomAnchor, constant: 16),
             ])
         NSLayoutConstraint.activate([
-            self.secondView.leftAnchor.constraint(equalTo: self.firstView.leftAnchor),
-            self.secondView.rightAnchor.constraint(equalTo: self.firstView.rightAnchor),
-            self.secondView.bottomAnchor.constraint(equalTo: self.firstView.bottomAnchor),
-            self.secondView.topAnchor.constraint(equalTo: self.firstView.topAnchor),
+            self.secondView.leftAnchor.constraint(equalTo: self.PostCollectionView.leftAnchor),
+            self.secondView.rightAnchor.constraint(equalTo: self.PostCollectionView.rightAnchor),
+            self.secondView.bottomAnchor.constraint(equalTo: self.PostCollectionView.bottomAnchor),
+            self.secondView.topAnchor.constraint(equalTo: self.PostCollectionView.topAnchor),
             ])
         
             
@@ -140,6 +149,29 @@ class MypageViewController: UIViewController{
 
 }
 
+
+
+extension MypageViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as? PostCollectionViewCell
+        
+        cell?.setup(with: UIImage()) //named:"asset name" 하면 이미지 띄울 수 있음
+        
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+}
+
+extension MypageViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width: CGFloat = (collectionView.frame.width / 3) - 1.0
+        return CGSize(width: width, height: width)
+    }
+}
 
 
 
