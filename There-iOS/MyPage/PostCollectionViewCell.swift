@@ -14,6 +14,6 @@ final class PostCollectionViewCell: UICollectionViewCell {
         addSubview(imageView)
         imageView.snp.makeConstraints{ $0.edges.equalToSuperview() }
         
-        imageView.backgroundColor = .tertiaryLabel
+        imageView.backgroundColor = .tertiaryLabel //서버연동해서 이미지데이터받아오기
     }
 }

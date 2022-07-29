@@ -81,7 +81,7 @@ class MypageViewController: UIViewController{
        return control
      }()
     
-    private lazy var PostCollectionView: UICollectionView = {
+    private lazy var postCollectionView: UICollectionView = {
          let layout = UICollectionViewFlowLayout()
          layout.minimumLineSpacing = 0.5
          layout.minimumInteritemSpacing = 0.5
@@ -96,18 +96,24 @@ class MypageViewController: UIViewController{
          return collectionView
      }()
     
-     let secondView: UIView = {
-       let view = UIView()
-       view.backgroundColor = .yellow
-       view.translatesAutoresizingMaskIntoConstraints = false
-       return view
-     }()
-     
+    private lazy var portfolioTableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
+        tableView.backgroundColor = .systemBackground
+        tableView.dataSource = self
+        
+        tableView.register(PortfolioTableViewCell.self, forCellReuseIdentifier: "PortfolioTableViewCell")
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false //중요!!!!
+        
+        return tableView
+    }()
+    
+    //뷰 왔다갔다 할 때 사라지게 하기
      var shouldHideFirstView: Bool? {
        didSet {
          guard let shouldHideFirstView = self.shouldHideFirstView else { return }
-         self.PostCollectionView.isHidden = shouldHideFirstView
-         self.secondView.isHidden = !self.PostCollectionView.isHidden
+         self.postCollectionView.isHidden = shouldHideFirstView
+         self.portfolioTableView.isHidden = !self.postCollectionView.isHidden
        }
      }
     
@@ -117,21 +123,21 @@ class MypageViewController: UIViewController{
         setUpNavigationBar()
         setUpLayOut()
         self.view.addSubview(self.segmentedControl)
-        self.view.addSubview(self.PostCollectionView)
-        self.view.addSubview(self.secondView)
+        self.view.addSubview(self.postCollectionView)
+        self.view.addSubview(self.portfolioTableView)
          
         
         NSLayoutConstraint.activate([
-            self.PostCollectionView.leftAnchor.constraint(equalTo: self.segmentedControl.leftAnchor),
-            self.PostCollectionView.rightAnchor.constraint(equalTo: self.segmentedControl.rightAnchor),
-            self.PostCollectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -80),
-            self.PostCollectionView.topAnchor.constraint(equalTo: self.segmentedControl.bottomAnchor, constant: 16),
+            self.postCollectionView.leftAnchor.constraint(equalTo: self.segmentedControl.leftAnchor),
+            self.postCollectionView.rightAnchor.constraint(equalTo: self.segmentedControl.rightAnchor),
+            self.postCollectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -80),
+            self.postCollectionView.topAnchor.constraint(equalTo: self.segmentedControl.bottomAnchor, constant: 16),
             ])
         NSLayoutConstraint.activate([
-            self.secondView.leftAnchor.constraint(equalTo: self.PostCollectionView.leftAnchor),
-            self.secondView.rightAnchor.constraint(equalTo: self.PostCollectionView.rightAnchor),
-            self.secondView.bottomAnchor.constraint(equalTo: self.PostCollectionView.bottomAnchor),
-            self.secondView.topAnchor.constraint(equalTo: self.PostCollectionView.topAnchor),
+            self.portfolioTableView.leftAnchor.constraint(equalTo: self.postCollectionView.leftAnchor),
+            self.portfolioTableView.rightAnchor.constraint(equalTo: self.postCollectionView.rightAnchor),
+            self.portfolioTableView.bottomAnchor.constraint(equalTo: self.postCollectionView.bottomAnchor),
+            self.portfolioTableView.topAnchor.constraint(equalTo: self.postCollectionView.topAnchor),
             ])
         
             
@@ -150,7 +156,7 @@ class MypageViewController: UIViewController{
 }
 
 
-
+//CollectionView DataSource, Delegete : post
 extension MypageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as? PostCollectionViewCell
@@ -161,7 +167,7 @@ extension MypageViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 10 //무한대로 생성가능하게
     }
     
 }
@@ -174,9 +180,27 @@ extension MypageViewController: UICollectionViewDelegateFlowLayout {
 }
 
 
+//TableView DataSource, Delegate: portfolio
+extension MypageViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10 //무한 스크롤
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioTableViewCell", for: indexPath) as? PortfolioTableViewCell
+        cell?.selectionStyle = .none
+        cell?.setUp()
+        
+        return cell ?? UITableViewCell()
+    }
+}
+
+
+
 
 
 private extension MypageViewController{
+    
     func setUpNavigationBar(){
        
         let userID = UILabel()
@@ -184,26 +208,16 @@ private extension MypageViewController{
         userID.text = "계정명"
         userID.font = UIFont(name: "Plain", size:30)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userID)
-            
         
+        let writeButton = self.navigationItem.makeSFSymbolButton(self,
+                                                                 action: Selector("pushToWrite"),
+                                                                 symbolName: "plus")
+        let popUpButton = self.navigationItem.makeSFSymbolButton(self,
+                                                                 action: Selector("popUp"),
+                                                                  symbolName: "line.3.horizontal")
+                    
+        self.navigationItem.rightBarButtonItems = [popUpButton, writeButton]
 
-        let uploadButton = UIButton(type:.custom)
-        uploadButton.setImage(UIImage(systemName: "plus"), for: .normal)
-        uploadButton.tintColor = .black
-        //uploadButton.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
-        
-        let upload = UIBarButtonItem(customView: uploadButton)
-        upload.customView?.translatesAutoresizingMaskIntoConstraints = false
-        upload.customView?.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        upload.customView?.widthAnchor.constraint(equalToConstant: 30).isActive = true
-               
-        navigationItem.rightBarButtonItem = upload
-
-        /*
-    @objc func buttonTapped(sender: UIButton){
-        print("post작성화면으로 넘어가기")
-    }
-         */
     }
     
     func setUpLayOut(){
