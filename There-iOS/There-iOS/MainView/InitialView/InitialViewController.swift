@@ -15,7 +15,7 @@ class InitialViewController: UIViewController {
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
-    title = "push & pop"
+    title = "로그인"
     }
     
     
@@ -26,25 +26,19 @@ class InitialViewController: UIViewController {
     // MARK: - Function
     
     @objc
-    private func pushVC() {
+    private func clickedLogin() {
         let login = LoginViewController(bgColor: UIColor.white)
         
         navigationController?.pushViewController(login, animated: false)
     }
+    @objc
+    private func clickedSignUp() {
+        let signUp = SignUpViewController(bgColor: UIColor.white)
+        
+        navigationController?.pushViewController(signUp, animated: false)
+    }
     
-//
-//    @objc
-//    func buttonClicked(_ sender: CustomButton?) {
-//        if sender == loginBtn {
-//            let loginView = LoginViewController(bgColor: UIColor.yellow)
-////            loginView.modalPresentationStyle = .fullScreen
-//            self.navigationController?.pushViewController(loginView, animated: true)
-//        }else {
-//            let signUpView = SignUpViewController(bgColor: UIColor.white)
-//            signUpView.modalPresentationStyle = .fullScreen
-//            self.present(signUpView, animated: false, completion: nil)
-//        }
-//    }
+
 
     //          이전 화면 돌아가는 버튼 클릭시 실행
 //    func popViewController(animated: Bool) -> UIViewController?{}
@@ -68,8 +62,8 @@ class InitialViewController: UIViewController {
         self.view.addSubview(signUpBtn)
         setLayout()
         
-        loginBtn.addTarget(self, action: #selector(pushVC), for: .touchUpInside)
-        signUpBtn.addTarget(self, action: #selector(pushVC), for: .touchUpInside)
+        loginBtn.addTarget(self, action: #selector(clickedLogin), for: .touchUpInside)
+        signUpBtn.addTarget(self, action: #selector(clickedSignUp), for: .touchUpInside)
         
     }
 

@@ -33,8 +33,6 @@ class MainTabBarController: UITabBarController {
         mypageNC.tabBarItem = mypageTabBarItem
         moreNC.tabBarItem = moreTabBarItem
         
-        
-        
     }
 
 }

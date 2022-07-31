@@ -14,29 +14,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // 윈도우의 씬을 가져온다
         guard let windowScene = (scene as? UIWindowScene) else {return}
-        
         // 윈도우 씬 설정
         window = UIWindow(windowScene: windowScene)
+        // 설정한 윈도우를 보이게 끔 설정
+        window?.makeKeyAndVisible()
+        
+        
         // 뷰 컨트롤러 인스턴스 생성
         let initialVC = InitialViewController(bgColor: UIColor.white)
         // 루트 네비게이션 컨트롤러 설정
         let navVC = UINavigationController(rootViewController: initialVC)
         // 뿌리 뷰컨트롤러를 위에서 설정한 네비게이션 컨트롤러로 설정
         window?.rootViewController = navVC
-        // 설정한 윈도우를 보이게 끔 설정
-        window?.makeKeyAndVisible()
+//
+//        if ( window?.screen == HomeViewController() ) {
+//            let mainTC = MainTabBarController()
+//            window?.rootViewController = mainTC
+//            print("success")
+//        }
 
-        
-
-        
-// version 1
         
 //        let mainTC = MainTabBarController()
-////        let navigationController = BaseNavigationController(rootViewController: mainTC)
-////        window?.rootViewController = main
 //        window?.rootViewController = mainTC
-
-
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
