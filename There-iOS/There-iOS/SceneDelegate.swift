@@ -26,6 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navVC = UINavigationController(rootViewController: initialVC)
         // 뿌리 뷰컨트롤러를 위에서 설정한 네비게이션 컨트롤러로 설정
         window?.rootViewController = navVC
+        // Light mode -> white, Dark mode -> black으로 설정됨
+        window?.tintColor = .label
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

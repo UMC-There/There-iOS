@@ -29,10 +29,9 @@ class MainTabBarController: UITabBarController {
         self.viewControllers = [homeNC, searchNC, chatNC, mypageNC, moreNC]
         let homeTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         let searchTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 1)
-        let chatTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "message"), tag: 2)
-        let mypageTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person"), tag: 3)
-        let moreTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "ellipsis"), tag: 4)
-        
+        let chatTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "message") , selectedImage: UIImage(systemName: "message.fill"))
+        let mypageTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person") , selectedImage: UIImage(systemName: "person.fill"))
+        let moreTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "ellipsis"), selectedImage: UIImage(systemName: "ellipsis.fill")) 
         
         
         homeNC.tabBarItem = homeTabBarItem
