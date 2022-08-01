@@ -12,6 +12,7 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
+        navigationItem.title = "Instagram"
     }
     
     private let tableView: UITableView = {

@@ -25,11 +25,13 @@
 		0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; };
 		0759B2F62886A994005B9018 /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07B85ECD2893A6000088BCE3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B85ECC2893A6000088BCE3 /* PostViewController.swift */; };
+		07C53C65289806F100FB9FEE /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C53C64289806F100FB9FEE /* UIButton+.swift */; };
 		07D89EAE288E8FA2001A4281 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EAD288E8FA2001A4281 /* LoginViewController.swift */; };
 		07D89EB0288E8FB6001A4281 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EAF288E8FB6001A4281 /* SignUpViewController.swift */; };
 		07D89EB2288E9009001A4281 /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EB1288E9009001A4281 /* ViewPager.swift */; };
 		07D89EB4288EA601001A4281 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EB3288EA601001A4281 /* CollectionTableViewCell.swift */; };
 		07D89EB6288EA951001A4281 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EB5288EA951001A4281 /* TileCollectionViewCell.swift */; };
+		07D89F822897DD1B004FC808 /* CustomPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89F812897DD1B004FC808 /* CustomPostCell.swift */; };
 		07E672602897D161005768CB /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6725F2897D161005768CB /* CustomTabBar.swift */; };
 		07E672622897D29A005768CB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E672612897D29A005768CB /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
@@ -67,11 +69,13 @@
 		0756104D288FD908001C0EA7 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		0756104F2890025E001C0EA7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		07B85ECC2893A6000088BCE3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		07C53C64289806F100FB9FEE /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		07D89EAD288E8FA2001A4281 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07D89EAF288E8FB6001A4281 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		07D89EB1288E9009001A4281 /* ViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
 		07D89EB3288EA601001A4281 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		07D89EB5288EA951001A4281 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
+		07D89F812897DD1B004FC808 /* CustomPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPostCell.swift; sourceTree = "<group>"; };
 		07E6725F2897D161005768CB /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		07E672612897D29A005768CB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		67AA3DBED054395C30105591 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				0756104B288FBAF9001C0EA7 /* CustomButton.swift */,
 				07E6725F2897D161005768CB /* CustomTabBar.swift */,
 				07E672612897D29A005768CB /* CustomTextField.swift */,
+				07D89F812897DD1B004FC808 /* CustomPostCell.swift */,
+				07C53C64289806F100FB9FEE /* UIButton+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -135,20 +141,12 @@
 			path = "There-iOS";
 			sourceTree = "<group>";
 		};
-		07B85EC92893A4FA0088BCE3 /* PostView */ = {
-			isa = PBXGroup;
-			children = (
-				07B85ECC2893A6000088BCE3 /* PostViewController.swift */,
-			);
-			path = PostView;
-			sourceTree = "<group>";
-		};
 		07D89EA9288E8EDB001A4281 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				07B85EC92893A4FA0088BCE3 /* PostView */,
 				07D89EAA288E8F0B001A4281 /* InitialView */,
 				0712BC9628868D770017A81F /* HomeViewController.swift */,
+				07B85ECC2893A6000088BCE3 /* PostViewController.swift */,
 				0712BC9828868D880017A81F /* SearchViewController.swift */,
 				0712BC9A28868D970017A81F /* ChatViewController.swift */,
 				0712BC9C28868DA00017A81F /* MypageViewController.swift */,
@@ -332,12 +330,14 @@
 				0731987C288C262300C2C068 /* UIKitExtension.swift in Sources */,
 				07D89EB4288EA601001A4281 /* CollectionTableViewCell.swift in Sources */,
 				0749CE202882CB9F002B8D36 /* SceneDelegate.swift in Sources */,
+				07C53C65289806F100FB9FEE /* UIButton+.swift in Sources */,
 				07D89EB0288E8FB6001A4281 /* SignUpViewController.swift in Sources */,
 				0712BC9F28868DD20017A81F /* MoreViewController.swift in Sources */,
 				07E672622897D29A005768CB /* CustomTextField.swift in Sources */,
 				0712BC9B28868D970017A81F /* ChatViewController.swift in Sources */,
 				0756104E288FD908001C0EA7 /* InitialViewController.swift in Sources */,
 				07E672602897D161005768CB /* CustomTabBar.swift in Sources */,
+				07D89F822897DD1B004FC808 /* CustomPostCell.swift in Sources */,
 				07D89EAE288E8FA2001A4281 /* LoginViewController.swift in Sources */,
 				0712BC9728868D770017A81F /* HomeViewController.swift in Sources */,
 				07D89EB2288E9009001A4281 /* ViewPager.swift in Sources */,

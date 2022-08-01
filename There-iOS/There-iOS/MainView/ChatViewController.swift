@@ -13,6 +13,7 @@ class ChatViewController: UIViewController {
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
+        navigationItem.title = "Instagram"
     }
 
     

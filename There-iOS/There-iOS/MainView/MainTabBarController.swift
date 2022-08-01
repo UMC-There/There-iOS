@@ -23,7 +23,7 @@ class MainTabBarController: UITabBarController {
         let homeNC = UINavigationController.init(rootViewController: HomeViewController(bgColor: UIColor.white))
         let searchNC = UINavigationController.init(rootViewController: SearchViewController(bgColor: UIColor.white))
         let chatNC = UINavigationController.init(rootViewController: ChatViewController(bgColor: UIColor.white))
-        let mypageNC = UINavigationController.init(rootViewController: MypageViewController(title: "마이페이지", bgColor: UIColor.white))
+        let mypageNC = UINavigationController.init(rootViewController: MypageViewController(bgColor: UIColor.white))
         let moreNC = UINavigationController.init(rootViewController: MoreViewController(bgColor: UIColor.white))
         
         self.viewControllers = [homeNC, searchNC, chatNC, mypageNC, moreNC]
