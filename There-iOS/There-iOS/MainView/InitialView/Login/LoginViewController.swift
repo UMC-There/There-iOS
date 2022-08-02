@@ -39,6 +39,7 @@ class LoginViewController: UIViewController {
     
     private lazy var passwordField: UITextField = {
         let password = CustomTextField(text: "비밀번호를 입력하세요")
+        password.isSecureTextEntry = true
 
         return password
     }()
@@ -187,3 +188,4 @@ extension LoginViewController {
         }
     }
 }
+

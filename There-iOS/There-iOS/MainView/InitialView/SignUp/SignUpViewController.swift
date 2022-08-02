@@ -43,12 +43,14 @@ class SignUpViewController: UIViewController {
     
     private lazy var passwordField: UITextField = {
         let password = CustomTextField(text: "비밀번호를 입력하세요")
+        password.isSecureTextEntry = true
 
         return password
     }()
     
     private lazy var rePasswordField: UITextField = {
         let rePassword = CustomTextField(text: "비밀번호를 다시 입력하세요")
+        rePassword.isSecureTextEntry = true
 
         return rePassword
     }()

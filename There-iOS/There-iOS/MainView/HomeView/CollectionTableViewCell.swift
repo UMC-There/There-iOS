@@ -7,16 +7,35 @@
 
 import UIKit
 
+// MARK: - Struct
 struct CollectionTableViewCellViewModel{
     let viewModels: [TileCollectionViewCellViewModel]
 }
+
+// MARK: - Protocol
 
 protocol CollectionTableViewCellDelegate: AnyObject {
     func collectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel)
 }
 
 class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+    
+    // MARK: - Init
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = .systemBackground
+        contentView.addSubview(collectionView)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+    
+    // MARK: - Property
+    
     static let identifier = "CollectionTableViewCell"
     
     weak var delegate: CollectionTableViewCellDelegate?
@@ -32,20 +51,6 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         collectionView.backgroundColor = .systemBackground
         return collectionView
     }()
-    
-    // MARK: - Init
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .systemBackground
-        contentView.addSubview(collectionView)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError()
-    }
     
     // MARK: - Layout
     
