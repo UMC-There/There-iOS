@@ -1,7 +1,9 @@
 # There-iOS
 
 - Splash
+- Bottom bar
 - PostDetail Screen
 - Search Screen
 - Home Screen
-- Login, Join Screen
+- Initial, Login, Join Screen
+- Etc screen
