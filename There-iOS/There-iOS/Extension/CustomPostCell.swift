@@ -9,8 +9,10 @@ import SnapKit
 import UIKit
 
 
-
 final class CustomPostCell: UITableViewCell {
+    
+    // MARK: - Property
+    
     private lazy var postImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .tertiaryLabel
@@ -67,6 +69,8 @@ final class CustomPostCell: UITableViewCell {
         
         return label
     }()
+    
+    // MARK: - Function
     
     func setup() {
         // 추후 코드 유지보수를 고려

@@ -39,6 +39,7 @@ class PostViewController: UIViewController {
     }
 }
 
+// MARK: - Extension
 
 extension PostViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

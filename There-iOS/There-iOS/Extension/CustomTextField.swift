@@ -20,7 +20,6 @@ class CustomTextField: UITextField {
     
     convenience init(text: String) {
         self.init()
-        self.backgroundColor = UIColor.rgb(red: 255, green: 255, blue: 255)
         self.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor : UIColor.rgb(red: 100, green: 116, blue: 139)])
         self.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         self.layer.masksToBounds = true
@@ -29,6 +28,7 @@ class CustomTextField: UITextField {
         self.textColor = UIColor.rgb(red: 13, green: 15, blue: 17)
 
     }
+    
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: UIEdgeInsets(top: 12, left: 40, bottom: 13, right: 40))
@@ -41,6 +41,11 @@ class CustomTextField: UITextField {
     
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.textRect(forBounds: bounds)
+        let border = CALayer()
+        border.frame = CGRect(x: 0,  y: self.frame.size.height-1, width: self.frame.width/1.1, height: 1)
+        border.borderWidth = 1
+        border.backgroundColor = UIColor.systemGray2.cgColor
+        self.layer.addSublayer(border)
         return rect.inset(by: UIEdgeInsets.init(top: 12, left: 9, bottom: 13, right: 9))
     }
     
@@ -60,6 +65,7 @@ extension CustomTextField: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+
 
 }
 

@@ -9,9 +9,6 @@ import UIKit
 import SnapKit
 import Then
 
-import UIKit
-import Then
-
 class HomeViewController: UIViewController {
 
     convenience init(bgColor: UIColor) {
