@@ -9,11 +9,11 @@ import UIKit
 
 class MypageViewController: UIViewController {
 
-    convenience init(title: String, bgColor: UIColor) {
-            self.init()
-            self.title = title
+    convenience init(bgColor: UIColor) {
+        self.init()
         self.view.backgroundColor = bgColor
-        }
+        navigationItem.title = "Instagram"
+    }
     
     lazy var userName: UILabel = {
         let name = UILabel()

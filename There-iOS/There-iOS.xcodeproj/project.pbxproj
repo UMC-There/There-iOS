@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070260E128992B3F003F7416 /* CustomSnsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070260E028992B3F003F7416 /* CustomSnsButton.swift */; };
 		0712BC9728868D770017A81F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712BC9628868D770017A81F /* HomeViewController.swift */; };
 		0712BC9928868D880017A81F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712BC9828868D880017A81F /* SearchViewController.swift */; };
 		0712BC9B28868D970017A81F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712BC9A28868D970017A81F /* ChatViewController.swift */; };
 		0712BC9D28868DA00017A81F /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712BC9C28868DA00017A81F /* MypageViewController.swift */; };
 		0712BC9F28868DD20017A81F /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712BC9E28868DD20017A81F /* MoreViewController.swift */; };
 		0712BCA1288698AD0017A81F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712BCA0288698AD0017A81F /* MainTabBarController.swift */; };
-		0731987A288C256E00C2C068 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07319879288C256E00C2C068 /* CustomTextField.swift */; };
 		0731987C288C262300C2C068 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731987B288C262300C2C068 /* UIKitExtension.swift */; };
 		0749CE1E2882CB9F002B8D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749CE1D2882CB9F002B8D36 /* AppDelegate.swift */; };
 		0749CE202882CB9F002B8D36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749CE1F2882CB9F002B8D36 /* SceneDelegate.swift */; };
-		0749CE222882CB9F002B8D36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749CE212882CB9F002B8D36 /* ViewController.swift */; };
 		0749CE272882CBA2002B8D36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE262882CBA2002B8D36 /* Assets.xcassets */; };
 		0749CE2A2882CBA2002B8D36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0749CE282882CBA2002B8D36 /* LaunchScreen.storyboard */; };
 		0756104C288FBAF9001C0EA7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0756104B288FBAF9001C0EA7 /* CustomButton.swift */; };
@@ -25,12 +24,16 @@
 		075610502890025E001C0EA7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0756104F2890025E001C0EA7 /* NavigationViewController.swift */; };
 		0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; };
 		0759B2F62886A994005B9018 /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0759B2F92886AF9B005B9018 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */; };
+		07B85ECD2893A6000088BCE3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B85ECC2893A6000088BCE3 /* PostViewController.swift */; };
+		07C53C65289806F100FB9FEE /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C53C64289806F100FB9FEE /* UIButton+.swift */; };
 		07D89EAE288E8FA2001A4281 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EAD288E8FA2001A4281 /* LoginViewController.swift */; };
 		07D89EB0288E8FB6001A4281 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EAF288E8FB6001A4281 /* SignUpViewController.swift */; };
 		07D89EB2288E9009001A4281 /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EB1288E9009001A4281 /* ViewPager.swift */; };
 		07D89EB4288EA601001A4281 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EB3288EA601001A4281 /* CollectionTableViewCell.swift */; };
 		07D89EB6288EA951001A4281 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EB5288EA951001A4281 /* TileCollectionViewCell.swift */; };
+		07D89F822897DD1B004FC808 /* CustomPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89F812897DD1B004FC808 /* CustomPostCell.swift */; };
+		07E672602897D161005768CB /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E6725F2897D161005768CB /* CustomTabBar.swift */; };
+		07E672622897D29A005768CB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E672612897D29A005768CB /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,30 +51,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		070260E028992B3F003F7416 /* CustomSnsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSnsButton.swift; sourceTree = "<group>"; };
 		0712BC9628868D770017A81F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0712BC9828868D880017A81F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0712BC9A28868D970017A81F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0712BC9C28868DA00017A81F /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		0712BC9E28868DD20017A81F /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		0712BCA0288698AD0017A81F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		07319879288C256E00C2C068 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0731987B288C262300C2C068 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		0749CE1A2882CB9F002B8D36 /* There-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "There-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0749CE1D2882CB9F002B8D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0749CE1F2882CB9F002B8D36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0749CE212882CB9F002B8D36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0749CE262882CBA2002B8D36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0749CE292882CBA2002B8D36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0749CE2B2882CBA2002B8D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0756104B288FBAF9001C0EA7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0756104D288FD908001C0EA7 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		0756104F2890025E001C0EA7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		07B85ECC2893A6000088BCE3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		07C53C64289806F100FB9FEE /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		07D89EAD288E8FA2001A4281 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07D89EAF288E8FB6001A4281 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		07D89EB1288E9009001A4281 /* ViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
 		07D89EB3288EA601001A4281 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		07D89EB5288EA951001A4281 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
+		07D89F812897DD1B004FC808 /* CustomPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPostCell.swift; sourceTree = "<group>"; };
+		07E6725F2897D161005768CB /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		07E672612897D29A005768CB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		67AA3DBED054395C30105591 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33568F03BF2FAD6BC98DC5C /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,9 +98,13 @@
 		07319878288C1FC700C2C068 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				07319879288C256E00C2C068 /* CustomTextField.swift */,
 				0731987B288C262300C2C068 /* UIKitExtension.swift */,
 				0756104B288FBAF9001C0EA7 /* CustomButton.swift */,
+				07E6725F2897D161005768CB /* CustomTabBar.swift */,
+				07E672612897D29A005768CB /* CustomTextField.swift */,
+				07D89F812897DD1B004FC808 /* CustomPostCell.swift */,
+				07C53C64289806F100FB9FEE /* UIButton+.swift */,
+				070260E028992B3F003F7416 /* CustomSnsButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -124,7 +134,6 @@
 				07319878288C1FC700C2C068 /* Extension */,
 				0749CE1D2882CB9F002B8D36 /* AppDelegate.swift */,
 				0749CE1F2882CB9F002B8D36 /* SceneDelegate.swift */,
-				0749CE212882CB9F002B8D36 /* ViewController.swift */,
 				0749CE262882CBA2002B8D36 /* Assets.xcassets */,
 				0749CE282882CBA2002B8D36 /* LaunchScreen.storyboard */,
 				0749CE2B2882CBA2002B8D36 /* Info.plist */,
@@ -137,11 +146,11 @@
 			children = (
 				07D89EAA288E8F0B001A4281 /* InitialView */,
 				0712BC9628868D770017A81F /* HomeViewController.swift */,
+				07B85ECC2893A6000088BCE3 /* PostViewController.swift */,
 				0712BC9828868D880017A81F /* SearchViewController.swift */,
 				0712BC9A28868D970017A81F /* ChatViewController.swift */,
 				0712BC9C28868DA00017A81F /* MypageViewController.swift */,
 				0712BC9E28868DD20017A81F /* MoreViewController.swift */,
-				0759B2F82886AF9B005B9018 /* BaseNavigationController.swift */,
 				0712BCA0288698AD0017A81F /* MainTabBarController.swift */,
 				07D89EB1288E9009001A4281 /* ViewPager.swift */,
 				07D89EB3288EA601001A4281 /* CollectionTableViewCell.swift */,
@@ -312,20 +321,23 @@
 				07D89EB6288EA951001A4281 /* TileCollectionViewCell.swift in Sources */,
 				0712BC9928868D880017A81F /* SearchViewController.swift in Sources */,
 				0756104C288FBAF9001C0EA7 /* CustomButton.swift in Sources */,
-				0731987A288C256E00C2C068 /* CustomTextField.swift in Sources */,
-				0749CE222882CB9F002B8D36 /* ViewController.swift in Sources */,
+				07B85ECD2893A6000088BCE3 /* PostViewController.swift in Sources */,
 				0712BCA1288698AD0017A81F /* MainTabBarController.swift in Sources */,
 				0712BC9D28868DA00017A81F /* MypageViewController.swift in Sources */,
 				0749CE1E2882CB9F002B8D36 /* AppDelegate.swift in Sources */,
+				070260E128992B3F003F7416 /* CustomSnsButton.swift in Sources */,
 				075610502890025E001C0EA7 /* NavigationViewController.swift in Sources */,
 				0731987C288C262300C2C068 /* UIKitExtension.swift in Sources */,
 				07D89EB4288EA601001A4281 /* CollectionTableViewCell.swift in Sources */,
 				0749CE202882CB9F002B8D36 /* SceneDelegate.swift in Sources */,
+				07C53C65289806F100FB9FEE /* UIButton+.swift in Sources */,
 				07D89EB0288E8FB6001A4281 /* SignUpViewController.swift in Sources */,
 				0712BC9F28868DD20017A81F /* MoreViewController.swift in Sources */,
+				07E672622897D29A005768CB /* CustomTextField.swift in Sources */,
 				0712BC9B28868D970017A81F /* ChatViewController.swift in Sources */,
-				0759B2F92886AF9B005B9018 /* BaseNavigationController.swift in Sources */,
 				0756104E288FD908001C0EA7 /* InitialViewController.swift in Sources */,
+				07E672602897D161005768CB /* CustomTabBar.swift in Sources */,
+				07D89F822897DD1B004FC808 /* CustomPostCell.swift in Sources */,
 				07D89EAE288E8FA2001A4281 /* LoginViewController.swift in Sources */,
 				0712BC9728868D770017A81F /* HomeViewController.swift in Sources */,
 				07D89EB2288E9009001A4281 /* ViewPager.swift in Sources */,
