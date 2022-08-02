@@ -2,7 +2,7 @@
 //  CustomTextField.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/23.
+//  Created by 양채연 on 2022/08/01.
 //
 
 import Foundation
@@ -18,19 +18,17 @@ class CustomTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(image: UIImage, text: String) {
+    convenience init(text: String) {
         self.init()
-        self.backgroundColor = UIColor.rgb(red: 243, green: 243, blue: 243)
-        self.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor : UIColor.rgb(red: 194, green: 194, blue: 194)])
-        self.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 16)
-        self.layer.cornerRadius = 20.0
+        self.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor : UIColor.rgb(red: 100, green: 116, blue: 139)])
+        self.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 20)
         self.layer.masksToBounds = true
         self.isUserInteractionEnabled = true
         self.delegate = self
-        self.textColor = UIColor.rgb(red: 65, green: 65, blue: 65)
-        self.setLeft(image: image)
-        self.setRight()
+        self.textColor = UIColor.rgb(red: 13, green: 15, blue: 17)
+
     }
+    
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: UIEdgeInsets(top: 12, left: 40, bottom: 13, right: 40))
@@ -43,6 +41,11 @@ class CustomTextField: UITextField {
     
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.textRect(forBounds: bounds)
+        let border = CALayer()
+        border.frame = CGRect(x: 0,  y: self.frame.size.height-1, width: self.frame.width/1.1, height: 1)
+        border.borderWidth = 1
+        border.backgroundColor = UIColor.systemGray2.cgColor
+        self.layer.addSublayer(border)
         return rect.inset(by: UIEdgeInsets.init(top: 12, left: 9, bottom: 13, right: 9))
     }
     
@@ -51,11 +54,11 @@ class CustomTextField: UITextField {
 extension CustomTextField: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.backgroundColor = UIColor.rgb(red: 252, green: 245, blue: 235)
+        self.backgroundColor = UIColor.rgb(red: 247, green: 248, blue: 249)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        self.backgroundColor = UIColor.rgb(red: 243, green: 243, blue: 243)
+        self.backgroundColor = UIColor.rgb(red: 247, green: 248, blue: 249)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -63,4 +66,6 @@ extension CustomTextField: UITextFieldDelegate {
         return true
     }
 
+
 }
+

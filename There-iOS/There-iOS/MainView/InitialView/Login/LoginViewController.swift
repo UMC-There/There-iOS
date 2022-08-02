@@ -12,67 +12,178 @@ import SnapKit
 class LoginViewController: UIViewController {
     
     // MARK: - Init
+    
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
-        title = "ppppppp"
     }
 
-    
     // MARK: - Property
 
-    var stackView: UIStackView!
-    var labelView: UIView!
-    var textFieldView: UIStackView!
-    var loginbtnView: UIStackView!
-    var moreOprionView: UIStackView!
-    
-//    private let label = UILabel().then {
-//        $0.text = "아이디와 비밀번호를 입력하세요"
-//        $0.font = UIFont.boldSystemFont(ofSize: 40.0)
-//    }
+    private lazy var label: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 35.0, weight: .bold)
+        label.numberOfLines = 2
+        label.textColor = .label
+        label.text = "아이디와 비밀번호를 입력하세요"
+        
+        return label
 
-    private let loginBtn = CustomButton(text: "로그인 해버리기", bgColor: UIColor.rgb(red: 0, green: 0, blue: 0),
-                                        titleColor: UIColor.rgb(red: 255, green: 255, blue: 255))
+    }()
+
+    private lazy var idField: UITextField = {
+        let id = CustomTextField(text: "아이디를 입력하세요")
+
+        return id
+    }()
     
+    private lazy var passwordField: UITextField = {
+        let password = CustomTextField(text: "비밀번호를 입력하세요")
+
+        return password
+    }()
+    
+    private lazy var findMyProfile: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 16.0, weight: .medium)
+        label.text = "아이디/비밀번호 찾기"
+        label.textColor = UIColor.rgb(red: 100, green: 116, blue: 139)
+        
+        return label
+    }()
+        
+
+    private let loginBtn = CustomButton(text: "로그인", bgColor: UIColor.black, titleColor: UIColor.white)
+    
+    private lazy var insta: UIButton = {
+        let btn = CustomSnsButton(text: "인스타그램", bgColor: UIColor.white, titleColor: UIColor.black, imageName: "Instagram")
+        
+        btn.imageEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 12)
+        return btn
+    }()
+    
+    private lazy var google: UIButton = {
+        let btn = CustomSnsButton(text: "구글", bgColor: UIColor.white, titleColor: UIColor.black, imageName: "Google")
+        btn.imageEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 12)
+        
+        return btn
+    }()
+    
+    private lazy var checkMember: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 16.0)
+        label.textColor = UIColor.rgb(red: 100, green: 116, blue: 139)
+        label.text = "아직 회원이 아니신가요?"
+        
+        return label
+    }()
+
+    private lazy var goSignUp: UIButton = {
+        let btn = UIButton()
+        
+        btn.setTitle("회원가입", for: .normal)
+        btn.setTitleColor(.label, for: .normal)
+        btn.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .medium)
+        
+        return btn
+    }()
+    
+    private lazy var chevronBtn: UIButton = {
+        let btn = UIButton()
+        btn.setImage(systemName: "chevron.right")
+        
+        return btn
+    }()
+    
+    // MARK: - Function
     
     @objc
-    func buttonClicked(_ sender: CustomButton?) {
-        if sender == loginBtn {
-            let loginView = LoginViewController(bgColor: UIColor.yellow)
-//            loginView.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(loginView, animated: true)
-        }else {
-            let signUpView = SignUpViewController(bgColor: UIColor.white)
-            signUpView.modalPresentationStyle = .fullScreen
-            self.present(signUpView, animated: false, completion: nil)
-        }
+    private func clickedLogin() {
+          let tab = MainTabBarController()
+          tab.modalPresentationStyle = .fullScreen
+          self.present(tab, animated: false, completion: nil)
     }
     
-    
-//     MARK: - Function
-
-    func setLayout() {
-//        loginBtn.then {
-//            $0.translatesAutoresizingMaskIntoConstraints = false
-//        }
-        loginBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        loginBtn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 100).isActive = true
-
-    }
-
-    @objc func popVC() {
-        print("pop")
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(loginBtn)
-        setLayout()
+        setup()
         
-        
-        loginBtn.addTarget(self, action: #selector(popVC), for: .touchUpInside)
+        loginBtn.addTarget(self, action: #selector(clickedLogin), for: .touchUpInside)
     }
+}
+
+    
+    // MARK: - Extension
 
 
+extension LoginViewController {
+    func setup() {
+        [
+            label,
+            idField,
+            passwordField,
+            findMyProfile,
+            loginBtn,
+            insta,
+            google,
+            checkMember,
+            goSignUp,
+            chevronBtn,
+            
+        ].forEach { view.addSubview($0) }
+        
+        let basicOffset = 20
+        
+        label.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(basicOffset)
+            $0.trailing.equalToSuperview().offset(basicOffset)
+            $0.top.equalToSuperview().inset(150)
+        }
+        
+        idField.snp.makeConstraints {
+            $0.leading.equalTo(label)
+            $0.trailing.equalTo(label)
+            $0.top.equalTo(label.snp.bottom).offset(80)
+        }
+               
+        passwordField.snp.makeConstraints {
+            $0.leading.equalTo(label)
+            $0.trailing.equalTo(label)
+            $0.top.equalTo(idField.snp.bottom).offset(35)
+        }
+        
+        findMyProfile.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(30)
+            $0.top.equalTo(passwordField.snp.bottom).offset(10)
+        }
+
+        loginBtn.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.leading.equalTo(label)
+            $0.top.equalTo(findMyProfile.snp.bottom).offset(60)
+        }
+        
+        insta.snp.makeConstraints {
+            $0.leading.equalTo(label)
+            $0.top.equalTo(loginBtn.snp.bottom).offset(15)
+        }
+        google.snp.makeConstraints {
+            $0.leading.equalTo(insta.snp.trailing).offset(10)
+            $0.top.equalTo(insta)
+        }
+        checkMember.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(90)
+            $0.top.equalTo(google.snp.bottom).offset(110)
+        }
+        
+        goSignUp.snp.makeConstraints {
+            $0.leading.equalTo(checkMember.snp.trailing).offset(10)
+            $0.top.equalTo(google.snp.bottom).offset(103)
+        }
+        
+        chevronBtn.snp.makeConstraints {
+            $0.leading.equalTo(goSignUp.snp.trailing).offset(10)
+            $0.top.equalTo(google.snp.bottom).offset(107)
+        }
+    }
 }
