@@ -101,6 +101,8 @@ class MypageViewController: UIViewController{
         tableView.backgroundColor = .systemBackground
         tableView.dataSource = self
         
+        //tableView.contentInset =  UIEdgeInsets(top: maxHeight, left: 0, bottom: 0, right: 0)
+        
         tableView.register(PortfolioTableViewCell.self, forCellReuseIdentifier: "PortfolioTableViewCell")
         
         tableView.translatesAutoresizingMaskIntoConstraints = false //중요!!!!
@@ -183,7 +185,7 @@ extension MypageViewController: UICollectionViewDelegateFlowLayout {
 //TableView DataSource, Delegate: portfolio
 extension MypageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 //무한 스크롤
+        return 10 //아이템 무한 생성
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -194,6 +196,21 @@ extension MypageViewController: UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
 }
+
+/*
+extension MypageViewController: UITableViewDelegate{
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            if scrollView.contentOffset.y < 0 {
+                heightConstraint.constant = max(abs(scrollView.contentOffset.y), minHeight)
+            } else {
+                heightConstraint.constant = minHeight
+            }
+            let offset = -scrollView.contentOffset.y
+            let percentage = (offset-100)/50
+            upperHeaderView.alpha = percentage
+        }
+}
+ */
 
 
 
