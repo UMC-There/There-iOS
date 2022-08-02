@@ -95,6 +95,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070B21FA2899440B0027E7F0 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				0712BC9628868D770017A81F /* HomeViewController.swift */,
+				07D89EB3288EA601001A4281 /* CollectionTableViewCell.swift */,
+				07D89EB5288EA951001A4281 /* TileCollectionViewCell.swift */,
+				07D89EB1288E9009001A4281 /* ViewPager.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		070B21FB289944170027E7F0 /* SearchVIew */ = {
+			isa = PBXGroup;
+			children = (
+				0712BC9828868D880017A81F /* SearchViewController.swift */,
+			);
+			path = SearchVIew;
+			sourceTree = "<group>";
+		};
+		070B21FC2899441E0027E7F0 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				0712BC9A28868D970017A81F /* ChatViewController.swift */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		070B21FD289944270027E7F0 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				0712BC9C28868DA00017A81F /* MypageViewController.swift */,
+				070B21FF2899444F0027E7F0 /* PostView */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		070B21FE2899442F0027E7F0 /* EtcView */ = {
+			isa = PBXGroup;
+			children = (
+				0712BC9E28868DD20017A81F /* MoreViewController.swift */,
+			);
+			path = EtcView;
+			sourceTree = "<group>";
+		};
+		070B21FF2899444F0027E7F0 /* PostView */ = {
+			isa = PBXGroup;
+			children = (
+				07B85ECC2893A6000088BCE3 /* PostViewController.swift */,
+			);
+			path = PostView;
+			sourceTree = "<group>";
+		};
 		07319878288C1FC700C2C068 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,17 +196,13 @@
 		07D89EA9288E8EDB001A4281 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				070B21FE2899442F0027E7F0 /* EtcView */,
+				070B21FD289944270027E7F0 /* ProfileView */,
+				070B21FC2899441E0027E7F0 /* ChatView */,
+				070B21FB289944170027E7F0 /* SearchVIew */,
+				070B21FA2899440B0027E7F0 /* HomeView */,
 				07D89EAA288E8F0B001A4281 /* InitialView */,
-				0712BC9628868D770017A81F /* HomeViewController.swift */,
-				07B85ECC2893A6000088BCE3 /* PostViewController.swift */,
-				0712BC9828868D880017A81F /* SearchViewController.swift */,
-				0712BC9A28868D970017A81F /* ChatViewController.swift */,
-				0712BC9C28868DA00017A81F /* MypageViewController.swift */,
-				0712BC9E28868DD20017A81F /* MoreViewController.swift */,
 				0712BCA0288698AD0017A81F /* MainTabBarController.swift */,
-				07D89EB1288E9009001A4281 /* ViewPager.swift */,
-				07D89EB3288EA601001A4281 /* CollectionTableViewCell.swift */,
-				07D89EB5288EA951001A4281 /* TileCollectionViewCell.swift */,
 				0756104F2890025E001C0EA7 /* NavigationViewController.swift */,
 			);
 			path = MainView;
