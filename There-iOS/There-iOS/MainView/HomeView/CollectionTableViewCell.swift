@@ -7,31 +7,18 @@
 
 import UIKit
 
+// MARK: - Struct
 struct CollectionTableViewCellViewModel{
     let viewModels: [TileCollectionViewCellViewModel]
 }
+
+// MARK: - Protocol
 
 protocol CollectionTableViewCellDelegate: AnyObject {
     func collectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel)
 }
 
 class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
-    static let identifier = "CollectionTableViewCell"
-    
-    weak var delegate: CollectionTableViewCellDelegate?
-    
-    private var viewModels: [TileCollectionViewCellViewModel] = []
-    
-    private let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(TileCollectionViewCell.self, forCellWithReuseIdentifier: TileCollectionViewCell.identifier)
-        collectionView.backgroundColor = .systemBackground
-        return collectionView
-    }()
     
     // MARK: - Init
     
@@ -46,6 +33,33 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
+    // MARK: - Property
+    
+    static let identifier = "CollectionTableViewCell"
+    
+    weak var delegate: CollectionTableViewCellDelegate?
+    
+    private var viewModels: [TileCollectionViewCellViewModel] = []
+ 
+    private lazy var myFollow: UILabel = {
+        let myFollow = UILabel()
+        myFollow.font = .systemFont(ofSize: 25.0)
+        myFollow.textColor = .label
+        myFollow.text = "나의 팔로우"
+        
+        return myFollow
+    }()
+    
+    private let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(TileCollectionViewCell.self, forCellWithReuseIdentifier: TileCollectionViewCell.identifier)
+        collectionView.backgroundColor = .systemBackground
+        return collectionView
+    }()
     
     // MARK: - Layout
     

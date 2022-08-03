@@ -1,19 +1,27 @@
 //
-//  MoreViewController.swift
+//  PostViewController.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/19.
+//  Created by 양채연 on 2022/07/29.
 //
 
 import UIKit
 
-class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: - Init
 
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
         navigationItem.title = "Instagram"
     }
+    
+    
+    // MARK: - Property
+    
+
+    
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -28,13 +36,10 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
             TileCollectionViewCellViewModel(name: "Kakao", backgroundColor: .systemYellow),
             TileCollectionViewCellViewModel(name: "Naver", backgroundColor: .systemGreen),
             TileCollectionViewCellViewModel(name: "Facebook", backgroundColor: .systemGray),
-            TileCollectionViewCellViewModel(name: "Intel", backgroundColor: .systemPink),
-            TileCollectionViewCellViewModel(name: "Naver", backgroundColor: .systemGreen),
-            TileCollectionViewCellViewModel(name: "Facebook", backgroundColor: .systemGray),
-            TileCollectionViewCellViewModel(name: "Intel", backgroundColor: .systemPink),
         ])
     ]
     
+    // MARK: - Function
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +76,9 @@ class MoreViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 }
 
-extension MoreViewController: CollectionTableViewCellDelegate {
+// MARK: - Extension
+
+extension HomeViewController: CollectionTableViewCellDelegate {
     func collectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel) {
         let alert = UIAlertController(title: viewModel.name, message: "You successfully get the selected item!", preferredStyle: .alert
         )
@@ -80,3 +87,4 @@ extension MoreViewController: CollectionTableViewCellDelegate {
         present(alert, animated: true)
     }
 }
+

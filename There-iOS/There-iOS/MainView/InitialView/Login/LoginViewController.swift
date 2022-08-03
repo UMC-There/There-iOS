@@ -11,6 +11,8 @@ import SnapKit
 
 class LoginViewController: UIViewController {
     
+    // 공통 인스턴스에 있는 통신하는 메서드를 호출해서 받은 데이터를 실질적으로 가공함
+    
     // MARK: - Init
     
     convenience init(bgColor: UIColor) {
@@ -31,14 +33,15 @@ class LoginViewController: UIViewController {
 
     }()
 
-    private lazy var idField: UITextField = {
-        let id = CustomTextField(text: "아이디를 입력하세요")
+    private lazy var emailField: UITextField = {
+        let email = CustomTextField(text: "이메일을 입력하세요")
 
-        return id
+        return email
     }()
     
     private lazy var passwordField: UITextField = {
         let password = CustomTextField(text: "비밀번호를 입력하세요")
+        password.isSecureTextEntry = true
 
         return password
     }()
@@ -99,16 +102,26 @@ class LoginViewController: UIViewController {
     
     @objc
     private func clickedLogin() {
+        login()
           let tab = MainTabBarController()
           tab.modalPresentationStyle = .fullScreen
           self.present(tab, animated: false, completion: nil)
     }
     
+    @objc
+    private func clickedSignUp() {
+        let signUp = SignUpViewController(bgColor: UIColor.white)
+        
+        navigationController?.pushViewController(signUp, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        login()
         
         loginBtn.addTarget(self, action: #selector(clickedLogin), for: .touchUpInside)
+        goSignUp.addTarget(self, action: #selector(clickedSignUp), for: .touchUpInside)
     }
 }
 
@@ -120,7 +133,7 @@ extension LoginViewController {
     func setup() {
         [
             label,
-            idField,
+            emailField,
             passwordField,
             findMyProfile,
             loginBtn,
@@ -140,7 +153,7 @@ extension LoginViewController {
             $0.top.equalToSuperview().inset(150)
         }
         
-        idField.snp.makeConstraints {
+        emailField.snp.makeConstraints {
             $0.leading.equalTo(label)
             $0.trailing.equalTo(label)
             $0.top.equalTo(label.snp.bottom).offset(80)
@@ -149,7 +162,7 @@ extension LoginViewController {
         passwordField.snp.makeConstraints {
             $0.leading.equalTo(label)
             $0.trailing.equalTo(label)
-            $0.top.equalTo(idField.snp.bottom).offset(35)
+            $0.top.equalTo(emailField.snp.bottom).offset(35)
         }
         
         findMyProfile.snp.makeConstraints {
@@ -185,5 +198,41 @@ extension LoginViewController {
             $0.leading.equalTo(goSignUp.snp.trailing).offset(10)
             $0.top.equalTo(google.snp.bottom).offset(107)
         }
+    }
+    
+    // 서버 통신 코드를 실제로 뷰 컨트롤러에서 호출해서 사용하는 부분
+    
+    func login() {
+        // 값 가져오기
+        guard let email = emailField.text else {return}
+        guard let password = passwordField.text else {return}
+        
+        // 서버 통신 서비스 코드를 싱글톤 변수를 통해 접근
+        // 호출 후에 받응 응답을 처리
+        
+        LoginService.shared.login(email: email, password: password) {
+            response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? LoginResponse else {return}
+                print(data)
+                self.alert(message: data.message)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func alert(message: String) {
+        let alertVC = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default)
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true)
     }
 }
