@@ -11,6 +11,8 @@ import SnapKit
 
 class LoginViewController: UIViewController {
     
+    // 공통 인스턴스에 있는 통신하는 메서드를 호출해서 받은 데이터를 실질적으로 가공함
+    
     // MARK: - Init
     
     convenience init(bgColor: UIColor) {
@@ -105,11 +107,36 @@ class LoginViewController: UIViewController {
           self.present(tab, animated: false, completion: nil)
     }
     
+    @objc
+    private func clickedSignUp() {
+        let signUp = SignUpViewController(bgColor: UIColor.white)
+        
+        navigationController?.pushViewController(signUp, animated: false)
+    }
+    
+    func loginAction() {
+        LoginService.shared.login(completion: result in
+                                  switch result {
+        case .success(let message):
+            print("success-", message)
+        case .requestErr(let message):
+            print("requestErr")
+        case .pathErr:
+            print("pathErr")
+        case .serverErr:
+            print("serverErr")
+        case .networkFail:
+            print("networkFail")
+                                    
+        )
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         
         loginBtn.addTarget(self, action: #selector(clickedLogin), for: .touchUpInside)
+        goSignUp.addTarget(self, action: #selector(clickedSignUp), for: .touchUpInside)
     }
 }
 

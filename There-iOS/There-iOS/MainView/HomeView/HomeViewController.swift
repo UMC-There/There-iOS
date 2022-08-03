@@ -20,6 +20,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - Property
     
+
+    
+    
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
@@ -33,13 +36,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             TileCollectionViewCellViewModel(name: "Kakao", backgroundColor: .systemYellow),
             TileCollectionViewCellViewModel(name: "Naver", backgroundColor: .systemGreen),
             TileCollectionViewCellViewModel(name: "Facebook", backgroundColor: .systemGray),
-            TileCollectionViewCellViewModel(name: "Intel", backgroundColor: .systemPink),
-            TileCollectionViewCellViewModel(name: "Naver", backgroundColor: .systemGreen),
-            TileCollectionViewCellViewModel(name: "Facebook", backgroundColor: .systemGray),
-            TileCollectionViewCellViewModel(name: "Intel", backgroundColor: .systemPink),
         ])
     ]
     
+    // MARK: - Function
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +47,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.delegate = self
     }
-    
-    // MARK: - Function
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

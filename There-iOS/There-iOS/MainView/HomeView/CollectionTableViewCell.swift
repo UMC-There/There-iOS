@@ -41,6 +41,15 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     weak var delegate: CollectionTableViewCellDelegate?
     
     private var viewModels: [TileCollectionViewCellViewModel] = []
+ 
+    private lazy var myFollow: UILabel = {
+        let myFollow = UILabel()
+        myFollow.font = .systemFont(ofSize: 25.0)
+        myFollow.textColor = .label
+        myFollow.text = "나의 팔로우"
+        
+        return myFollow
+    }()
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

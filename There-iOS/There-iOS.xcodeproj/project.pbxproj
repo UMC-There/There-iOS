@@ -14,6 +14,9 @@
 		0712BC9D28868DA00017A81F /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712BC9C28868DA00017A81F /* MypageViewController.swift */; };
 		0712BC9F28868DD20017A81F /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712BC9E28868DD20017A81F /* MoreViewController.swift */; };
 		0712BCA1288698AD0017A81F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712BCA0288698AD0017A81F /* MainTabBarController.swift */; };
+		0723121D289A652A00DEBDDC /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723121C289A652A00DEBDDC /* NetworkResult.swift */; };
+		0723121F289A654400DEBDDC /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723121E289A654400DEBDDC /* APIConstants.swift */; };
+		07231221289A657000DEBDDC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07231220289A657000DEBDDC /* LoginService.swift */; };
 		0731987C288C262300C2C068 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731987B288C262300C2C068 /* UIKitExtension.swift */; };
 		0749CE1E2882CB9F002B8D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749CE1D2882CB9F002B8D36 /* AppDelegate.swift */; };
 		0749CE202882CB9F002B8D36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749CE1F2882CB9F002B8D36 /* SceneDelegate.swift */; };
@@ -24,6 +27,8 @@
 		075610502890025E001C0EA7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0756104F2890025E001C0EA7 /* NavigationViewController.swift */; };
 		0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; };
 		0759B2F62886A994005B9018 /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0785EB57289A5DAD000446E2 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0785EB56289A5DAD000446E2 /* LoginDataModel.swift */; };
+		0785EB59289A5DBF000446E2 /* SignUpDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0785EB58289A5DBF000446E2 /* SignUpDataModel.swift */; };
 		07B85ECD2893A6000088BCE3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B85ECC2893A6000088BCE3 /* PostViewController.swift */; };
 		07C53C65289806F100FB9FEE /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C53C64289806F100FB9FEE /* UIButton+.swift */; };
 		07D89EAE288E8FA2001A4281 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D89EAD288E8FA2001A4281 /* LoginViewController.swift */; };
@@ -58,6 +63,9 @@
 		0712BC9C28868DA00017A81F /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		0712BC9E28868DD20017A81F /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		0712BCA0288698AD0017A81F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		0723121C289A652A00DEBDDC /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		0723121E289A654400DEBDDC /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		07231220289A657000DEBDDC /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		0731987B288C262300C2C068 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		0749CE1A2882CB9F002B8D36 /* There-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "There-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0749CE1D2882CB9F002B8D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,8 @@
 		0756104B288FBAF9001C0EA7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0756104D288FD908001C0EA7 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		0756104F2890025E001C0EA7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		0785EB56289A5DAD000446E2 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
+		0785EB58289A5DBF000446E2 /* SignUpDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataModel.swift; sourceTree = "<group>"; };
 		07B85ECC2893A6000088BCE3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		07C53C64289806F100FB9FEE /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		07D89EAD288E8FA2001A4281 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +157,15 @@
 			path = PostView;
 			sourceTree = "<group>";
 		};
+		0723121B289A651400DEBDDC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0723121C289A652A00DEBDDC /* NetworkResult.swift */,
+				0723121E289A654400DEBDDC /* APIConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		07319878288C1FC700C2C068 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +201,7 @@
 		0749CE1C2882CB9F002B8D36 /* There-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				0723121B289A651400DEBDDC /* Network */,
 				07D89EA9288E8EDB001A4281 /* MainView */,
 				07319878288C1FC700C2C068 /* Extension */,
 				0749CE1D2882CB9F002B8D36 /* AppDelegate.swift */,
@@ -222,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				07D89EAD288E8FA2001A4281 /* LoginViewController.swift */,
+				0785EB56289A5DAD000446E2 /* LoginDataModel.swift */,
+				07231220289A657000DEBDDC /* LoginService.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -230,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				07D89EAF288E8FB6001A4281 /* SignUpViewController.swift */,
+				0785EB58289A5DBF000446E2 /* SignUpDataModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -385,10 +408,15 @@
 				0712BC9B28868D970017A81F /* ChatViewController.swift in Sources */,
 				0756104E288FD908001C0EA7 /* InitialViewController.swift in Sources */,
 				07E672602897D161005768CB /* CustomTabBar.swift in Sources */,
+				0723121D289A652A00DEBDDC /* NetworkResult.swift in Sources */,
+				0785EB59289A5DBF000446E2 /* SignUpDataModel.swift in Sources */,
+				0785EB57289A5DAD000446E2 /* LoginDataModel.swift in Sources */,
 				07D89F822897DD1B004FC808 /* CustomPostCell.swift in Sources */,
+				0723121F289A654400DEBDDC /* APIConstants.swift in Sources */,
 				07D89EAE288E8FA2001A4281 /* LoginViewController.swift in Sources */,
 				0712BC9728868D770017A81F /* HomeViewController.swift in Sources */,
 				07D89EB2288E9009001A4281 /* ViewPager.swift in Sources */,
+				07231221289A657000DEBDDC /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
