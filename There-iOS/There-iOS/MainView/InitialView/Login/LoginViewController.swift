@@ -215,12 +215,11 @@ extension LoginViewController {
             switch response {
             case .success(let data):
                 guard let data = data as? LoginResponse else {return}
-                print(data)
                 self.alert(message: data.message)
             case .requestErr(let err):
                 print(err)
             case .pathErr:
-                print("pathErr")
+                print("pathErr")    // login 과 signup 모두 path error 발생
             case .serverErr:
                 print("serverErr")
             case .networkFail:
