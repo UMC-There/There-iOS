@@ -7,3 +7,4 @@
 - Home Screen
 - Initial, Login, Join Screen
 - Etc screen
+- Communication Server(login/join)
