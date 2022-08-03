@@ -16,15 +16,15 @@ struct SignUpService {
     // static을 활용해서 shared라는 LoginService 싱글턴 인스턴스 선언
     static let shared = SignUpService()
     
-    // login 메서드: @escape 키워드를 사용해 escape closure형태로 completion 정의
+    private init() {}
+    
+    // signUp 메서드: @escape 키워드를 사용해 escape closure형태로 completion 정의
     // 해당 네트워크 작업이 끝날 때 -> completion closure에 네트워크의 결과를 담아서 호출
     
     func signUp(name: String, email: String, password: String, checkpwd: String, completion: @escaping(NetworkResult<Any>)->Void) {
         // json 형태로 받아오기 위해 header 작성 -> 필요한 헤더를 key-value의 형태로 작성
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         
-        //            // dataResponse 안에서 통신에 대한 결과물이 들어있음
-        //            dump(dataResponse)
         
         // 요청 바디
         let body: Parameters = [
@@ -37,7 +37,7 @@ struct SignUpService {
         
         // dataRequest: 주소를 가지고, get 방식으로, 인코딩 방식으로, 헤더 정보와 함께 요청을 보내기위한 정보 (요청서)
         let dataRequest = AF.request(APIConstants.signUpURL,
-                                     method: .post,
+                                     method: .post, parameters: body,
                                      encoding: JSONEncoding.default,
                                      headers: header)
         

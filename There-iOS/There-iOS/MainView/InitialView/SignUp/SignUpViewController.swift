@@ -81,8 +81,6 @@ class SignUpViewController: UIViewController {
         setup()
         
         signUp()
-        
-
     }
 
 
