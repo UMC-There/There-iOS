@@ -6,9 +6,14 @@
 //
 
 import Foundation
-import Alamofire
 
-class LoginDataModel {
-    var email = "",
-    var password = ""
+struct LoginResponse: Codable {
+    let isSuccess: Bool?
+    let message: String
+    let data: LoginData?
+}
+
+struct LoginData: Codable {
+    let email: String
+    let password: String
 }

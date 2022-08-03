@@ -17,6 +17,7 @@
 		0723121D289A652A00DEBDDC /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723121C289A652A00DEBDDC /* NetworkResult.swift */; };
 		0723121F289A654400DEBDDC /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723121E289A654400DEBDDC /* APIConstants.swift */; };
 		07231221289A657000DEBDDC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07231220289A657000DEBDDC /* LoginService.swift */; };
+		07231224289A77BA00DEBDDC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 07231223289A77BA00DEBDDC /* Alamofire */; };
 		0731987C288C262300C2C068 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731987B288C262300C2C068 /* UIKitExtension.swift */; };
 		0749CE1E2882CB9F002B8D36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749CE1D2882CB9F002B8D36 /* AppDelegate.swift */; };
 		0749CE202882CB9F002B8D36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0749CE1F2882CB9F002B8D36 /* SceneDelegate.swift */; };
@@ -99,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0759B2F52886A994005B9018 /* Pods_There_iOS.framework in Frameworks */,
+				07231224289A77BA00DEBDDC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +295,9 @@
 			dependencies = (
 			);
 			name = "There-iOS";
+			packageProductDependencies = (
+				07231223289A77BA00DEBDDC /* Alamofire */,
+			);
 			productName = "There-iOS";
 			productReference = 0749CE1A2882CB9F002B8D36 /* There-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -321,6 +326,9 @@
 				Base,
 			);
 			mainGroup = 0749CE112882CB9E002B8D36;
+			packageReferences = (
+				07231222289A77BA00DEBDDC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 0749CE1B2882CB9F002B8D36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -632,6 +640,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07231222289A77BA00DEBDDC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07231223289A77BA00DEBDDC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07231222289A77BA00DEBDDC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0749CE122882CB9E002B8D36 /* Project object */;
 }
