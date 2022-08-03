@@ -1,28 +1,23 @@
 //
-//  PostViewController.swift
+//  MoreViewController.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/29.
+//  Created by 양채연 on 2022/07/19.
 //
 
 import UIKit
-import SnapKit
-import Then
 
-class HomeViewController: UIViewController {
+class MoreViewController: UIViewController {
 
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
         navigationItem.title = "Instagram"
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
     }
-
-
 }
+

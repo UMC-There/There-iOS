@@ -43,12 +43,14 @@ class SignUpViewController: UIViewController {
     
     private lazy var passwordField: UITextField = {
         let password = CustomTextField(text: "비밀번호를 입력하세요")
+        password.isSecureTextEntry = true
 
         return password
     }()
     
     private lazy var rePasswordField: UITextField = {
         let rePassword = CustomTextField(text: "비밀번호를 다시 입력하세요")
+        rePassword.isSecureTextEntry = true
 
         return rePassword
     }()
@@ -77,7 +79,8 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-
+        
+        signUp()
     }
 
 
@@ -149,5 +152,43 @@ extension SignUpViewController {
         }
     }
     
+    
+    // 서버 통신 코드를 실제로 뷰 컨트롤러에서 호출해서 사용하는 부분
+    
+    func signUp() {
+        // 값 가져오기
+        guard let name = nicknameField.text else {return}
+        guard let email = emailField.text else {return}
+        guard let password = passwordField.text else {return}
+        guard let repassword = rePasswordField.text else {return}
+        
+        // 서버 통신 서비스 코드를 싱글톤 변수를 통해 접근
+        // 호출 후에 받응 응답을 처리
+        
+        SignUpService.shared.signUp(name: name, email: email, password: password, checkpwd: repassword) {
+            response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? SignUpResponse else {return}
+            
+                self.alert(message: data.message)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func alert(message: String) {
+        let alertVC = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default)
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true)
+    }
 
 }

@@ -7,21 +7,15 @@
 
 import UIKit
 
+// MARK: - Struct
 struct TileCollectionViewCellViewModel {
     let name: String
     let backgroundColor: UIColor
 }
 
 class TileCollectionViewCell: UICollectionViewCell {
-    static let identifier = "TileCollectionViewCell"
     
-    private let label: UILabel = {
-       let label = UILabel()
-        label.textColor = .white
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 20, weight: .medium)
-        return label
-    }()
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +29,20 @@ class TileCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
+    // MARK: - Property
+    
+    static let identifier = "TileCollectionViewCell"
+    
+    private let label: UILabel = {
+       let label = UILabel()
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 20, weight: .medium)
+        return label
+    }()
+    
+    // MARK: - Function
     
     override func layoutSubviews() {
         super.layoutSubviews()
