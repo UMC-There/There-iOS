@@ -118,6 +118,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        login()
         
         loginBtn.addTarget(self, action: #selector(clickedLogin), for: .touchUpInside)
         goSignUp.addTarget(self, action: #selector(clickedSignUp), for: .touchUpInside)

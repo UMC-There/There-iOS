@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct SingUpResponse: Codable {
-    let status: Int
+struct SignUpResponse: Codable {
+    let code: Int
     let isSuccess: Bool?
     let message: String
-    let data: SignUpData?
+    let result: SignUpResult?
     // 로그인 성공 시 data가 넘어오고, 실패 시 data가 안넘어옴
 }
 
@@ -21,3 +21,10 @@ struct SignUpData: Codable {
     let password: String
     let checkpwd: String
 }
+
+struct SignUpResult: Codable {
+    let jwt: String
+    let userIdx: Int
+}
+
+

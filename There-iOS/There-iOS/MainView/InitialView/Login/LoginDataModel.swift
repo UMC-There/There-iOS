@@ -8,12 +8,18 @@
 import Foundation
 
 struct LoginResponse: Codable {
+    let code: Int
     let isSuccess: Bool?
     let message: String
-    let data: LoginData?
+    let data: LoginResult?
 }
 
 struct LoginData: Codable {
     let email: String
     let password: String
+}
+
+struct LoginResult: Codable {
+    let jwt: String
+    let userIndx: Int
 }
