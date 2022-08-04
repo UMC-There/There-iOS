@@ -16,6 +16,9 @@ class MypageViewController: UIViewController{
             view.backgroundColor = bgColor
         }
     
+    let uploadViewController = UINavigationController(rootViewController: UploadViewController(uploadImage: UIImage()))
+    
+    
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 40.0
@@ -158,6 +161,9 @@ class MypageViewController: UIViewController{
 }
 
 
+
+
+
 //CollectionView DataSource, Delegete : post
 extension MypageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -226,15 +232,18 @@ private extension MypageViewController{
         userID.font = UIFont(name: "Plain", size:30)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: userID)
         
-        let writeButton = self.navigationItem.makeSFSymbolButton(self,
-                                                                 action: Selector("pushToWrite"),
-                                                                 symbolName: "plus")
+        let uploadButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(didTapUploadButton))
+        uploadButton.tintColor = .black
+                                           
         let popUpButton = self.navigationItem.makeSFSymbolButton(self,
                                                                  action: Selector("popUp"),
                                                                   symbolName: "line.3.horizontal")
                     
-        self.navigationItem.rightBarButtonItems = [popUpButton, writeButton]
-
+        self.navigationItem.rightBarButtonItems = [popUpButton, uploadButton]
+    }
+    
+    @objc func didTapUploadButton(){
+       present(uploadViewController, animated: true)
     }
     
     func setUpLayOut(){

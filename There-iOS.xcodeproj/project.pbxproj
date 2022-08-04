@@ -26,6 +26,7 @@
 		2F62966F28926EE700331A53 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62966E28926EE700331A53 /* PostCollectionViewCell.swift */; };
 		2F6296712892811500331A53 /* UINavigationItems+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6296702892811500331A53 /* UINavigationItems+.swift */; };
 		2F62967628928DDD00331A53 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F62967528928DDD00331A53 /* PortfolioTableViewCell.swift */; };
+		2F9BF79928996C1900DC26D0 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9BF79828996C1900DC26D0 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,7 @@
 		2F62966E28926EE700331A53 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F6296702892811500331A53 /* UINavigationItems+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItems+.swift"; sourceTree = "<group>"; };
 		2F62967528928DDD00331A53 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
+		2F9BF79828996C1900DC26D0 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		67AA3DBED054395C30105591 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B96D23B6861E2422F09BFCD8 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33568F03BF2FAD6BC98DC5C /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				2F6296632891A3B500331A53 /* ProfileDataView.swift */,
 				2F62966E28926EE700331A53 /* PostCollectionViewCell.swift */,
 				2F62967528928DDD00331A53 /* PortfolioTableViewCell.swift */,
+				2F9BF79828996C1900DC26D0 /* UploadViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0712BC9928868D880017A81F /* SearchViewController.swift in Sources */,
+				2F9BF79928996C1900DC26D0 /* UploadViewController.swift in Sources */,
 				0749CE222882CB9F002B8D36 /* ViewController.swift in Sources */,
 				0712BCA1288698AD0017A81F /* MainTabBarController.swift in Sources */,
 				0712BC9D28868DA00017A81F /* MypageViewController.swift in Sources */,
