@@ -9,6 +9,8 @@ import SnapKit
 import UIKit
 
 final class UploadViewController: UIViewController {
+    let tapGestureRecognizer = UITapGestureRecognizer(target: UploadViewController.self, action: #selector(imgPick))
+    
     private lazy var postTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "작품명"
@@ -36,7 +38,9 @@ final class UploadViewController: UIViewController {
         let label = UILabel()
         label.text = "사진선택"
         label.font = .systemFont(ofSize: 15.0)
-        label.target(forAction: #selector(imgPick), withSender: UITapGestureRecognizer().self)
+       
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(tapGestureRecognizer)
         return label
     }()
     
@@ -219,6 +223,7 @@ private extension UploadViewController{
         selectImageLabel.snp.makeConstraints{
             $0.centerX.equalTo(uploadImageView.snp.centerX)
             $0.centerY.equalTo(uploadImageView.snp.centerY)
+
             
         }
         
