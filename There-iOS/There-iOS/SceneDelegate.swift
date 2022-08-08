@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/16.
+//  Created by 양채연 on 2022/08/08.
 //
 
 import UIKit
@@ -29,6 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Light mode -> white, Dark mode -> black으로 설정됨
         window?.tintColor = .label
     }
+
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

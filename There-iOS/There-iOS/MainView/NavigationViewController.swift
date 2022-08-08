@@ -2,7 +2,7 @@
 //  NavigationViewController.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/26.
+//  Created by 양채연 on 2022/08/08.
 //
 
 import UIKit
@@ -15,7 +15,6 @@ class NavigationViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
 //    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-//        <#code#>
+//        
 //    }
-
 }

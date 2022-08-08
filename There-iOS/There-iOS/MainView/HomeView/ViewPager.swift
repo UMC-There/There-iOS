@@ -2,7 +2,7 @@
 //  ViewPager.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/25.
+//  Created by 양채연 on 2022/08/08.
 //
 
 import UIKit

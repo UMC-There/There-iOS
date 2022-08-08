@@ -1,10 +1,9 @@
 //
-//  LoginViewController.swift
+//  InitialViewController.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/26.
+//  Created by 양채연 on 2022/08/08.
 //
-
 
 import UIKit
 import Then
@@ -69,4 +68,3 @@ class InitialViewController: UIViewController {
     }
 
 }
-
