@@ -2,7 +2,7 @@
 //  MainTabBarController.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/19.
+//  Created by 양채연 on 2022/08/08.
 //
 
 import UIKit
@@ -31,7 +31,7 @@ class MainTabBarController: UITabBarController {
         let searchTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 1)
         let chatTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "message") , selectedImage: UIImage(systemName: "message.fill"))
         let mypageTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person") , selectedImage: UIImage(systemName: "person.fill"))
-        let moreTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "ellipsis"), selectedImage: UIImage(systemName: "ellipsis.fill")) 
+        let moreTabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "ellipsis"), selectedImage: UIImage(systemName: "ellipsis.fill"))
         
         
         homeNC.tabBarItem = homeTabBarItem
@@ -43,5 +43,3 @@ class MainTabBarController: UITabBarController {
     }
 
 }
-
-

@@ -2,7 +2,7 @@
 //  CollectionTableViewCell.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/25.
+//  Created by 양채연 on 2022/08/08.
 //
 
 import UIKit
@@ -13,7 +13,6 @@ struct CollectionTableViewCellViewModel{
 }
 
 // MARK: - Protocol
-
 protocol CollectionTableViewCellDelegate: AnyObject {
     func collectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel)
 }
@@ -99,4 +98,4 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         
         delegate?.collectionTableViewCellDidTapItem(with: viewModel)
     }
-} 
+}

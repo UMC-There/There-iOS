@@ -1,8 +1,8 @@
 //
-//  PostViewController.swift
+//  HomeViewController.swift
 //  There-iOS
 //
-//  Created by 양채연 on 2022/07/29.
+//  Created by 양채연 on 2022/08/08.
 //
 
 import UIKit
@@ -10,7 +10,6 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Init
-
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
@@ -77,7 +76,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 }
 
 // MARK: - Extension
-
 extension HomeViewController: CollectionTableViewCellDelegate {
     func collectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel) {
         let alert = UIAlertController(title: viewModel.name, message: "You successfully get the selected item!", preferredStyle: .alert
@@ -87,4 +85,3 @@ extension HomeViewController: CollectionTableViewCellDelegate {
         present(alert, animated: true)
     }
 }
-
