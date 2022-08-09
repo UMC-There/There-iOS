@@ -16,5 +16,10 @@ final class PostCollectionViewCell: UICollectionViewCell {
         
         imageView.backgroundColor = .tertiaryLabel //서버연동해서 이미지데이터받아오기
     }
+    
+    
+    
+
+    
 }
 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8ABE25CB-C779-4A8D-8E3B-4E44AED9A9FB"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DF57CD8-34B3-4101-A8DF-8404F0DB160E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "There-iOS/MainView/ProfileView/MyProfileView/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0DF57CD8-34B3-4101-A8DF-8404F0DB160E - 9548d5c39e16b921"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "There_iOS.PostViewController.__allocating_init() -&gt; There_iOS.PostViewController"
+                  moduleName = "There-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangchaeyeon/Documents/GitHub/There-iOS/There-iOS/There-iOS/MainView/ProfileView/MyProfileView/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "0DF57CD8-34B3-4101-A8DF-8404F0DB160E - 79841316804c1126"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "There_iOS.PostViewController.init() -&gt; There_iOS.PostViewController"
+                  moduleName = "There-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yangchaeyeon/Documents/GitHub/There-iOS/There-iOS/There-iOS/MainView/ProfileView/MyProfileView/PostViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "709729FF-EEAE-4FFB-8964-A03E59F237D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "There-iOS/MainView/ProfileView/MyProfileView/PostViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

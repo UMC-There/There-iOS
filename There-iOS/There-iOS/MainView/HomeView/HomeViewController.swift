@@ -16,6 +16,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationItem.title = "Instagram"
     }
     
+    static var istapped = false
+    
     
     // MARK: - Property
     
@@ -47,9 +49,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
     }
     
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
+
+    }
+    
+    override func viewWillLayoutSubviews() {
+        if HomeViewController.istapped == true {
+            let post = PostViewController()
+            self.navigationController?.pushViewController(post, animated: false)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,16 +83,27 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.size.width/2
     }
+    
+    func goFeed() {
+        let post = PostViewController()
+        self.navigationController?.pushViewController(post, animated: false)
+    }
+    
+
 
 }
 
 // MARK: - Extension
 extension HomeViewController: CollectionTableViewCellDelegate {
     func collectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel) {
-        let alert = UIAlertController(title: viewModel.name, message: "You successfully get the selected item!", preferredStyle: .alert
-        )
-        
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-        present(alert, animated: true)
+//        let alert = UIAlertController(title: viewModel.name, message: "You successfully get the selected item!", preferredStyle: .alert
+//        )
+//
+//        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+////        present(alert, animated: true)
+//
+//        let post = PostViewController()
+//        self.navigationController?.pushViewController(post, animated: false)
+
     }
 }
