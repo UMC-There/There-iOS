@@ -12,13 +12,12 @@ import Then
 class MypageViewController: UIViewController{
     
     convenience init(bgColor: UIColor) {
-            self.init()
-            view.backgroundColor = bgColor
-        }
+        self.init()
+        view.backgroundColor = bgColor
+    }
     
     let uploadViewController = UINavigationController(rootViewController: UploadViewController(uploadImage: UIImage()))
-    
-    
+
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 40.0
@@ -84,6 +83,7 @@ class MypageViewController: UIViewController{
        return control
      }()
     
+    
     private lazy var postCollectionView: UICollectionView = {
          let layout = UICollectionViewFlowLayout()
          layout.minimumLineSpacing = 0.5
@@ -98,6 +98,7 @@ class MypageViewController: UIViewController{
         collectionView.translatesAutoresizingMaskIntoConstraints = false
          return collectionView
      }()
+    
     
     private lazy var portfolioTableView: UITableView = {
         let tableView = UITableView(frame: .zero)
@@ -121,8 +122,7 @@ class MypageViewController: UIViewController{
          self.portfolioTableView.isHidden = !self.postCollectionView.isHidden
        }
      }
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
@@ -131,7 +131,6 @@ class MypageViewController: UIViewController{
         self.view.addSubview(self.postCollectionView)
         self.view.addSubview(self.portfolioTableView)
          
-        
         NSLayoutConstraint.activate([
             self.postCollectionView.leftAnchor.constraint(equalTo: self.segmentedControl.leftAnchor),
             self.postCollectionView.rightAnchor.constraint(equalTo: self.segmentedControl.rightAnchor),
@@ -152,31 +151,41 @@ class MypageViewController: UIViewController{
         self.didChangeValue(segment: self.segmentedControl)
           }
          
-          
+
     @objc private func didChangeValue(segment: UISegmentedControl) {
-            self.shouldHideFirstView = segment.selectedSegmentIndex != 0
-          }
-      
-
+        self.shouldHideFirstView = segment.selectedSegmentIndex != 0
+    }
 }
-
-
 
 
 
 //CollectionView DataSource, Delegete : post
 extension MypageViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as? PostCollectionViewCell
         
         cell?.setup(with: UIImage()) //named:"asset name" 하면 이미지 띄울 수 있음
-        
+    
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10 //무한대로 생성가능하게
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//
+//        print("click index=\(indexPath.row)")
+//        let cell = collectionView.cellForItem(at: indexPath)
+        
+        let post = PostViewController(bgColor: UIColor.white)
+        self.navigationController?.pushViewController(post, animated: true)
+        
+    }
+    
+
+
     
 }
 
@@ -236,7 +245,7 @@ private extension MypageViewController{
         uploadButton.tintColor = .black
                                            
         let popUpButton = self.navigationItem.makeSFSymbolButton(self,
-                                                                 action: Selector("popUp"),
+                                                                 action: #selector(didTapPopUpButton),
                                                                   symbolName: "line.3.horizontal")
                     
         self.navigationItem.rightBarButtonItems = [popUpButton, uploadButton]
@@ -244,6 +253,18 @@ private extension MypageViewController{
     
     @objc func didTapUploadButton(){
        present(uploadViewController, animated: true)
+    }
+    
+    @objc func didTapPopUpButton() {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        [
+            UIAlertAction(title: "회원 정보 변경", style: .default),
+            UIAlertAction(title: "탈퇴하기", style: .destructive),
+            UIAlertAction(title: "닫기", style: .cancel)
+        ].forEach{actionSheet.addAction($0)}
+        
+        present(actionSheet, animated: true)
     }
     
     func setUpLayOut(){

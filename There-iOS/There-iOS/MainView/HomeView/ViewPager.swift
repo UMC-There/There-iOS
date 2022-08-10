@@ -167,7 +167,7 @@ extension ViewPager:UIScrollViewDelegate{
         scrollToPage(index: Int(pageNumber))
     }
     
-    //http://stackoverflow.com/a/1857162
+  
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         NSObject.cancelPreviousPerformRequests(withTarget: scrollView)
         self.perform(#selector(self.scrollViewDidEndScrollingAnimation(_:)), with: scrollView, afterDelay: 0.3)
