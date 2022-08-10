@@ -12,14 +12,11 @@ import Then
 class MypageViewController: UIViewController{
     
     convenience init(bgColor: UIColor) {
-            self.init()
-            view.backgroundColor = bgColor
-        }
+        self.init()
+        view.backgroundColor = bgColor
+    }
     
     let uploadViewController = UINavigationController(rootViewController: UploadViewController(uploadImage: UIImage()))
-    
-    static var didTapped = false
-    
 
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -125,15 +122,7 @@ class MypageViewController: UIViewController{
          self.portfolioTableView.isHidden = !self.postCollectionView.isHidden
        }
      }
-    
-//
-//    func moveToPostViewController(with post: Post) {
-//        let postViewController = PostViewController(post: Post)
-//
-//        navigationController?.pushViewController(postViewController, animated: true)
-//    }
-//
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
@@ -166,17 +155,6 @@ class MypageViewController: UIViewController{
     @objc private func didChangeValue(segment: UISegmentedControl) {
         self.shouldHideFirstView = segment.selectedSegmentIndex != 0
     }
-    func goPost() {
-        let post = PostViewController()
-        navigationController?.pushViewController(post, animated: false)
-    }
-    
-
-    
-
-
-
-
 }
 
 
@@ -197,9 +175,13 @@ extension MypageViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("click index=\(indexPath.row)")
-        let post = collectionView.cellForItem(at: indexPath) as? PostCollectionViewCell
-//        MypageViewController?.moveToPostViewController(with: post)
+//
+//        print("click index=\(indexPath.row)")
+//        let cell = collectionView.cellForItem(at: indexPath)
+        
+        let post = PostViewController(bgColor: UIColor.white)
+        self.navigationController?.pushViewController(post, animated: true)
+        
     }
     
 

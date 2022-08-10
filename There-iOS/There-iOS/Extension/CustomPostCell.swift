@@ -9,7 +9,6 @@ import Foundation
 import SnapKit
 import UIKit
 
-
 final class CustomPostCell: UITableViewCell {
     
     // MARK: - Property

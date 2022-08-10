@@ -13,7 +13,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
-        navigationItem.title = "Instagram"
+        navigationItem.title = "그곳"
     }
     
     static var istapped = false
@@ -56,12 +56,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     
-    override func viewWillLayoutSubviews() {
-        if HomeViewController.istapped == true {
-            let post = PostViewController()
-            self.navigationController?.pushViewController(post, animated: false)
-        }
-    }
+//    override func viewWillLayoutSubviews() {
+//        if HomeViewController.istapped == true {
+//            let post = PostViewController(bgColor: UIColor.white)
+//            self.navigationController?.pushViewController(post, animated: false)
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count
@@ -84,10 +84,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return view.frame.size.width/2
     }
     
-    func goFeed() {
-        let post = PostViewController()
-        self.navigationController?.pushViewController(post, animated: false)
-    }
     
 
 
@@ -95,6 +91,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 // MARK: - Extension
 extension HomeViewController: CollectionTableViewCellDelegate {
+
     func collectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel) {
 //        let alert = UIAlertController(title: viewModel.name, message: "You successfully get the selected item!", preferredStyle: .alert
 //        )
@@ -103,7 +100,7 @@ extension HomeViewController: CollectionTableViewCellDelegate {
 ////        present(alert, animated: true)
 //
 //        let post = PostViewController()
-//        self.navigationController?.pushViewController(post, animated: false)
+//        self.present(post, animated: true)
 
     }
 }

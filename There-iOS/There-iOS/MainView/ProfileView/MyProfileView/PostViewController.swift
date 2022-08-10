@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 import SnapKit
 import Then
 
@@ -13,25 +14,14 @@ import Then
 class PostViewController: UIViewController {
 
     // MARK: - Init
-    convenience init() {
+    convenience init(bgColor: UIColor) {
         self.init()
-        self.view.backgroundColor = UIColor.white
-//        self.navigationItem.title = "그곳"
+        self.view.backgroundColor = bgColor
     }
-  
-//    init(post: Post) {
-//        super.init(nibName: nil, bundle: nil)
-//
-//        presenter = PostPresenter(viewController: self, post: post)
-//    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
     // MARK: - Property
     
-//    private var presenter: PostPresenter!
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
@@ -74,8 +64,3 @@ private extension PostViewController {
     }
 }
 
-//extension PostViewController: PostPresenter {
-//    init(post: Post) {
-//    
-//    }
-//}
