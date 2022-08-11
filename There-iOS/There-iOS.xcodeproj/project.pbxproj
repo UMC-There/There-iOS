@@ -37,7 +37,6 @@
 		07A4F69228A12106006D24FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A4F69028A12106006D24FE /* LaunchScreen.storyboard */; };
 		07A4F69F28A121B9006D24FE /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F69E28A121B9006D24FE /* CustomButton.swift */; };
 		07A4F6A128A121CA006D24FE /* CustomPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6A028A121CA006D24FE /* CustomPostCell.swift */; };
-		07A4F6A328A121DD006D24FE /* CustomSnsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6A228A121DD006D24FE /* CustomSnsButton.swift */; };
 		07A4F6A528A121F1006D24FE /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6A428A121F1006D24FE /* CustomTabBar.swift */; };
 		07A4F6A728A12202006D24FE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6A628A12202006D24FE /* CustomTextField.swift */; };
 		07A4F6A928A12216006D24FE /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6A828A12216006D24FE /* UIButton+.swift */; };
@@ -94,7 +93,6 @@
 		07A4F69328A12106006D24FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A4F69E28A121B9006D24FE /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		07A4F6A028A121CA006D24FE /* CustomPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPostCell.swift; sourceTree = "<group>"; };
-		07A4F6A228A121DD006D24FE /* CustomSnsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSnsButton.swift; sourceTree = "<group>"; };
 		07A4F6A428A121F1006D24FE /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		07A4F6A628A12202006D24FE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		07A4F6A828A12216006D24FE /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				07A4F69E28A121B9006D24FE /* CustomButton.swift */,
-				07A4F6A228A121DD006D24FE /* CustomSnsButton.swift */,
 				07A4F6A828A12216006D24FE /* UIButton+.swift */,
 			);
 			path = Button;
@@ -443,7 +440,6 @@
 				074EF96A28A12E8F00D93ABC /* LoginService.swift in Sources */,
 				07A4F69F28A121B9006D24FE /* CustomButton.swift in Sources */,
 				07A4F6AD28A12243006D24FE /* APIConstants.swift in Sources */,
-				07A4F6A328A121DD006D24FE /* CustomSnsButton.swift in Sources */,
 				07A4F6AF28A12253006D24FE /* NetworkResult.swift in Sources */,
 				07A4F6A528A121F1006D24FE /* CustomTabBar.swift in Sources */,
 				07A4F68A28A12104006D24FE /* ViewController.swift in Sources */,
