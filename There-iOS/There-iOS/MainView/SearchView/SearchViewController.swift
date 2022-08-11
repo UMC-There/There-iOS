@@ -35,7 +35,7 @@ class SearchViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "검색어를 입력하세요"
         
-        searchController.searchBar.scopeButtonTitles = ["인기", "계정", "태그"]
+        searchController.searchBar.scopeButtonTitles = ["계정", "태그"]
         searchController.searchBar.showsScopeBar = true // search bar 비활성화 상태에도 scope bar 나타나게 하기
         
         searchController.searchResultsUpdater = self
@@ -88,6 +88,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             cell.detailTextLabel?.text = self.sub[indexPath.row]
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.width/9
     }
         
 }

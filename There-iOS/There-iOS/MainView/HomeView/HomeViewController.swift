@@ -13,16 +13,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
-        navigationItem.title = "그곳"
+        navigationItem.title = "Home"
     }
     
-    static var istapped = false
-    
-    
-    // MARK: - Property
-    
 
-    
+    // MARK: - Property
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -30,13 +25,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return table
     }()
     
+    private let tableView2: UITableView = {
+        let table = UITableView()
+        table.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
+        return table
+    }()
+    
     private let viewModels: [CollectionTableViewCellViewModel] = [
         CollectionTableViewCellViewModel(viewModels: [
-            TileCollectionViewCellViewModel(name: "Apple", backgroundColor: .systemRed),
-            TileCollectionViewCellViewModel(name: "Microsoft", backgroundColor: .systemBlue),
-            TileCollectionViewCellViewModel(name: "Kakao", backgroundColor: .systemYellow),
-            TileCollectionViewCellViewModel(name: "Naver", backgroundColor: .systemGreen),
-            TileCollectionViewCellViewModel(name: "Facebook", backgroundColor: .systemGray),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
         ])
     ]
     
@@ -53,16 +54,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
-
     }
     
-//    override func viewWillLayoutSubviews() {
-//        if HomeViewController.istapped == true {
-//            let post = PostViewController(bgColor: UIColor.white)
-//            self.navigationController?.pushViewController(post, animated: false)
-//        }
-//    }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count
     }
@@ -84,9 +78,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return view.frame.size.width/2
     }
     
-    
-
-
 }
 
 // MARK: - Extension
@@ -97,10 +88,10 @@ extension HomeViewController: CollectionTableViewCellDelegate {
 //        )
 //
 //        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-////        present(alert, animated: true)
+//        present(alert, animated: true)
 //
-//        let post = PostViewController()
-//        self.present(post, animated: true)
+        let post = PostViewController(bgColor: UIColor.white)
+        self.navigationController?.pushViewController(post, animated: true)
 
     }
 }
