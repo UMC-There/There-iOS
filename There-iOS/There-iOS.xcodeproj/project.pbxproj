@@ -10,8 +10,6 @@
 		07149CEB28A13690000B894F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07149CEA28A13690000B894F /* PostViewController.swift */; };
 		07149CEF28A137B8000B894F /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */; };
 		07149CF028A137B8000B894F /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		074D675B28A3CBB3006C00C1 /* CustomPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D675A28A3CBB3006C00C1 /* CustomPaymentCell.swift */; };
-		074D675D28A3DB89006C00C1 /* CustomOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D675C28A3DB89006C00C1 /* CustomOptionCell.swift */; };
 		074EF96228A12E1000D93ABC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96128A12E1000D93ABC /* SearchViewController.swift */; };
 		074EF96628A12E5100D93ABC /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96528A12E5100D93ABC /* InitialViewController.swift */; };
 		074EF96828A12E7400D93ABC /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96728A12E7400D93ABC /* LoginDataModel.swift */; };
@@ -67,8 +65,6 @@
 
 /* Begin PBXFileReference section */
 		07149CEA28A13690000B894F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = "There-iOS/MainView/ProfileView/MyProfileView/PostViewController.swift"; sourceTree = SOURCE_ROOT; };
-		074D675A28A3CBB3006C00C1 /* CustomPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaymentCell.swift; sourceTree = "<group>"; };
-		074D675C28A3DB89006C00C1 /* CustomOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOptionCell.swift; sourceTree = "<group>"; };
 		074EF96128A12E1000D93ABC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		074EF96528A12E5100D93ABC /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		074EF96728A12E7400D93ABC /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
@@ -125,16 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		074D676028A43174006C00C1 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				07A4F6A028A121CA006D24FE /* CustomPostCell.swift */,
-				074D675A28A3CBB3006C00C1 /* CustomPaymentCell.swift */,
-				074D675C28A3DB89006C00C1 /* CustomOptionCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		074D676128A4318F006C00C1 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,10 +234,10 @@
 			isa = PBXGroup;
 			children = (
 				074D676128A4318F006C00C1 /* Button */,
-				074D676028A43174006C00C1 /* Cell */,
 				07A4F6A428A121F1006D24FE /* CustomTabBar.swift */,
 				07A4F6A628A12202006D24FE /* CustomTextField.swift */,
 				07A4F6AA28A12222006D24FE /* UIKitExtension.swift */,
+				07A4F6A028A121CA006D24FE /* CustomPostCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -458,9 +444,7 @@
 				07A4F69F28A121B9006D24FE /* CustomButton.swift in Sources */,
 				07A4F6AD28A12243006D24FE /* APIConstants.swift in Sources */,
 				07A4F6A328A121DD006D24FE /* CustomSnsButton.swift in Sources */,
-				074D675D28A3DB89006C00C1 /* CustomOptionCell.swift in Sources */,
 				07A4F6AF28A12253006D24FE /* NetworkResult.swift in Sources */,
-				074D675B28A3CBB3006C00C1 /* CustomPaymentCell.swift in Sources */,
 				07A4F6A528A121F1006D24FE /* CustomTabBar.swift in Sources */,
 				07A4F68A28A12104006D24FE /* ViewController.swift in Sources */,
 				07149CEB28A13690000B894F /* PostViewController.swift in Sources */,
