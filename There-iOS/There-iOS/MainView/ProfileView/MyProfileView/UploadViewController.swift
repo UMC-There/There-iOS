@@ -137,12 +137,15 @@ extension UploadViewController : UIImagePickerControllerDelegate, UINavigationCo
         
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             selectImage = editedImage
-        }//info: pick한 정보를 가지고 있는 딕셔너리
+        }
         else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             selectImage = originalImage
         }
         
-        print(selectImage)
+        //print(selectImage)
+        //let input = UploadDataInput(images: imageString, jsonList: String, userIdx: Int32) -> mypage
+        //완료를 눌렀을 때, Mypage.PostView.PostCell로 이미지 넘어가도록
+        
         
         picker.dismiss(animated: true) { [weak self] in //메모리위해 ..뒤에 self?
             let uploadViewController = UploadViewController(uploadImage: selectImage ?? UIImage())

@@ -47,6 +47,9 @@
 		07A4F6B728A122B7006D24FE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6B628A122B7006D24FE /* MainTabBarController.swift */; };
 		07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6B828A122CE006D24FE /* NavigationViewController.swift */; };
 		07A4F6BB28A12300006D24FE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6BA28A12300006D24FE /* ChatViewController.swift */; };
+		2FB69FCC28A47C4C00055C0E /* UploadDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB69FCB28A47C4C00055C0E /* UploadDataModel.swift */; };
+		2FB69FCE28A4810D00055C0E /* UploadDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB69FCD28A4810D00055C0E /* UploadDataInput.swift */; };
+		2FB69FF428A4A88C00055C0E /* UploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB69FF328A4A88C00055C0E /* UploadDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -105,6 +108,9 @@
 		07A4F6B828A122CE006D24FE /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		07A4F6BA28A12300006D24FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		22722C1C4D5D09C328FAA5C6 /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		2FB69FCB28A47C4C00055C0E /* UploadDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataModel.swift; sourceTree = "<group>"; };
+		2FB69FCD28A4810D00055C0E /* UploadDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataInput.swift; sourceTree = "<group>"; };
+		2FB69FF328A4A88C00055C0E /* UploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataManager.swift; sourceTree = "<group>"; };
 		6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B19E80E5B22621CC89CB27 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +164,9 @@
 				074EF98628A1316700D93ABC /* ProfileDataView.swift */,
 				074EF98828A1318100D93ABC /* UINavigationItems+.swift */,
 				074EF98A28A1319A00D93ABC /* UploadViewController.swift */,
+				2FB69FCB28A47C4C00055C0E /* UploadDataModel.swift */,
+				2FB69FCD28A4810D00055C0E /* UploadDataInput.swift */,
+				2FB69FF328A4A88C00055C0E /* UploadDataManager.swift */,
 			);
 			path = MyProfileView;
 			sourceTree = "<group>";
@@ -430,9 +439,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB69FCC28A47C4C00055C0E /* UploadDataModel.swift in Sources */,
 				074EF97728A1304900D93ABC /* HomeViewController.swift in Sources */,
 				074EF98B28A1319A00D93ABC /* UploadViewController.swift in Sources */,
 				074EF96A28A12E8F00D93ABC /* LoginService.swift in Sources */,
+				2FB69FCE28A4810D00055C0E /* UploadDataInput.swift in Sources */,
 				07A4F69F28A121B9006D24FE /* CustomButton.swift in Sources */,
 				07A4F6AD28A12243006D24FE /* APIConstants.swift in Sources */,
 				07A4F6A328A121DD006D24FE /* CustomSnsButton.swift in Sources */,
@@ -458,6 +469,7 @@
 				07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */,
 				074EF97D28A130A200D93ABC /* MoreViewController.swift in Sources */,
 				074EF98928A1318100D93ABC /* UINavigationItems+.swift in Sources */,
+				2FB69FF428A4A88C00055C0E /* UploadDataManager.swift in Sources */,
 				07A4F6AB28A12222006D24FE /* UIKitExtension.swift in Sources */,
 				074EF98528A1314E00D93ABC /* PostCollectionViewCell.swift in Sources */,
 				07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */,
