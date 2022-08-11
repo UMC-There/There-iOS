@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "google_1x.png",
+      "filename" : "instagram_1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "google_2x.png",
+      "filename" : "instagram_2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "google_3x.png",
+      "filename" : "instagram_3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
