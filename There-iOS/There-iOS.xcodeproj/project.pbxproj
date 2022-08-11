@@ -12,7 +12,6 @@
 		07149CF028A137B8000B894F /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		074D675B28A3CBB3006C00C1 /* CustomPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D675A28A3CBB3006C00C1 /* CustomPaymentCell.swift */; };
 		074D675D28A3DB89006C00C1 /* CustomOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D675C28A3DB89006C00C1 /* CustomOptionCell.swift */; };
-		074D675F28A4102C006C00C1 /* MoreCollectionVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074D675E28A4102C006C00C1 /* MoreCollectionVIewCell.swift */; };
 		074EF96228A12E1000D93ABC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96128A12E1000D93ABC /* SearchViewController.swift */; };
 		074EF96628A12E5100D93ABC /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96528A12E5100D93ABC /* InitialViewController.swift */; };
 		074EF96828A12E7400D93ABC /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96728A12E7400D93ABC /* LoginDataModel.swift */; };
@@ -70,7 +69,6 @@
 		07149CEA28A13690000B894F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = "There-iOS/MainView/ProfileView/MyProfileView/PostViewController.swift"; sourceTree = SOURCE_ROOT; };
 		074D675A28A3CBB3006C00C1 /* CustomPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaymentCell.swift; sourceTree = "<group>"; };
 		074D675C28A3DB89006C00C1 /* CustomOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOptionCell.swift; sourceTree = "<group>"; };
-		074D675E28A4102C006C00C1 /* MoreCollectionVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCollectionVIewCell.swift; sourceTree = "<group>"; };
 		074EF96128A12E1000D93ABC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		074EF96528A12E5100D93ABC /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		074EF96728A12E7400D93ABC /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				074EF97C28A130A200D93ABC /* MoreViewController.swift */,
-				074D675E28A4102C006C00C1 /* MoreCollectionVIewCell.swift */,
 			);
 			path = EtcView;
 			sourceTree = "<group>";
@@ -460,7 +457,6 @@
 				074EF96A28A12E8F00D93ABC /* LoginService.swift in Sources */,
 				07A4F69F28A121B9006D24FE /* CustomButton.swift in Sources */,
 				07A4F6AD28A12243006D24FE /* APIConstants.swift in Sources */,
-				074D675F28A4102C006C00C1 /* MoreCollectionVIewCell.swift in Sources */,
 				07A4F6A328A121DD006D24FE /* CustomSnsButton.swift in Sources */,
 				074D675D28A3DB89006C00C1 /* CustomOptionCell.swift in Sources */,
 				07A4F6AF28A12253006D24FE /* NetworkResult.swift in Sources */,
