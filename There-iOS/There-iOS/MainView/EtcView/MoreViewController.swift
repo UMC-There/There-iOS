@@ -5,7 +5,6 @@
 //  Created by 양채연 on 2022/08/08.
 //
 
-
 import UIKit
 import SnapKit
 import Then
@@ -20,7 +19,6 @@ class MoreViewController: UIViewController {
     }
 
     // MARK: - Property
-
 
     private lazy var chargingAmountView: UIView = {
         let view = UIView()
@@ -43,7 +41,7 @@ class MoreViewController: UIViewController {
     private lazy var chargingMoney: UILabel = {
         let title = UILabel()
         title.font = .systemFont(ofSize: 40.0, weight: .medium)
-        title.text = "100,000원"
+        title.text = "10000원"
         title.textColor = .black
         
         return title
@@ -51,7 +49,7 @@ class MoreViewController: UIViewController {
     
 
     private lazy var chargingBtn: UIButton = {
-        let btn = CustomButton(text: "충전하기", bgColor: .white, titleColor: .darkGray, imageName: "")
+        let btn = CustomButton(text: "충전하기", bgColor: .white, titleColor: .darkGray)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         btn.widthAnchor.constraint(equalToConstant: 100).isActive = true
         btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
@@ -63,7 +61,7 @@ class MoreViewController: UIViewController {
     }()
     
     private lazy var purchaseHistoryBtn: UIButton = {
-        let btn = CustomButton(text: "구매내역", bgColor: .white, titleColor: .darkGray, imageName: "")
+        let btn = CustomButton(text: "구매내역", bgColor: .white, titleColor: .darkGray)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         btn.widthAnchor.constraint(equalToConstant: 100).isActive = true
         btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
@@ -155,16 +153,9 @@ class MoreViewController: UIViewController {
     }()
     
     
+    
+    
     // MARK: - Function
-    
-    
-    @objc
-    private func clickedCharge() {
-        let charge = ChargeViewController(bgColor: UIColor.white)
-        
-        navigationController?.pushViewController(charge, animated: false)
-    }
-    
  
     func setup() {
         [
@@ -270,15 +261,11 @@ class MoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        [
-            chargingAmountView,
-            settingView,
-            customerServiceView,
-            contactUsView
-            
-        ].forEach{view.addSubview($0)}
-
-        chargingBtn.addTarget(self, action: #selector(clickedCharge), for: .touchUpInside)
+        view.addSubview(chargingAmountView)
+        view.addSubview(settingView)
+        view.addSubview(customerServiceView)
+        view.addSubview(contactUsView)
+        
         setup()
 
     }
