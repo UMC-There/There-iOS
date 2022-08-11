@@ -9,7 +9,6 @@ import SnapKit
 import UIKit
 
 final class UploadViewController: UIViewController {
-    let tapGestureRecognizer = UITapGestureRecognizer(target: UploadViewController.self, action: #selector(imgPick))
     
     private lazy var postTitleLabel: UILabel = {
         let label = UILabel()
@@ -34,16 +33,18 @@ final class UploadViewController: UIViewController {
     
     //private let selectImgImage = UIImage(systemName: "fold")
     
-    private lazy var selectImageLabel : UILabel = {
-        let label = UILabel()
-        label.text = "사진선택"
-        label.font = .systemFont(ofSize: 15.0)
-       
-        label.isUserInteractionEnabled = true
-        label.addGestureRecognizer(tapGestureRecognizer)
-        return label
-    }()
+    private lazy var selectButton : UIButton = {
+        let button = UIButton(type: .custom)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("사진선택", for: .normal)
+        button.setTitleColor(.secondaryLabel, for: .normal)
+        button.contentHorizontalAlignment = .center
     
+        
+        button.addTarget(self, action: #selector(imgPick), for: .touchUpInside)
+        
+        return button
+    }()
     
     private let uploadImage: UIImage
 
@@ -119,6 +120,9 @@ final class UploadViewController: UIViewController {
         setUpLayOut()
         
         uploadImageView.image = uploadImage
+        if uploadImage != UIImage() {
+            self.selectButton.isHidden = true
+        }
     }
 }
 
@@ -138,6 +142,9 @@ extension UploadViewController : UIImagePickerControllerDelegate, UINavigationCo
         }
         
         print(selectImage)
+        //let input = UploadDataInput(images: imageString, jsonList: String, userIdx: Int32) -> mypage
+        //완료를 눌렀을 때, Mypage.PostView.PostCell로 이미지 넘어가도록
+        
         
         picker.dismiss(animated: true) { [weak self] in //메모리위해 ..뒤에 self?
             let uploadViewController = UploadViewController(uploadImage: selectImage ?? UIImage())
@@ -191,7 +198,7 @@ private extension UploadViewController{
         
         
         
-        [postTitleLabel, postTitleTextField, underLineView1, uploadImageView, selectImageLabel, postIntroLabel,introImageView, postIntroTextView, hashTagTextfield, underLineView2].forEach{view.addSubview($0)}
+        [postTitleLabel, postTitleTextField, underLineView1, uploadImageView, selectButton, postIntroLabel,introImageView, postIntroTextView, hashTagTextfield, underLineView2].forEach{view.addSubview($0)}
         
         let inset: CGFloat = 16.0
         
@@ -220,7 +227,7 @@ private extension UploadViewController{
     
         }
         
-        selectImageLabel.snp.makeConstraints{
+        selectButton.snp.makeConstraints{
             $0.centerX.equalTo(uploadImageView.snp.centerX)
             $0.centerY.equalTo(uploadImageView.snp.centerY)
 
