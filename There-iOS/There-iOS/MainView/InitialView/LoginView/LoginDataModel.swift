@@ -23,3 +23,5 @@ struct LoginResult: Codable {
     let jwt: String
     let userIndx: Int
 }
+
+

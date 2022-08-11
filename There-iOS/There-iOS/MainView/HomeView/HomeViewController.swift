@@ -33,11 +33,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private let viewModels: [CollectionTableViewCellViewModel] = [
         CollectionTableViewCellViewModel(viewModels: [
-            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
-            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
-            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
-            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
-            TileCollectionViewCellViewModel(name: "", backgroundColor: .systemGray),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .tertiaryLabel),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .tertiaryLabel),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .tertiaryLabel),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .tertiaryLabel),
+            TileCollectionViewCellViewModel(name: "", backgroundColor: .tertiaryLabel),
         ])
     ]
     

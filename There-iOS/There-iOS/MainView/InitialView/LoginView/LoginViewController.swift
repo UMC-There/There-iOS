@@ -8,6 +8,7 @@
 import UIKit
 import Then
 import SnapKit
+//import KakaoSDKAuth
 
 class LoginViewController: UIViewController {
     
@@ -102,7 +103,17 @@ class LoginViewController: UIViewController {
           self.present(tab, animated: false, completion: nil)
     }
     
+    @objc
+    private func clickedKakao() {
+        
+//        UserApi.shared.loginWithKakaoAccount()
+//
+//        if (UserApi.isKakaoTalkLoginAvailable()) {
+//            UserApi.shared.loginWithKakaoTalk()
+//        }
+    }
 
+    
     @objc
     private func clickedSignUp() {
         let signUp = SignUpViewController(bgColor: UIColor.white)
