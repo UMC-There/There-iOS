@@ -58,7 +58,7 @@ extension MoreViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch self.tableView
+       // switch self.tableView
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomPaymentCell", for: indexPath) as? CustomPaymentCell
                 
         cell?.selectionStyle = .none

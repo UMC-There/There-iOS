@@ -7,6 +7,7 @@
 
 import SnapKit
 import UIKit
+import SwiftUI
 
 final class UploadViewController: UIViewController {
     
@@ -46,7 +47,7 @@ final class UploadViewController: UIViewController {
         return button
     }()
     
-    private let uploadImage: UIImage
+    private var uploadImage: UIImage
 
     private lazy var uploadImageView: UIImageView = {
         let imageView = UIImageView()
@@ -55,6 +56,7 @@ final class UploadViewController: UIViewController {
         return imageView
     }()
  
+    
     init(uploadImage: UIImage) {
         self.uploadImage = uploadImage
         
@@ -132,28 +134,22 @@ final class UploadViewController: UIViewController {
 //image upload
 extension UploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate { //imagepicker 델리게이트를 따를 때 반드시 navigation delegate 따라야한다.
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) { //media를 pick했을 때 할 수 있는 동작 구현 -> 게시물 작성 화면으로 넘기기
-        var selectImage: UIImage?
+        var selectImage: UIImage? = nil
         
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             selectImage = editedImage
-        }//info: pick한 정보를 가지고 있는 딕셔너리
+        }
         else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             selectImage = originalImage
         }
+        self.uploadImageView.image = selectImage ?? UIImage()
         
-        print(selectImage)
+        picker.dismiss(animated: true)
+       
         //let input = UploadDataInput(images: imageString, jsonList: String, userIdx: Int32) -> mypage
         //완료를 눌렀을 때, Mypage.PostView.PostCell로 이미지 넘어가도록
-        
-        
-        picker.dismiss(animated: true) { [weak self] in //메모리위해 ..뒤에 self?
-            let uploadViewController = UploadViewController(uploadImage: selectImage ?? UIImage())
-            let navigationController = UINavigationController(rootViewController: uploadViewController)
-            //navigationController.modalPresentationStyle = .fullScreen
+           // self?.uploadImage = selectImage ?? UIImage()
             
-            self?.present(navigationController, animated: true)
-            
-        }//imagePicker 창닫고, completion: 게시물 작성창으로 넘김
     }
 }
 
@@ -186,12 +182,12 @@ private extension UploadViewController{
     }
     
     @objc func didUploadPost(){
-        print("upload")
+        uploadImage //-> MypageViewController로 넘기기
         dismiss(animated: true)
     }
     
     @objc func imgPick(){
-        present(imagePickerViewController, animated: true)
+        self.present(self.imagePickerViewController, animated: true)
     }
     
     func setUpLayOut(){

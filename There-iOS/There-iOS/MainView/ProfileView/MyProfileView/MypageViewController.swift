@@ -16,6 +16,13 @@ class MypageViewController: UIViewController{
         view.backgroundColor = bgColor
     }
     
+    var userPosts: [Result]?{
+        didSet { self.postCollectionView.reloadData()}
+    } //데이터 업로드
+    
+   // var deletedIndex: Int?
+    
+    
     let uploadViewController = UINavigationController(rootViewController: UploadViewController(uploadImage: UIImage()))
 
     private lazy var profileImageView: UIImageView = {
@@ -84,7 +91,7 @@ class MypageViewController: UIViewController{
      }()
     
     
-    private lazy var postCollectionView: UICollectionView = {
+    lazy var postCollectionView: UICollectionView = {
          let layout = UICollectionViewFlowLayout()
          layout.minimumLineSpacing = 0.5
          layout.minimumInteritemSpacing = 0.5
@@ -113,6 +120,8 @@ class MypageViewController: UIViewController{
         
         return tableView
     }()
+    
+    
     
     //뷰 왔다갔다 할 때 사라지게 하기
      var shouldHideFirstView: Bool? {
@@ -165,19 +174,22 @@ extension MypageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as? PostCollectionViewCell
         
-        cell?.setup(with: UIImage()) //named:"asset name" 하면 이미지 띄울 수 있음
-    
+        //cell?.setupImage(with: UIImage()) //named:"asset name" 하면 이미지 띄울 수 있음
+        
+        let itemIndex = indexPath.item
+        //PostIdx.init(postIdx: indexPath.item) //인덱스 설정 post까지 구현하면 수정하기
+        if let cellData = self.userPosts{ //데이터 셀에 전달
+            cell?.uploadData(cellData[itemIndex].imgURL)
+        }
+        
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10 //무한대로 생성가능하게
+        return userPosts?.count ?? 0 //업로드 한 만큼 셀 생성
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//        print("click index=\(indexPath.row)")
-//        let cell = collectionView.cellForItem(at: indexPath)
         
         let post = PostViewController(bgColor: UIColor.white)
         self.navigationController?.pushViewController(post, animated: true)
@@ -212,25 +224,10 @@ extension MypageViewController: UITableViewDataSource {
     }
 }
 
-/*
-extension MypageViewController: UITableViewDelegate{
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            if scrollView.contentOffset.y < 0 {
-                heightConstraint.constant = max(abs(scrollView.contentOffset.y), minHeight)
-            } else {
-                heightConstraint.constant = minHeight
-            }
-            let offset = -scrollView.contentOffset.y
-            let percentage = (offset-100)/50
-            upperHeaderView.alpha = percentage
-        }
-}
- */
 
 
 
-
-
+//UI
 private extension MypageViewController{
     
     func setUpNavigationBar(){
@@ -322,8 +319,20 @@ private extension MypageViewController{
     }
     
  
-    
 
+}
+
+//API 통신
+extension MypageViewController{
+    func sucessAPI(_ result: UserFeedModel){
+       // self.userPosts.result.postIdx = result.result?.postIdx
+        print("ddd")
+    }
+    
+    func successDeletePostAPI(_ isSuccess: Bool){
+        guard isSuccess else {return}
+    
+    }
 }
 
     

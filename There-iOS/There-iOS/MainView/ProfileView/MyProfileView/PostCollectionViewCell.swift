@@ -7,19 +7,32 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 final class PostCollectionViewCell: UICollectionViewCell {
-    private let imageView = UIImageView()
-    func setup(with image: UIImage){
-        addSubview(imageView)
-        imageView.snp.makeConstraints{ $0.edges.equalToSuperview() }
+   let postImageView = UIImageView()
+    /*
+   func setupImage(with image: UIImage){
+        addSubview(postImageView)
+        postImageView.snp.makeConstraints{ $0.edges.equalToSuperview() }
+        postImageView.image = UIImage() //
+        postImageView.backgroundColor = .tertiaryLabel //서버연동해서 이미지데이터받아오기
+    }*/
+    
+    public func uploadData(_ imageURLStr: String?){
+        //imageView의 이미지를 업로드한다.
+        guard let imageURLStr = imageURLStr else {return }
         
-        imageView.backgroundColor = .tertiaryLabel //서버연동해서 이미지데이터받아오기
+        if let url = URL(string: imageURLStr){
+            postImageView.kf.setImage(with: url,
+                                      placeholder: UIImage(systemName: "photo"))
+        }
+        
+        addSubview(postImageView)
+        postImageView.snp.makeConstraints{ $0.edges.equalToSuperview() }
+        postImageView.backgroundColor = .tertiaryLabel 
+    
     }
-    
-    
-    
-
     
 }
 
