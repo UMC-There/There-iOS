@@ -55,22 +55,17 @@ class LoginViewController: UIViewController {
     }()
         
 
-    private let loginBtn = CustomButton(text: "로그인", bgColor: UIColor.black, titleColor: UIColor.white)
+    private let loginBtn = CustomButton(text: "로그인", bgColor: UIColor.black, titleColor: UIColor.white, imageName: "")
     
-    private lazy var insta: UIButton = {
-        let btn = CustomSnsButton(text: "인스타그램", bgColor: UIColor.white, titleColor: UIColor.black, imageName: "Instagram")
+    private lazy var kakao: UIButton = {
+        let btn = CustomButton(text: "카카오로 로그인", bgColor: UIColor.rgb(red: 254, green: 229, blue: 1), titleColor: UIColor.black, imageName: "message")
         
+        btn.layer.borderWidth = 0
         btn.imageEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 12)
         return btn
     }()
     
-    private lazy var google: UIButton = {
-        let btn = CustomSnsButton(text: "구글", bgColor: UIColor.white, titleColor: UIColor.black, imageName: "Google")
-        btn.imageEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 12)
-        
-        return btn
-    }()
-    
+
     private lazy var checkMember: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16.0)
@@ -107,6 +102,7 @@ class LoginViewController: UIViewController {
           self.present(tab, animated: false, completion: nil)
     }
     
+
     @objc
     private func clickedSignUp() {
         let signUp = SignUpViewController(bgColor: UIColor.white)
@@ -135,8 +131,7 @@ extension LoginViewController {
             passwordField,
             findMyProfile,
             loginBtn,
-            insta,
-            google,
+            kakao,
             checkMember,
             goSignUp,
             chevronBtn,
@@ -174,27 +169,25 @@ extension LoginViewController {
             $0.top.equalTo(findMyProfile.snp.bottom).offset(60)
         }
         
-        insta.snp.makeConstraints {
+        kakao.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
             $0.leading.equalTo(label)
-            $0.top.equalTo(loginBtn.snp.bottom).offset(15)
+            $0.top.equalTo(loginBtn.snp.bottom).offset(20)
         }
-        google.snp.makeConstraints {
-            $0.leading.equalTo(insta.snp.trailing).offset(10)
-            $0.top.equalTo(insta)
-        }
+   
         checkMember.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(90)
-            $0.top.equalTo(google.snp.bottom).offset(110)
+            $0.top.equalTo(loginBtn.snp.bottom).offset(110)
         }
         
         goSignUp.snp.makeConstraints {
             $0.leading.equalTo(checkMember.snp.trailing).offset(10)
-            $0.top.equalTo(google.snp.bottom).offset(103)
+            $0.top.equalTo(loginBtn.snp.bottom).offset(103)
         }
         
         chevronBtn.snp.makeConstraints {
             $0.leading.equalTo(goSignUp.snp.trailing).offset(10)
-            $0.top.equalTo(google.snp.bottom).offset(107)
+            $0.top.equalTo(loginBtn.snp.bottom).offset(107)
         }
     }
     

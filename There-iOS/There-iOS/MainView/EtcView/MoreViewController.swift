@@ -50,7 +50,7 @@ class MoreViewController: UIViewController {
     
 
     private lazy var chargingBtn: UIButton = {
-        let btn = CustomButton(text: "충전하기", bgColor: .white, titleColor: .darkGray)
+        let btn = CustomButton(text: "충전하기", bgColor: .white, titleColor: .darkGray, imageName: "")
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         btn.widthAnchor.constraint(equalToConstant: 100).isActive = true
         btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
@@ -62,7 +62,7 @@ class MoreViewController: UIViewController {
     }()
     
     private lazy var purchaseHistoryBtn: UIButton = {
-        let btn = CustomButton(text: "구매내역", bgColor: .white, titleColor: .darkGray)
+        let btn = CustomButton(text: "구매내역", bgColor: .white, titleColor: .darkGray, imageName: "")
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 17)
         btn.widthAnchor.constraint(equalToConstant: 100).isActive = true
         btn.heightAnchor.constraint(equalToConstant: 35).isActive = true

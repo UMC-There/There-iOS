@@ -55,31 +55,26 @@ class SignUpViewController: UIViewController {
     }()
     
     
-    private let signUpBtn = CustomButton(text: "회원가입하기", bgColor: UIColor.black, titleColor: UIColor.white)
+    private let signUpBtn = CustomButton(text: "회원가입하기", bgColor: UIColor.black, titleColor: UIColor.white, imageName: "")
 
     
-    private lazy var insta: UIButton = {
-        let btn = CustomSnsButton(text: "인스타그램", bgColor: UIColor.white, titleColor: UIColor.black, imageName: "Instagram")
-        btn.imageEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 12)
 
-        return btn
-    }()
-    
-    private lazy var google: UIButton = {
-        let btn = CustomSnsButton(text: "구글", bgColor: UIColor.white, titleColor: UIColor.black, imageName: "Google")
-        btn.imageEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 12)
-        
-        return btn
-    }()
 
 
     // MARK: - Function
+
+    @objc
+    private func clickedSignUp() {
+        let goLogin = LoginViewController(bgColor: UIColor.white)
+        
+        navigationController?.pushViewController(goLogin, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        
         signUp()
+        signUpBtn.addTarget(self, action: #selector(clickedSignUp), for: .touchUpInside)
     }
 
 
@@ -95,9 +90,6 @@ extension SignUpViewController {
             passwordField,
             rePasswordField,
             signUpBtn,
-            insta,
-            google,
-
             
         ].forEach { view.addSubview($0) }
         
@@ -140,14 +132,7 @@ extension SignUpViewController {
             $0.top.equalTo(rePasswordField.snp.bottom).offset(60)
         }
         
-        insta.snp.makeConstraints {
-            $0.leading.equalTo(label)
-            $0.top.equalTo(signUpBtn.snp.bottom).offset(15)
-        }
-        google.snp.makeConstraints {
-            $0.leading.equalTo(insta.snp.trailing).offset(10)
-            $0.top.equalTo(insta)
-        }
+
     }
     
     

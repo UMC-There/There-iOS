@@ -19,7 +19,7 @@ class CustomButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(text: String, bgColor: UIColor, titleColor: UIColor) {
+    convenience init(text: String, bgColor: UIColor, titleColor: UIColor, imageName: String) {
         self.init()
         self.translatesAutoresizingMaskIntoConstraints = false
         self.widthAnchor.constraint(equalToConstant: 350).isActive = true
@@ -29,7 +29,11 @@ class CustomButton: UIButton {
         self.setTitle(text, for: .normal)
         self.setTitleColor(titleColor, for: .normal)
         self.backgroundColor = bgColor
-     
+        
+        self.setImage(UIImage(named: imageName), for: .normal)
+        self.imageView?.contentMode = .scaleAspectFit
+
+        
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 10.0
         self.layer.masksToBounds = true

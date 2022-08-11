@@ -21,8 +21,8 @@ class InitialViewController: UIViewController {
     
     // MARK: - Property
     
-    private let loginBtn = CustomButton(text: "로그인", bgColor: UIColor.rgb(red: 0, green: 0, blue: 0), titleColor: UIColor.rgb(red: 255, green: 255, blue: 255))
-    private let signUpBtn = CustomButton(text: "회원가입", bgColor: UIColor.rgb(red: 255, green: 255, blue: 255), titleColor: UIColor.black)
+    private let loginBtn = CustomButton(text: "로그인", bgColor: UIColor.black, titleColor: UIColor.white, imageName: "")
+    private let signUpBtn = CustomButton(text: "회원가입", bgColor: UIColor.white, titleColor: UIColor.black, imageName: "")
     
     
     // MARK: - Function
