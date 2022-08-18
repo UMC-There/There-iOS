@@ -42,7 +42,32 @@ struct LoginService {
         dataRequest.responseData{
             dataResponse in
 
-            
+    
+            // dataResponse.result: 통신 성공했는지 실패했는지에 대한 여부
+            switch dataResponse.result {
+                
+            case .success:
+            guard let statusCode = dataResponse.response?.statusCode else{return}
+            guard let value = dataResponse.value else{return}
+                
+            let networkResult = self.judgeStatus(by: statusCode, value)
+            completion(networkResult)
+        
+            case .failure: completion(.networkFail)
+        }
+        }
+    }
+    
+    func kakaoLogin(accessToken: String, completion: @escaping(NetworkResult<Any>)->Void) {
+        let header: HTTPHeaders = ["Authorization" : "Bearer\(accessToken)"]
+        
+        let dataRequest = AF.request(APIConstants.kakaoLoginURL,
+                                     method: .post,
+                                     encoding: JSONEncoding.default,
+                                     headers: header)
+        
+        dataRequest.responseData{
+            dataResponse in
 
             // dataResponse.result: 통신 성공했는지 실패했는지에 대한 여부
             switch dataResponse.result {
@@ -57,6 +82,7 @@ struct LoginService {
             case .failure: completion(.networkFail)
         }
         }
+        
     }
     
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {

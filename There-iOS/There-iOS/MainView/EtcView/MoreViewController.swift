@@ -20,6 +20,8 @@ class MoreViewController: UIViewController {
     }
 
     // MARK: - Property
+    
+
 
     private lazy var chargingAmountView: UIView = {
         let view = UIView()
@@ -157,6 +159,7 @@ class MoreViewController: UIViewController {
     
     
     // MARK: - Function
+    
  
     func setup() {
         [
@@ -266,7 +269,7 @@ class MoreViewController: UIViewController {
         view.addSubview(settingView)
         view.addSubview(customerServiceView)
         view.addSubview(contactUsView)
-        
+
         setup()
 
     }

@@ -30,13 +30,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Light mode -> white, Dark mode -> black으로 설정됨
         window?.tintColor = .label
         
-//        if let url = URLContexts.first?.url {
-//            if (AuthApi.isKakaoTalkLoginUrl(url)) {
-//                    _ = AuthController.handleOpenUrl(url: url)
-//                }
-//            }
     }
 
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                _ = AuthController.handleOpenUrl(url: url)
+            }
+        }
+    }
 
 
     func sceneDidDisconnect(_ scene: UIScene) {

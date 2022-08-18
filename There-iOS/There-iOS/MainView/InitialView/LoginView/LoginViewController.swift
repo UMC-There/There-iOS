@@ -8,7 +8,10 @@
 import UIKit
 import Then
 import SnapKit
-//import KakaoSDKAuth
+import Alamofire
+import Combine
+
+
 
 class LoginViewController: UIViewController {
     
@@ -63,6 +66,7 @@ class LoginViewController: UIViewController {
         
         btn.layer.borderWidth = 0
         btn.imageEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 12)
+        btn.addTarget(self, action: #selector(clickedKakao), for: .touchUpInside)
         return btn
     }()
     
@@ -92,6 +96,11 @@ class LoginViewController: UIViewController {
         
         return btn
     }()
+
+    lazy var kakaoAuthVM: KakaoAuthVM = {
+        KakaoAuthVM()
+    }()
+    
     
     // MARK: - Function
     
@@ -105,12 +114,8 @@ class LoginViewController: UIViewController {
     
     @objc
     private func clickedKakao() {
-        
-//        UserApi.shared.loginWithKakaoAccount()
-//
-//        if (UserApi.isKakaoTalkLoginAvailable()) {
-//            UserApi.shared.loginWithKakaoTalk()
-//        }
+        print("Kakao Login btn clicked")
+        kakaoAuthVM.kakaoLogin()
     }
 
     
@@ -124,11 +129,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        login()
         
         loginBtn.addTarget(self, action: #selector(clickedLogin), for: .touchUpInside)
         goSignUp.addTarget(self, action: #selector(clickedSignUp), for: .touchUpInside)
-    }
+    }// viewDidLoad
 }
 
     
@@ -218,6 +222,7 @@ extension LoginViewController {
             case .success(let data):
                 guard let data = data as? LoginResponse else {return}
                 print(data)
+                print(data.result?.jwt)
 //                self.alert(message: data.message)
             case .requestErr(let err):
                 print(err)
@@ -230,6 +235,8 @@ extension LoginViewController {
             }
         }
     }
+
+    
     
     func alert(message: String) {
         let alertVC = UIAlertController(title: message, message: nil, preferredStyle: .alert)
@@ -237,4 +244,6 @@ extension LoginViewController {
         alertVC.addAction(okAction)
         present(alertVC, animated: true)
     }
+    
+    
 }

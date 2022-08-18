@@ -7,18 +7,31 @@
 
 import UIKit
 import KakaoSDKCommon
+import KakaoSDKAuth
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    // MARK: UISceneSession Lifecycle
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        KakaoSDK.initSDK(appKey: "${4eef694b16fcc83f835bc72fe162a5f7}")
+        
+        let nativeAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
+        
+        KakaoSDK.initSDK(appKey: nativeAppKey as! String)
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+           if (AuthApi.isKakaoTalkLoginUrl(url)) {
+               return AuthController.handleOpenUrl(url: url)
+           }
 
-    // MARK: UISceneSession Lifecycle
+           return false
+       }
+
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

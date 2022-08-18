@@ -113,7 +113,7 @@ final class CustomPostCell: UITableViewCell {
     private lazy var hisyotyLabel: UILabel = {
         let label = UILabel()
         label.textColor = .label
-        label.font = .systemFont(ofSize: 16.0, weight: .light)
+        label.font = .systemFont(ofSize: 18.0, weight: .light)
         label.text = "히스토리"
     
         return label
@@ -126,10 +126,15 @@ final class CustomPostCell: UITableViewCell {
         return btn
     }()
     
+
+    
     private lazy var historyView: UIView = {
         let view = UIView()
+        view.backgroundColor = .green
         view.addSubview(hisyotyLabel)
         view.addSubview(historyUpload)
+        view.layer.borderWidth = 5
+        view.layer.borderColor = UIColor.green.cgColor
         
         return view
     }()
@@ -157,7 +162,7 @@ final class CustomPostCell: UITableViewCell {
         
         userImageView.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(25)
-            $0.top.equalToSuperview().offset(20)
+            $0.top.equalToSuperview().offset(30)
             $0.height.equalTo(50)
             $0.width.equalTo(50)
         }
@@ -169,7 +174,7 @@ final class CustomPostCell: UITableViewCell {
         
         optionBtn.snp.makeConstraints {
             $0.leading.equalTo(userName.snp.trailing).offset(50)
-            $0.top.equalToSuperview().offset(34)
+            $0.top.equalToSuperview().offset(40)
             $0.trailing.equalToSuperview().inset(20)
         }
         
@@ -232,7 +237,7 @@ final class CustomPostCell: UITableViewCell {
         
         hisyotyLabel.snp.makeConstraints {
             $0.leading.equalTo(likeBtn.snp.leading)
-            $0.top.equalTo(dateLabel.snp.bottom).offset(10)
+            $0.top.equalTo(dateLabel.snp.bottom).offset(15)
         }
         
         historyUpload.snp.makeConstraints {
@@ -243,7 +248,10 @@ final class CustomPostCell: UITableViewCell {
         historyView.snp.makeConstraints {
             $0.leading.equalTo(likeBtn.snp.leading)
             $0.top.equalTo(dateLabel.snp.bottom).offset(20)
+
         }
+
+//        historyUpload.addTarget(self, action: #selector(didTapUploadButton()), for: .touchUpInside)
     }
 
 }

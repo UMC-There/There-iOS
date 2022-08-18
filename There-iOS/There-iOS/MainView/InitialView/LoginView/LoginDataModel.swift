@@ -11,7 +11,7 @@ struct LoginResponse: Codable {
     let code: Int
     let isSuccess: Bool?
     let message: String
-    let data: LoginResult?
+    let result: LoginResult?
 }
 
 struct LoginData: Codable {

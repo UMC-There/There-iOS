@@ -12,7 +12,7 @@ struct SignUpResponse: Codable {
     let isSuccess: Bool?
     let message: String
     let result: SignUpResult?
-    // 로그인 성공 시 data가 넘어오고, 실패 시 data가 안넘어옴
+    // 회원가입 성공 시 data가 넘어오고, 실패 시 data가 안넘어옴
 }
 
 struct SignUpData: Codable {

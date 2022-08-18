@@ -1,0 +1,13 @@
+//
+//  Config.xcconfig
+//  There-iOS
+//
+//  Created by 양채연 on 2022/08/14.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KAKAO_NATIVE_APP_KEY = 4eef694b16fcc83f835bc72fe162a5f7
+
+

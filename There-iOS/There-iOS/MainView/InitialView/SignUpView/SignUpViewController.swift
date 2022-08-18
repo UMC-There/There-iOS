@@ -60,12 +60,12 @@ class SignUpViewController: UIViewController {
     
 
 
-
     // MARK: - Function
 
     @objc
     private func clickedSignUp() {
         let goLogin = LoginViewController(bgColor: UIColor.white)
+        signUp()
         
         navigationController?.pushViewController(goLogin, animated: true)
     }
@@ -73,7 +73,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        signUp()
+
         signUpBtn.addTarget(self, action: #selector(clickedSignUp), for: .touchUpInside)
     }
 
@@ -131,7 +131,6 @@ extension SignUpViewController {
             $0.leading.equalTo(label)
             $0.top.equalTo(rePasswordField.snp.bottom).offset(60)
         }
-        
 
     }
     
@@ -153,7 +152,6 @@ extension SignUpViewController {
             switch response {
             case .success(let data):
                 guard let data = data as? SignUpResponse else {return}
-            
                 self.alert(message: data.message)
             case .requestErr(let err):
                 print(err)

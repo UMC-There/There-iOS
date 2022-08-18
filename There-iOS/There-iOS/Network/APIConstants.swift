@@ -17,4 +17,8 @@ struct APIConstants {
     
     // signUpURL = "http://3.39.57.176:8080/users/join"
     static let signUpURL = baseURL + "/users/join"
+    
+    // kakaoLoginURL
+    static let kakaoLoginURL = loginURL + "/kakao"
+    
 }

@@ -51,6 +51,7 @@ struct SignUpService {
             case .success:
             guard let statusCode = dataResponse.response?.statusCode else{return}
             guard let value = dataResponse.value else{return}
+//                guard let token= value.result.jwt else{return}
                 
             let networkResult = self.judgeStatus(by: statusCode, value)
             completion(networkResult)

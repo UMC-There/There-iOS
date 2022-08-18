@@ -22,6 +22,8 @@ class PostViewController: UIViewController {
     
     // MARK: - Property
     
+    let uploadViewController = UINavigationController(rootViewController: UploadViewController(uploadImage: UIImage()))
+
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
@@ -34,11 +36,24 @@ class PostViewController: UIViewController {
         return tableView
     }()
 
+    
+    private lazy var test: UILabel = {
+        let title = UILabel()
+        title.textColor = .label
+        title.numberOfLines = 5
+        title.font = .systemFont(ofSize: 15.0, weight: .light)
+        title.text = "테스트"
+        
+        return title
+    }()
+    
+    @objc func didTapUploadButton(){
+       present(uploadViewController, animated: true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-
     }
 }
 

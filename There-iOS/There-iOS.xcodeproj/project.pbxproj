@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07149CEB28A13690000B894F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07149CEA28A13690000B894F /* PostViewController.swift */; };
-		07149CEF28A137B8000B894F /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */; };
-		07149CF028A137B8000B894F /* Pods_There_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		074EF96228A12E1000D93ABC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96128A12E1000D93ABC /* SearchViewController.swift */; };
 		074EF96628A12E5100D93ABC /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96528A12E5100D93ABC /* InitialViewController.swift */; };
 		074EF96828A12E7400D93ABC /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96728A12E7400D93ABC /* LoginDataModel.swift */; };
@@ -29,6 +27,8 @@
 		074EF98728A1316700D93ABC /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF98628A1316700D93ABC /* ProfileDataView.swift */; };
 		074EF98928A1318100D93ABC /* UINavigationItems+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF98828A1318100D93ABC /* UINavigationItems+.swift */; };
 		074EF98B28A1319A00D93ABC /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF98A28A1319A00D93ABC /* UploadViewController.swift */; };
+		0768B25228ACAADD00DE7D6A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0768B25128ACAADD00DE7D6A /* Then */; };
+		079C894528AE1F2A00B45C7E /* CustomChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C894428AE1F2A00B45C7E /* CustomChatCell.swift */; };
 		07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68528A12104006D24FE /* AppDelegate.swift */; };
 		07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68728A12104006D24FE /* SceneDelegate.swift */; };
 		07A4F68A28A12104006D24FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68928A12104006D24FE /* ViewController.swift */; };
@@ -46,16 +46,27 @@
 		07A4F6B728A122B7006D24FE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6B628A122B7006D24FE /* MainTabBarController.swift */; };
 		07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6B828A122CE006D24FE /* NavigationViewController.swift */; };
 		07A4F6BB28A12300006D24FE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6BA28A12300006D24FE /* ChatViewController.swift */; };
+		07CF639528A910E60082DB45 /* KakaoAuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF639428A910E60082DB45 /* KakaoAuthVM.swift */; };
+		07E26C0428A91FDE003D829F /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 07E26C0328A91FDE003D829F /* KakaoSDK */; };
+		07E26C0628A91FDE003D829F /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 07E26C0528A91FDE003D829F /* KakaoSDKAuth */; };
+		07E26C0828A91FDE003D829F /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 07E26C0728A91FDE003D829F /* KakaoSDKCommon */; };
+		07E26C0A28A91FDE003D829F /* KakaoSDKCommonCore in Frameworks */ = {isa = PBXBuildFile; productRef = 07E26C0928A91FDE003D829F /* KakaoSDKCommonCore */; };
+		07E26C0C28A91FDE003D829F /* KakaoSDKTalk in Frameworks */ = {isa = PBXBuildFile; productRef = 07E26C0B28A91FDE003D829F /* KakaoSDKTalk */; };
+		07E26C0E28A91FDE003D829F /* KakaoSDKTemplate in Frameworks */ = {isa = PBXBuildFile; productRef = 07E26C0D28A91FDE003D829F /* KakaoSDKTemplate */; };
+		07E26C1028A91FDE003D829F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 07E26C0F28A91FDE003D829F /* KakaoSDKUser */; };
+		07E26C1228A9206C003D829F /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		07E44BE528ACC7B6008092BD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07E44BE428ACC7B6008092BD /* SnapKit */; };
+		E42D2A9D93BA75BD8AD382A4 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FCCEFBF9A4436489D49318 /* Pods_There_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		07149CF128A137B8000B894F /* Embed Frameworks */ = {
+		07E26C1328A9206C003D829F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				07149CF028A137B8000B894F /* Pods_There_iOS.framework in Embed Frameworks */,
+				07E26C1228A9206C003D829F /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +74,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05E848DC97ED53AAA3DF0874 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		07149CEA28A13690000B894F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = "There-iOS/MainView/ProfileView/MyProfileView/PostViewController.swift"; sourceTree = SOURCE_ROOT; };
 		074EF96128A12E1000D93ABC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		074EF96528A12E5100D93ABC /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +95,7 @@
 		074EF98628A1316700D93ABC /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 		074EF98828A1318100D93ABC /* UINavigationItems+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItems+.swift"; sourceTree = "<group>"; };
 		074EF98A28A1319A00D93ABC /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		079C894428AE1F2A00B45C7E /* CustomChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatCell.swift; sourceTree = "<group>"; };
 		07A4F68228A12104006D24FE /* There-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "There-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A4F68528A12104006D24FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07A4F68728A12104006D24FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,9 +115,10 @@
 		07A4F6B628A122B7006D24FE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		07A4F6B828A122CE006D24FE /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		07A4F6BA28A12300006D24FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		22722C1C4D5D09C328FAA5C6 /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B19E80E5B22621CC89CB27 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		07CF639328A9099E0082DB45 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		07CF639428A910E60082DB45 /* KakaoAuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthVM.swift; sourceTree = "<group>"; };
+		71FCCEFBF9A4436489D49318 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA094A68E3A86F939959BC77 /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +126,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07149CEF28A137B8000B894F /* Pods_There_iOS.framework in Frameworks */,
+				07E26C0828A91FDE003D829F /* KakaoSDKCommon in Frameworks */,
+				07E26C0E28A91FDE003D829F /* KakaoSDKTemplate in Frameworks */,
+				0768B25228ACAADD00DE7D6A /* Then in Frameworks */,
+				07E26C0428A91FDE003D829F /* KakaoSDK in Frameworks */,
+				07E26C1028A91FDE003D829F /* KakaoSDKUser in Frameworks */,
+				07E26C0C28A91FDE003D829F /* KakaoSDKTalk in Frameworks */,
+				07E26C0A28A91FDE003D829F /* KakaoSDKCommonCore in Frameworks */,
+				07E26C0628A91FDE003D829F /* KakaoSDKAuth in Frameworks */,
+				E42D2A9D93BA75BD8AD382A4 /* Pods_There_iOS.framework in Frameworks */,
+				07E44BE528ACC7B6008092BD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +198,7 @@
 				07A4F68428A12104006D24FE /* There-iOS */,
 				07A4F68328A12104006D24FE /* Products */,
 				9261EA09D75AC4D6F75E6809 /* Pods */,
-				C975D28B70DC42643A299879 /* Frameworks */,
+				0902460205657F8F6BA6E18F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +222,8 @@
 				07A4F68928A12104006D24FE /* ViewController.swift */,
 				07A4F68E28A12106006D24FE /* Assets.xcassets */,
 				07A4F69328A12106006D24FE /* Info.plist */,
+				07CF639328A9099E0082DB45 /* Config.xcconfig */,
+				07CF639428A910E60082DB45 /* KakaoAuthVM.swift */,
 			);
 			path = "There-iOS";
 			sourceTree = "<group>";
@@ -235,6 +260,7 @@
 				07A4F6A628A12202006D24FE /* CustomTextField.swift */,
 				07A4F6AA28A12222006D24FE /* UIKitExtension.swift */,
 				07A4F6A028A121CA006D24FE /* CustomPostCell.swift */,
+				079C894428AE1F2A00B45C7E /* CustomChatCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -302,21 +328,21 @@
 			path = SearchView;
 			sourceTree = "<group>";
 		};
+		0902460205657F8F6BA6E18F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71FCCEFBF9A4436489D49318 /* Pods_There_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9261EA09D75AC4D6F75E6809 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E5B19E80E5B22621CC89CB27 /* Pods-There-iOS.debug.xcconfig */,
-				22722C1C4D5D09C328FAA5C6 /* Pods-There-iOS.release.xcconfig */,
+				05E848DC97ED53AAA3DF0874 /* Pods-There-iOS.debug.xcconfig */,
+				DA094A68E3A86F939959BC77 /* Pods-There-iOS.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		C975D28B70DC42643A299879 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,18 +352,29 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07A4F69628A12106006D24FE /* Build configuration list for PBXNativeTarget "There-iOS" */;
 			buildPhases = (
-				840693F54D2C3D044717ECF4 /* [CP] Check Pods Manifest.lock */,
+				0A79B56B63DFB0C47EBC2943 /* [CP] Check Pods Manifest.lock */,
 				07A4F67E28A12104006D24FE /* Sources */,
 				07A4F67F28A12104006D24FE /* Frameworks */,
 				07A4F68028A12104006D24FE /* Resources */,
-				FB37DC9844F7F202B4A93807 /* [CP] Embed Pods Frameworks */,
-				07149CF128A137B8000B894F /* Embed Frameworks */,
+				07E26C1328A9206C003D829F /* Embed Frameworks */,
+				692F12B92028C1B86E2569BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "There-iOS";
+			packageProductDependencies = (
+				07E26C0328A91FDE003D829F /* KakaoSDK */,
+				07E26C0528A91FDE003D829F /* KakaoSDKAuth */,
+				07E26C0728A91FDE003D829F /* KakaoSDKCommon */,
+				07E26C0928A91FDE003D829F /* KakaoSDKCommonCore */,
+				07E26C0B28A91FDE003D829F /* KakaoSDKTalk */,
+				07E26C0D28A91FDE003D829F /* KakaoSDKTemplate */,
+				07E26C0F28A91FDE003D829F /* KakaoSDKUser */,
+				0768B25128ACAADD00DE7D6A /* Then */,
+				07E44BE428ACC7B6008092BD /* SnapKit */,
+			);
 			productName = "There-iOS";
 			productReference = 07A4F68228A12104006D24FE /* There-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -367,7 +404,9 @@
 			);
 			mainGroup = 07A4F67928A12104006D24FE;
 			packageReferences = (
-				074C568728A50DEC000ED9FE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				07E26C0228A91FDE003D829F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				0768B25028ACAADD00DE7D6A /* XCRemoteSwiftPackageReference "Then" */,
+				07E44BE328ACC7B6008092BD /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 07A4F68328A12104006D24FE /* Products */;
 			projectDirPath = "";
@@ -392,7 +431,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		840693F54D2C3D044717ECF4 /* [CP] Check Pods Manifest.lock */ = {
+		0A79B56B63DFB0C47EBC2943 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,7 +453,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FB37DC9844F7F202B4A93807 /* [CP] Embed Pods Frameworks */ = {
+		692F12B92028C1B86E2569BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -443,6 +482,8 @@
 				074EF96A28A12E8F00D93ABC /* LoginService.swift in Sources */,
 				07A4F69F28A121B9006D24FE /* CustomButton.swift in Sources */,
 				07A4F6AD28A12243006D24FE /* APIConstants.swift in Sources */,
+				07CF639528A910E60082DB45 /* KakaoAuthVM.swift in Sources */,
+				079C894528AE1F2A00B45C7E /* CustomChatCell.swift in Sources */,
 				07A4F6AF28A12253006D24FE /* NetworkResult.swift in Sources */,
 				07A4F6A528A121F1006D24FE /* CustomTabBar.swift in Sources */,
 				07A4F68A28A12104006D24FE /* ViewController.swift in Sources */,
@@ -499,6 +540,7 @@
 /* Begin XCBuildConfiguration section */
 		07A4F69428A12106006D24FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CF639328A9099E0082DB45 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -533,6 +575,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -559,6 +602,7 @@
 		};
 		07A4F69528A12106006D24FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07CF639328A9099E0082DB45 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -593,6 +637,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -613,7 +658,7 @@
 		};
 		07A4F69728A12106006D24FE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5B19E80E5B22621CC89CB27 /* Pods-There-iOS.debug.xcconfig */;
+			baseConfigurationReference = 07CF639328A9099E0082DB45 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -632,6 +677,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				PODS_CONFIGURATION_BUILD_DIR = "build/Debug-iphoneos";
+				PODS_PODFILE_DIR_PATH = "/Users/yangchaeyeon/Documents/GitHub/There-iOS/There-iOS";
+				PODS_ROOT = "/Users/yangchaeyeon/Documents/GitHub/There-iOS/There-iOS/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.umc-2.There-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -642,7 +690,7 @@
 		};
 		07A4F69828A12106006D24FE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22722C1C4D5D09C328FAA5C6 /* Pods-There-iOS.release.xcconfig */;
+			baseConfigurationReference = 07CF639328A9099E0082DB45 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -661,6 +709,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				PODS_CONFIGURATION_BUILD_DIR = "build/Release-iphoneos";
+				PODS_PODFILE_DIR_PATH = "/Users/yangchaeyeon/Documents/GitHub/There-iOS/There-iOS";
+				PODS_ROOT = "/Users/yangchaeyeon/Documents/GitHub/There-iOS/There-iOS/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.umc-2.There-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -693,15 +744,79 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		074C568728A50DEC000ED9FE /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+		0768B25028ACAADD00DE7D6A /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		07E26C0228A91FDE003D829F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
 			requirement = {
-				branch = main;
+				branch = master;
 				kind = branch;
 			};
 		};
+		07E44BE328ACC7B6008092BD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0768B25128ACAADD00DE7D6A /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0768B25028ACAADD00DE7D6A /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		07E26C0328A91FDE003D829F /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E26C0228A91FDE003D829F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		07E26C0528A91FDE003D829F /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E26C0228A91FDE003D829F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		07E26C0728A91FDE003D829F /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E26C0228A91FDE003D829F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		07E26C0928A91FDE003D829F /* KakaoSDKCommonCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E26C0228A91FDE003D829F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommonCore;
+		};
+		07E26C0B28A91FDE003D829F /* KakaoSDKTalk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E26C0228A91FDE003D829F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKTalk;
+		};
+		07E26C0D28A91FDE003D829F /* KakaoSDKTemplate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E26C0228A91FDE003D829F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKTemplate;
+		};
+		07E26C0F28A91FDE003D829F /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E26C0228A91FDE003D829F /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		07E44BE428ACC7B6008092BD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E44BE328ACC7B6008092BD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07A4F67A28A12104006D24FE /* Project object */;
 }

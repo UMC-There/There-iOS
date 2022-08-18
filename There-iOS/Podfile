@@ -7,13 +7,19 @@ target 'There-iOS' do
 
   # Pods for There-iOS
 
-  pod 'SnapKit', '~> 5.6.0'
-  pod 'Then', '~> 3.0.0'
-  pod 'RxSwift', '~> 6.5.0'
-  pod 'RxCocoa', '~> 6.5.0'
+
   pod 'Alamofire', '~> 5.1'
   pod 'Kingfisher', '~> 7.0'
   pod 'KakaoSDKAuth'
   pod 'KakaoSDKCommon'
   pod 'KakaoSDKUser'
+
+
+  #for Mac M1
+  post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphoneimulator*]"] = "arm64"
+    end
+  end
+
 end
