@@ -11,7 +11,7 @@ struct UploadDataModel: Codable {
     let code: Int
     let isSuccess: Bool
     let message: String
-    let postIdx: PostIdx
+    let result: PostIdx?
 }
 
 struct PostIdx: Codable{

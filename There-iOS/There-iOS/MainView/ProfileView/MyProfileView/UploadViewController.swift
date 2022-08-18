@@ -7,7 +7,8 @@
 
 import SnapKit
 import UIKit
-import SwiftUI
+import Kingfisher
+
 
 final class UploadViewController: UIViewController {
     
@@ -47,7 +48,7 @@ final class UploadViewController: UIViewController {
         return button
     }()
     
-    private var uploadImage: UIImage
+   
 
     private lazy var uploadImageView: UIImageView = {
         let imageView = UIImageView()
@@ -55,7 +56,8 @@ final class UploadViewController: UIViewController {
         imageView.layer.borderColor = UIColor.quaternaryLabel.cgColor
         return imageView
     }()
- 
+    
+    public let uploadImage: UIImage
     
     init(uploadImage: UIImage) {
         self.uploadImage = uploadImage
@@ -114,7 +116,6 @@ final class UploadViewController: UIViewController {
         return lineView
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -122,10 +123,17 @@ final class UploadViewController: UIViewController {
         setUpLayOut()
         
         uploadImageView.image = uploadImage
-        if uploadImage != UIImage() {
+        /*if uploadImage != UIImage() {
             self.selectButton.isHidden = true
-        }
+         }*/
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+            //navigationBar 보이기
+        navigationController?.navigationBar.isHidden = false
+    }
+    
 }
 
 
@@ -134,7 +142,7 @@ final class UploadViewController: UIViewController {
 //image upload
 extension UploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate { //imagepicker 델리게이트를 따를 때 반드시 navigation delegate 따라야한다.
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) { //media를 pick했을 때 할 수 있는 동작 구현 -> 게시물 작성 화면으로 넘기기
-        var selectImage: UIImage? = nil
+        var selectImage: UIImage?
         
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             selectImage = editedImage
@@ -144,12 +152,9 @@ extension UploadViewController : UIImagePickerControllerDelegate, UINavigationCo
         }
         self.uploadImageView.image = selectImage ?? UIImage()
         
-        picker.dismiss(animated: true)
-       
-        //let input = UploadDataInput(images: imageString, jsonList: String, userIdx: Int32) -> mypage
-        //완료를 눌렀을 때, Mypage.PostView.PostCell로 이미지 넘어가도록
-           // self?.uploadImage = selectImage ?? UIImage()
-            
+        picker.dismiss(animated: true){
+            self.selectButton.isHidden = true
+        }
     }
 }
 
@@ -160,6 +165,12 @@ extension UploadViewController: UITextViewDelegate {
         guard textView.textColor == .secondaryLabel else { return }
         textView.text = nil
         textView.textColor = .label
+    }
+    
+    //return 키 -> 키보드 내려가도록
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
     }
 }
 
@@ -172,18 +183,18 @@ private extension UploadViewController{
         navigationItem.title = "게시글"
         
         let didButton = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(didUploadPost))
-
-        didButton.tintColor = .black
+        //didButton.tintColor = .black
         navigationItem.rightBarButtonItem = didButton
     }
     
     @objc func closeView(){
-        dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
-    @objc func didUploadPost(){
-        uploadImage //-> MypageViewController로 넘기기
-        dismiss(animated: true)
+    @objc func didUploadPost() -> UIImage{
+        self.navigationController?.popViewController(animated: true)
+        return (uploadImage)
+        
     }
     
     @objc func imgPick(){
@@ -191,8 +202,6 @@ private extension UploadViewController{
     }
     
     func setUpLayOut(){
-        
-        
         
         [postTitleLabel, postTitleTextField, underLineView1, uploadImageView, selectButton, postIntroLabel,introImageView, postIntroTextView, hashTagTextfield, underLineView2].forEach{view.addSubview($0)}
         

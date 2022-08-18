@@ -50,11 +50,10 @@
 		07A4F6B728A122B7006D24FE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6B628A122B7006D24FE /* MainTabBarController.swift */; };
 		07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6B828A122CE006D24FE /* NavigationViewController.swift */; };
 		07A4F6BB28A12300006D24FE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6BA28A12300006D24FE /* ChatViewController.swift */; };
-		2F51284A28A4D6E200BFD4A2 /* UploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284928A4D6E200BFD4A2 /* UploadDataManager.swift */; };
 		2F51284C28A4D6FE00BFD4A2 /* UploadDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284B28A4D6FE00BFD4A2 /* UploadDataModel.swift */; };
 		2F51284E28A4D72600BFD4A2 /* UploadDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284D28A4D72600BFD4A2 /* UploadDataInput.swift */; };
-		2F51285028A4F7F800BFD4A2 /* UserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284F28A4F7F800BFD4A2 /* UserFeedModel.swift */; };
-		2F51285228A4F80F00BFD4A2 /* UserFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51285128A4F80F00BFD4A2 /* UserFeedDataManager.swift */; };
+		2F51285028A4F7F800BFD4A2 /* PostDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284F28A4F7F800BFD4A2 /* PostDetailModel.swift */; };
+		2FFDB62328AE1DC3006D2813 /* UserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFDB62228AE1DC3006D2813 /* UserFeedModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -116,11 +115,10 @@
 		07A4F6B828A122CE006D24FE /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		07A4F6BA28A12300006D24FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		22722C1C4D5D09C328FAA5C6 /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		2F51284928A4D6E200BFD4A2 /* UploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataManager.swift; sourceTree = "<group>"; };
 		2F51284B28A4D6FE00BFD4A2 /* UploadDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataModel.swift; sourceTree = "<group>"; };
 		2F51284D28A4D72600BFD4A2 /* UploadDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataInput.swift; sourceTree = "<group>"; };
-		2F51284F28A4F7F800BFD4A2 /* UserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedModel.swift; sourceTree = "<group>"; };
-		2F51285128A4F80F00BFD4A2 /* UserFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedDataManager.swift; sourceTree = "<group>"; };
+		2F51284F28A4F7F800BFD4A2 /* PostDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailModel.swift; sourceTree = "<group>"; };
+		2FFDB62228AE1DC3006D2813 /* UserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedModel.swift; sourceTree = "<group>"; };
 		6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B19E80E5B22621CC89CB27 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -337,8 +335,8 @@
 		2F51285328A5105A00BFD4A2 /* PostGet */ = {
 			isa = PBXGroup;
 			children = (
-				2F51284F28A4F7F800BFD4A2 /* UserFeedModel.swift */,
-				2F51285128A4F80F00BFD4A2 /* UserFeedDataManager.swift */,
+				2F51284F28A4F7F800BFD4A2 /* PostDetailModel.swift */,
+				2FFDB62228AE1DC3006D2813 /* UserFeedModel.swift */,
 			);
 			path = PostGet;
 			sourceTree = "<group>";
@@ -348,7 +346,6 @@
 			children = (
 				2F51284D28A4D72600BFD4A2 /* UploadDataInput.swift */,
 				2F51284B28A4D6FE00BFD4A2 /* UploadDataModel.swift */,
-				2F51284928A4D6E200BFD4A2 /* UploadDataManager.swift */,
 			);
 			path = PostPost;
 			sourceTree = "<group>";
@@ -497,15 +494,14 @@
 				07A4F6A328A121DD006D24FE /* CustomSnsButton.swift in Sources */,
 				074D675D28A3DB89006C00C1 /* CustomOptionCell.swift in Sources */,
 				07A4F6AF28A12253006D24FE /* NetworkResult.swift in Sources */,
-				2F51284A28A4D6E200BFD4A2 /* UploadDataManager.swift in Sources */,
 				074D675B28A3CBB3006C00C1 /* CustomPaymentCell.swift in Sources */,
 				07A4F6A528A121F1006D24FE /* CustomTabBar.swift in Sources */,
 				07A4F68A28A12104006D24FE /* ViewController.swift in Sources */,
 				07149CEB28A13690000B894F /* PostViewController.swift in Sources */,
+				2FFDB62328AE1DC3006D2813 /* UserFeedModel.swift in Sources */,
 				074EF97528A1301600D93ABC /* CollectionTableViewCell.swift in Sources */,
 				07A4F6A928A12216006D24FE /* UIButton+.swift in Sources */,
-				2F51285228A4F80F00BFD4A2 /* UserFeedDataManager.swift in Sources */,
-				2F51285028A4F7F800BFD4A2 /* UserFeedModel.swift in Sources */,
+				2F51285028A4F7F800BFD4A2 /* PostDetailModel.swift in Sources */,
 				074EF98328A1313400D93ABC /* PortfolioTableViewCell.swift in Sources */,
 				074EF96C28A12EAD00D93ABC /* LoginViewController.swift in Sources */,
 				074EF96828A12E7400D93ABC /* LoginDataModel.swift in Sources */,

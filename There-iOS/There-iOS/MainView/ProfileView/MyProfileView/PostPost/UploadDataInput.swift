@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct UploadDataInput: Codable {
+struct UploadDataInput: Codable { //파라미터
     var images : [String?]
-    var jsonList : String
-    var userIdx : Int32
+    var jsonList : String?
+    var userIdx : Int32?
 }

@@ -8,22 +8,16 @@
 import UIKit
 import SnapKit
 import Then
+import Kingfisher
 
 class MypageViewController: UIViewController{
     
-    convenience init(bgColor: UIColor) {
+   convenience init(bgColor: UIColor) {
         self.init()
         view.backgroundColor = bgColor
     }
     
-    var userPosts: [Result]?{
-        didSet { self.postCollectionView.reloadData()}
-    } //데이터 업로드
-    
-   // var deletedIndex: Int?
-    
-    
-    let uploadViewController = UINavigationController(rootViewController: UploadViewController(uploadImage: UIImage()))
+    var userFeedModel : UserFeedModel?
 
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -91,7 +85,7 @@ class MypageViewController: UIViewController{
      }()
     
     
-    lazy var postCollectionView: UICollectionView = {
+    private lazy var postCollectionView: UICollectionView = {
          let layout = UICollectionViewFlowLayout()
          layout.minimumLineSpacing = 0.5
          layout.minimumInteritemSpacing = 0.5
@@ -172,28 +166,23 @@ class MypageViewController: UIViewController{
 extension MypageViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as? PostCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as? PostCollectionViewCell else {return UICollectionViewCell()}
         
-        //cell?.setupImage(with: UIImage()) //named:"asset name" 하면 이미지 띄울 수 있음
+        let imageUrl = URL(string: userFeedModel?.result.getUserPosts[indexPath.row].imgUrl ?? "default")
+        cell.postImageView.kf.setImage(with: imageUrl)
+
+        //cell?.setupImage(with: UIImage) //named:"asset name" 하면 이미지 띄울 수 있음
         
-        let itemIndex = indexPath.item
-        //PostIdx.init(postIdx: indexPath.item) //인덱스 설정 post까지 구현하면 수정하기
-        if let cellData = self.userPosts{ //데이터 셀에 전달
-            cell?.uploadData(cellData[itemIndex].imgURL)
-        }
-        
-        return cell ?? UICollectionViewCell()
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return userPosts?.count ?? 0 //업로드 한 만큼 셀 생성
+        return userFeedModel?.result.getUserPosts.count ?? 0 //포스트 개수만큼
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let post = PostViewController(bgColor: UIColor.white)
         self.navigationController?.pushViewController(post, animated: true)
-        
     }
     
 
@@ -227,6 +216,8 @@ extension MypageViewController: UITableViewDataSource {
 
 
 
+
+
 //UI
 private extension MypageViewController{
     
@@ -249,7 +240,9 @@ private extension MypageViewController{
     }
     
     @objc func didTapUploadButton(){
-       present(uploadViewController, animated: true)
+        let uploadViewController = UploadViewController(uploadImage: UIImage())
+        uploadViewController.modalPresentationStyle = .fullScreen
+        navigationController?.show(uploadViewController, sender: nil)
     }
     
     @objc func didTapPopUpButton() {
@@ -322,18 +315,4 @@ private extension MypageViewController{
 
 }
 
-//API 통신
-extension MypageViewController{
-    func sucessAPI(_ result: UserFeedModel){
-       // self.userPosts.result.postIdx = result.result?.postIdx
-        print("ddd")
-    }
-    
-    func successDeletePostAPI(_ isSuccess: Bool){
-        guard isSuccess else {return}
-    
-    }
-}
-
-    
 

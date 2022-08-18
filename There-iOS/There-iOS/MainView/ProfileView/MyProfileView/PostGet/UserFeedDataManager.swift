@@ -20,7 +20,7 @@ class UserFeedDataManager{
             .responseDecodable(of: UserFeedModel.self) { response in
             switch response.result{
             case.success(let result):
-                viewController.sucessAPI(result)
+                print ("success")
             case.failure(let error):
                 print(error.localizedDescription)
             }
