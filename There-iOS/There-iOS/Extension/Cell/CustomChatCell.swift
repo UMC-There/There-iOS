@@ -55,7 +55,7 @@ class CustomChatCell: UITableViewCell {
             contentView.addSubview($0)
         }
         contentView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().offset(20)
+            $0.leading.trailing.equalToSuperview().offset(10)
         }
         userImage.snp.makeConstraints {
             $0.top.leading.bottom.equalToSuperview().inset(10)
