@@ -255,12 +255,11 @@
 		07A4F69B28A12169006D24FE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				07E9A5C328AE38010034BE34 /* Cell */,
 				074D676128A4318F006C00C1 /* Button */,
 				07A4F6A428A121F1006D24FE /* CustomTabBar.swift */,
 				07A4F6A628A12202006D24FE /* CustomTextField.swift */,
 				07A4F6AA28A12222006D24FE /* UIKitExtension.swift */,
-				07A4F6A028A121CA006D24FE /* CustomPostCell.swift */,
-				079C894428AE1F2A00B45C7E /* CustomChatCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -326,6 +325,15 @@
 				074EF96128A12E1000D93ABC /* SearchViewController.swift */,
 			);
 			path = SearchView;
+			sourceTree = "<group>";
+		};
+		07E9A5C328AE38010034BE34 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				079C894428AE1F2A00B45C7E /* CustomChatCell.swift */,
+				07A4F6A028A121CA006D24FE /* CustomPostCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		0902460205657F8F6BA6E18F /* Frameworks */ = {

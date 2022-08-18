@@ -59,8 +59,3 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
-
-
-extension ChatViewController {
-
-}
