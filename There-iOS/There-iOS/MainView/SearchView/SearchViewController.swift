@@ -45,11 +45,13 @@ class SearchViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true // Large title로 하고싶을 때 추가
     }
     
+
     func setupTableView() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
 
+        
         NSLayoutConstraint.activate([
             self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
             self.tableView.bottomAnchor.constraint(equalTo: self.safeView.bottomAnchor),
@@ -77,7 +79,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: .none)
-        cell.imageView!.image = UIImage(named: "1")
+        cell.imageView!.image = UIImage(named: "person")
         cell.imageView!.layer.cornerRadius = CGFloat(22)
         cell.imageView!.clipsToBounds = true
         if isFiltering {
