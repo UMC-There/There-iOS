@@ -55,7 +55,7 @@ class KakaoAuthVM: ObservableObject {
                         //do something
                         _ = oauthToken
                         continuation.resume(returning: true)
-//                        self.getUsrInfo()
+                        self.getUsrInfo()
                     }
                 }
         }
@@ -80,7 +80,7 @@ class KakaoAuthVM: ObservableObject {
                 print(error)
             } else {
                 KakaoAuthVM.accessToken = oauthToken?.accessToken
-                KakaoAuthVM.accessToken = String(KakaoAuthVM.accessToken)
+                KakaoAuthVM.accessToken = String(KakaoAuthVM.accessToken!)
             }
         }
         
@@ -89,7 +89,8 @@ class KakaoAuthVM: ObservableObject {
             switch response {
             case .success(let data):
                 guard let data = data as? LoginResponse else {return}
-                print(data)
+                print("hollyshit")
+                print(data.result?.jwt)
 //                self.alert(message: data.message)
             case .requestErr(let err):
                 print(err)

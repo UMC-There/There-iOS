@@ -22,16 +22,22 @@ class ChatViewController: UIViewController {
         return tableView
     }()
     
+    private func configure() {
+        tableView.dataSource = self
+        tableView.rowHeight = 100
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.view.addSubview(tableView)
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.register(CustomChatCell.self, forCellReuseIdentifier: "cell")
         
-        
-        setup()
-    
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+
+        }
     }
 
     
@@ -47,8 +53,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "1"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CustomChatCell else {return .init()}
 
         
         return cell
@@ -57,13 +62,5 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 extension ChatViewController {
-    func setup() {
-        let guide = view.safeAreaLayoutGuide
-           NSLayoutConstraint.activate([
-               tableView.topAnchor.constraint(equalTo: guide.topAnchor),
-               tableView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-               tableView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-               tableView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
-               ])
-    }
+
 }

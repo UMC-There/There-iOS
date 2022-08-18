@@ -17,7 +17,7 @@ final class CustomPostCell: UITableViewCell {
     private lazy var userImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .black
-        imageView.image = UIImage(named: "1")
+        imageView.image = UIImage(named: "person")
         imageView.layer.cornerRadius = CGFloat(25)
         imageView.clipsToBounds = true
 
