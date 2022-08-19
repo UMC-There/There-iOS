@@ -84,24 +84,24 @@ class KakaoAuthVM: ObservableObject {
             }
         }
         
-        LoginService.shared.kakaoLogin(accessToken: KakaoAuthVM.accessToken) {
-            response in
-            switch response {
-            case .success(let data):
-                guard let data = data as? LoginResponse else {return}
-                print("hollyshit")
-                print(data.result?.jwt)
-//                self.alert(message: data.message)
-            case .requestErr(let err):
-                print(err)
-            case .pathErr:
-                print("pathErr")
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
-            }
-        }
+//        LoginService.shared.kakaoLogin(accessToken: KakaoAuthVM.accessToken) {
+//            response in
+//            switch response {
+//            case .success(let data):
+//                guard let data = data as? LoginResponse else {return}
+//                print("hollyshit")
+//                print(data.result?.jwt)
+////                self.alert(message: data.message)
+//            case .requestErr(let err):
+//                print(err)
+//            case .pathErr:
+//                print("pathErr")
+//            case .serverErr:
+//                print("serverErr")
+//            case .networkFail:
+//                print("networkFail")
+//            }
+//        }
     }
     
     

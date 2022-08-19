@@ -28,6 +28,7 @@
 		074EF98928A1318100D93ABC /* UINavigationItems+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF98828A1318100D93ABC /* UINavigationItems+.swift */; };
 		074EF98B28A1319A00D93ABC /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF98A28A1319A00D93ABC /* UploadViewController.swift */; };
 		0768B25228ACAADD00DE7D6A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0768B25128ACAADD00DE7D6A /* Then */; };
+		077A291D28AF8DA000E77BF6 /* ChargingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A291C28AF8DA000E77BF6 /* ChargingListViewController.swift */; };
 		079C894528AE1F2A00B45C7E /* CustomChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C894428AE1F2A00B45C7E /* CustomChatCell.swift */; };
 		07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68528A12104006D24FE /* AppDelegate.swift */; };
 		07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68728A12104006D24FE /* SceneDelegate.swift */; };
@@ -56,6 +57,8 @@
 		07E26C1028A91FDE003D829F /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 07E26C0F28A91FDE003D829F /* KakaoSDKUser */; };
 		07E26C1228A9206C003D829F /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07E44BE528ACC7B6008092BD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07E44BE428ACC7B6008092BD /* SnapKit */; };
+		07E9A5C528AE4BAE0034BE34 /* ChattingRoomViewControlelr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9A5C428AE4BAE0034BE34 /* ChattingRoomViewControlelr.swift */; };
+		07E9A5C728AE4DC10034BE34 /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E9A5C628AE4DC10034BE34 /* ChargeViewController.swift */; };
 		E42D2A9D93BA75BD8AD382A4 /* Pods_There_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FCCEFBF9A4436489D49318 /* Pods_There_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +98,7 @@
 		074EF98628A1316700D93ABC /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 		074EF98828A1318100D93ABC /* UINavigationItems+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItems+.swift"; sourceTree = "<group>"; };
 		074EF98A28A1319A00D93ABC /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		077A291C28AF8DA000E77BF6 /* ChargingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingListViewController.swift; sourceTree = "<group>"; };
 		079C894428AE1F2A00B45C7E /* CustomChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatCell.swift; sourceTree = "<group>"; };
 		07A4F68228A12104006D24FE /* There-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "There-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A4F68528A12104006D24FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		07A4F6BA28A12300006D24FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		07CF639328A9099E0082DB45 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		07CF639428A910E60082DB45 /* KakaoAuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthVM.swift; sourceTree = "<group>"; };
+		07E9A5C428AE4BAE0034BE34 /* ChattingRoomViewControlelr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomViewControlelr.swift; sourceTree = "<group>"; };
+		07E9A5C628AE4DC10034BE34 /* ChargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
 		71FCCEFBF9A4436489D49318 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA094A68E3A86F939959BC77 /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -277,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				07A4F6BA28A12300006D24FE /* ChatViewController.swift */,
+				07E9A5C428AE4BAE0034BE34 /* ChattingRoomViewControlelr.swift */,
 			);
 			path = ChatView;
 			sourceTree = "<group>";
@@ -285,6 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				074EF97C28A130A200D93ABC /* MoreViewController.swift */,
+				07E9A5C628AE4DC10034BE34 /* ChargeViewController.swift */,
+				077A291C28AF8DA000E77BF6 /* ChargingListViewController.swift */,
 			);
 			path = EtcView;
 			sourceTree = "<group>";
@@ -511,12 +520,15 @@
 				074EF96228A12E1000D93ABC /* SearchViewController.swift in Sources */,
 				074EF96E28A12ED300D93ABC /* SignUpViewController.swift in Sources */,
 				074EF98728A1316700D93ABC /* ProfileDataView.swift in Sources */,
+				07E9A5C728AE4DC10034BE34 /* ChargeViewController.swift in Sources */,
 				07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */,
 				074EF97D28A130A200D93ABC /* MoreViewController.swift in Sources */,
 				074EF98928A1318100D93ABC /* UINavigationItems+.swift in Sources */,
 				07A4F6AB28A12222006D24FE /* UIKitExtension.swift in Sources */,
 				074EF98528A1314E00D93ABC /* PostCollectionViewCell.swift in Sources */,
+				077A291D28AF8DA000E77BF6 /* ChargingListViewController.swift in Sources */,
 				07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */,
+				07E9A5C528AE4BAE0034BE34 /* ChattingRoomViewControlelr.swift in Sources */,
 				07A4F6BB28A12300006D24FE /* ChatViewController.swift in Sources */,
 				074EF97228A12F1900D93ABC /* SignUpDataModel.swift in Sources */,
 				07A4F6A128A121CA006D24FE /* CustomPostCell.swift in Sources */,

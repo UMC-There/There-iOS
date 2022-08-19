@@ -25,18 +25,7 @@ class InitialViewController: UIViewController {
         label.font = .systemFont(ofSize: 35.0, weight: .bold)
         label.numberOfLines = 2
         label.textColor = .label
-        label.text = "세상 어디에도 없는 곳,"
-        
-        return label
-
-    }()
-    
-    private lazy var appTitle2: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 35.0, weight: .bold)
-        label.numberOfLines = 2
-        label.textColor = .label
-        label.text = "그곳"
+        label.text = "세상 어디에도 없는 곳,\n그곳"
         
         return label
 
@@ -80,12 +69,6 @@ class InitialViewController: UIViewController {
             $0.top.equalToSuperview().inset(150)
         }
         
-        appTitle2.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(basicOffset)
-            $0.trailing.equalToSuperview().offset(basicOffset)
-            $0.top.equalTo(appTitle).offset(45)
-        }
-        
         appLogo.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(170)
             $0.top.equalToSuperview().offset(310)
@@ -108,7 +91,6 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(appTitle)
-        self.view.addSubview(appTitle2)
         self.view.addSubview(appLogo)
         self.view.addSubview(loginBtn)
         self.view.addSubview(signUpBtn)
@@ -120,3 +102,4 @@ class InitialViewController: UIViewController {
     }
 
 }
+

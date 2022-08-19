@@ -156,9 +156,15 @@ class MoreViewController: UIViewController {
     }()
     
     
-    
-    
     // MARK: - Function
+    
+    
+    @objc
+    private func clickedCharge() {
+        let charge = ChargeViewController(bgColor: UIColor.white)
+        
+        navigationController?.pushViewController(charge, animated: false)
+    }
     
  
     func setup() {
@@ -270,6 +276,7 @@ class MoreViewController: UIViewController {
         view.addSubview(customerServiceView)
         view.addSubview(contactUsView)
 
+        chargingBtn.addTarget(self, action: #selector(clickedCharge), for: .touchUpInside)
         setup()
 
     }

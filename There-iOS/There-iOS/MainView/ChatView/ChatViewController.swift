@@ -13,6 +13,7 @@ class ChatViewController: UIViewController {
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
+        self.navigationItem.title = "채팅"
     }
 
     private let tableView: UITableView = {
@@ -57,5 +58,10 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chattingRoom = ChattingRoomViewController(bgColor: UIColor.white)
+        
+        navigationController?.pushViewController(chattingRoom, animated: false)
     }
 }
