@@ -29,6 +29,7 @@
 		074EF98B28A1319A00D93ABC /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF98A28A1319A00D93ABC /* UploadViewController.swift */; };
 		0768B25228ACAADD00DE7D6A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0768B25128ACAADD00DE7D6A /* Then */; };
 		077A291D28AF8DA000E77BF6 /* ChargingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A291C28AF8DA000E77BF6 /* ChargingListViewController.swift */; };
+		077A291F28AF91C700E77BF6 /* CustomChargeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A291E28AF91C700E77BF6 /* CustomChargeCell.swift */; };
 		079C894528AE1F2A00B45C7E /* CustomChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C894428AE1F2A00B45C7E /* CustomChatCell.swift */; };
 		07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68528A12104006D24FE /* AppDelegate.swift */; };
 		07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68728A12104006D24FE /* SceneDelegate.swift */; };
@@ -99,6 +100,7 @@
 		074EF98828A1318100D93ABC /* UINavigationItems+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItems+.swift"; sourceTree = "<group>"; };
 		074EF98A28A1319A00D93ABC /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		077A291C28AF8DA000E77BF6 /* ChargingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingListViewController.swift; sourceTree = "<group>"; };
+		077A291E28AF91C700E77BF6 /* CustomChargeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChargeCell.swift; sourceTree = "<group>"; };
 		079C894428AE1F2A00B45C7E /* CustomChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatCell.swift; sourceTree = "<group>"; };
 		07A4F68228A12104006D24FE /* There-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "There-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A4F68528A12104006D24FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			children = (
 				079C894428AE1F2A00B45C7E /* CustomChatCell.swift */,
 				07A4F6A028A121CA006D24FE /* CustomPostCell.swift */,
+				077A291E28AF91C700E77BF6 /* CustomChargeCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				074EF97528A1301600D93ABC /* CollectionTableViewCell.swift in Sources */,
 				07A4F6A928A12216006D24FE /* UIButton+.swift in Sources */,
 				074EF98328A1313400D93ABC /* PortfolioTableViewCell.swift in Sources */,
+				077A291F28AF91C700E77BF6 /* CustomChargeCell.swift in Sources */,
 				074EF96C28A12EAD00D93ABC /* LoginViewController.swift in Sources */,
 				074EF96828A12E7400D93ABC /* LoginDataModel.swift in Sources */,
 				074EF96628A12E5100D93ABC /* InitialViewController.swift in Sources */,

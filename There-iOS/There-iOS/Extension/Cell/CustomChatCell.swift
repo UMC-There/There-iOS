@@ -10,6 +10,13 @@ import UIKit
 
 class CustomChatCell: UITableViewCell {
     
+    
+    // MARK: - Init
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     lazy var userImage: UIImageView = {
        let image = UIImageView()
         image.image = UIImage(named: "person")
@@ -77,7 +84,5 @@ class CustomChatCell: UITableViewCell {
         }
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 }

@@ -23,10 +23,6 @@ class ChatViewController: UIViewController {
         return tableView
     }()
     
-    private func configure() {
-        tableView.dataSource = self
-        tableView.rowHeight = 100
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
