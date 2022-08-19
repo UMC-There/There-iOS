@@ -17,6 +17,8 @@ class MypageViewController: UIViewController{
     }
     
     let uploadViewController = UINavigationController(rootViewController: UploadViewController(uploadImage: UIImage()))
+    
+    let editProfileViewController = UINavigationController(rootViewController: EditProfileViewController(uploadImage: UIImage()))
 
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -57,7 +59,7 @@ class MypageViewController: UIViewController{
     }()
     
     
-    private lazy var EditProfileButton: UIButton = {
+    private lazy var editProfileButton: UIButton = {
         var button = UIButton()
         button.setTitle("프로필편집", for: .normal)
         button.setTitleColor(.label, for: .normal)
@@ -149,6 +151,9 @@ class MypageViewController: UIViewController{
             
         self.segmentedControl.selectedSegmentIndex = 0
         self.didChangeValue(segment: self.segmentedControl)
+        
+        self.editProfileButton.addTarget(self, action: #selector(didTapProfileEditButton), for: .touchUpInside)
+        
           }
          
 
@@ -255,6 +260,10 @@ private extension MypageViewController{
        present(uploadViewController, animated: true)
     }
     
+    @objc func didTapProfileEditButton() {
+        present(editProfileViewController, animated: true)
+    }
+    
     @objc func didTapPopUpButton() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
@@ -268,7 +277,7 @@ private extension MypageViewController{
     }
     
     func setUpLayOut(){
-        let buttonStackView = UIStackView(arrangedSubviews: [artistNoteButton,EditProfileButton])
+        let buttonStackView = UIStackView(arrangedSubviews: [artistNoteButton,editProfileButton])
         buttonStackView.spacing = 4.0
         buttonStackView.distribution = .fillProportionally
         

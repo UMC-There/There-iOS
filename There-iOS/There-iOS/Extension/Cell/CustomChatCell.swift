@@ -32,16 +32,16 @@ class CustomChatCell: UITableViewCell {
             $0.width.height.equalTo(60)
         }
         nickName.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
+            $0.top.equalToSuperview().offset(12)
             $0.leading.equalTo(userImage.snp.trailing).offset(20)
         }
         chatContents.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(50)
+            $0.top.equalToSuperview().offset(40)
             $0.leading.equalTo(userImage.snp.trailing).offset(20)
         }
         time.snp.makeConstraints {
             $0.leading.equalTo(contentView.snp.trailing).inset(100)
-            $0.top.equalToSuperview().offset(20)
+            $0.top.equalTo(nickName)
             
         }
     }
@@ -80,7 +80,7 @@ class CustomChatCell: UITableViewCell {
         let contents = UILabel()
         
         contents.textColor = .label
-        contents.font = .systemFont(ofSize: 17.0, weight: .light)
+        contents.font = .systemFont(ofSize: 15.0, weight: .light)
         contents.text = "이곳에 마지막 채팅내용을 입력하세요."
         
         return contents

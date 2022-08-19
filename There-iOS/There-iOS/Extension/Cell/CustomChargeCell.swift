@@ -65,7 +65,7 @@ class CustomChargeCell: UITableViewCell {
     
     private lazy var chargeMoney: UILabel = {
         let label = UILabel()
-        label.text = "w20,000"
+        label.text = "₩20,000"
         label.font = .systemFont(ofSize: 15, weight: .medium)
         label.textColor = .label
         

@@ -10,10 +10,12 @@ import Foundation
 
 class SearchViewController: UIViewController {
 
+    // MARK: - Init
+    
     convenience init(bgColor: UIColor) {
         self.init()
         self.view.backgroundColor = bgColor
-        navigationItem.title = "Search"
+        self.navigationItem.title = "Search"
     }
     
     // MARK: Property
@@ -94,6 +96,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.frame.width/9
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let searchDetail = SearchDetailViewController(bgColor: UIColor.white)
+        
+        navigationController?.pushViewController(searchDetail, animated: false)
     }
         
 }

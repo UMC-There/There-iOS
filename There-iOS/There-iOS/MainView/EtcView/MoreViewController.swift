@@ -43,7 +43,7 @@ class MoreViewController: UIViewController {
     private lazy var chargingMoney: UILabel = {
         let title = UILabel()
         title.font = .systemFont(ofSize: 40.0, weight: .medium)
-        title.text = "10000원"
+        title.text = "100,000원"
         title.textColor = .black
         
         return title

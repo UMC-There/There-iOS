@@ -30,6 +30,8 @@
 		0768B25228ACAADD00DE7D6A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0768B25128ACAADD00DE7D6A /* Then */; };
 		077A291D28AF8DA000E77BF6 /* ChargingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A291C28AF8DA000E77BF6 /* ChargingListViewController.swift */; };
 		077A291F28AF91C700E77BF6 /* CustomChargeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A291E28AF91C700E77BF6 /* CustomChargeCell.swift */; };
+		077A292128AF9C5A00E77BF6 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A292028AF9C5A00E77BF6 /* SearchDetailViewController.swift */; };
+		077A292428AF9E7100E77BF6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A292328AF9E7100E77BF6 /* EditProfileViewController.swift */; };
 		079C894528AE1F2A00B45C7E /* CustomChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C894428AE1F2A00B45C7E /* CustomChatCell.swift */; };
 		07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68528A12104006D24FE /* AppDelegate.swift */; };
 		07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68728A12104006D24FE /* SceneDelegate.swift */; };
@@ -101,6 +103,8 @@
 		074EF98A28A1319A00D93ABC /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		077A291C28AF8DA000E77BF6 /* ChargingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingListViewController.swift; sourceTree = "<group>"; };
 		077A291E28AF91C700E77BF6 /* CustomChargeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChargeCell.swift; sourceTree = "<group>"; };
+		077A292028AF9C5A00E77BF6 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		077A292328AF9E7100E77BF6 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		079C894428AE1F2A00B45C7E /* CustomChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatCell.swift; sourceTree = "<group>"; };
 		07A4F68228A12104006D24FE /* There-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "There-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A4F68528A12104006D24FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,13 +195,18 @@
 			isa = PBXGroup;
 			children = (
 				074EF98028A1311600D93ABC /* MypageViewController.swift */,
-				074EF98228A1313400D93ABC /* PortfolioTableViewCell.swift */,
-				074EF98428A1314E00D93ABC /* PostCollectionViewCell.swift */,
 				074EF98628A1316700D93ABC /* ProfileDataView.swift */,
-				074EF98828A1318100D93ABC /* UINavigationItems+.swift */,
 				074EF98A28A1319A00D93ABC /* UploadViewController.swift */,
 			);
 			path = MyProfileView;
+			sourceTree = "<group>";
+		};
+		077A292228AF9E6000E77BF6 /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				077A292328AF9E7100E77BF6 /* EditProfileViewController.swift */,
+			);
+			path = EditView;
 			sourceTree = "<group>";
 		};
 		07A4F67928A12104006D24FE = {
@@ -268,6 +277,7 @@
 				07A4F6A428A121F1006D24FE /* CustomTabBar.swift */,
 				07A4F6A628A12202006D24FE /* CustomTextField.swift */,
 				07A4F6AA28A12222006D24FE /* UIKitExtension.swift */,
+				074EF98828A1318100D93ABC /* UINavigationItems+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -324,6 +334,7 @@
 		07A4F6B428A1229C006D24FE /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				077A292228AF9E6000E77BF6 /* EditView */,
 				074EF97F28A130E700D93ABC /* MyProfileView */,
 				074EF97E28A130DD00D93ABC /* PostView */,
 			);
@@ -334,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				074EF96128A12E1000D93ABC /* SearchViewController.swift */,
+				077A292028AF9C5A00E77BF6 /* SearchDetailViewController.swift */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -344,6 +356,8 @@
 				079C894428AE1F2A00B45C7E /* CustomChatCell.swift */,
 				07A4F6A028A121CA006D24FE /* CustomPostCell.swift */,
 				077A291E28AF91C700E77BF6 /* CustomChargeCell.swift */,
+				074EF98228A1313400D93ABC /* PortfolioTableViewCell.swift */,
+				074EF98428A1314E00D93ABC /* PostCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -517,12 +531,14 @@
 				074EF96628A12E5100D93ABC /* InitialViewController.swift in Sources */,
 				07A4F6B728A122B7006D24FE /* MainTabBarController.swift in Sources */,
 				074EF97B28A1308200D93ABC /* ViewPager.swift in Sources */,
+				077A292428AF9E7100E77BF6 /* EditProfileViewController.swift in Sources */,
 				074EF97928A1306A00D93ABC /* TileCollectionViewCell.swift in Sources */,
 				07A4F6A728A12202006D24FE /* CustomTextField.swift in Sources */,
 				074EF98128A1311600D93ABC /* MypageViewController.swift in Sources */,
 				07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */,
 				074EF96228A12E1000D93ABC /* SearchViewController.swift in Sources */,
 				074EF96E28A12ED300D93ABC /* SignUpViewController.swift in Sources */,
+				077A292128AF9C5A00E77BF6 /* SearchDetailViewController.swift in Sources */,
 				074EF98728A1316700D93ABC /* ProfileDataView.swift in Sources */,
 				07E9A5C728AE4DC10034BE34 /* ChargeViewController.swift in Sources */,
 				07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */,
