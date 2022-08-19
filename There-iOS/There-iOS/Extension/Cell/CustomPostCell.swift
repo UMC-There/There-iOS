@@ -11,12 +11,6 @@ import UIKit
 
 final class CustomPostCell: UITableViewCell {
     
-    // MARK: - Init
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     
     // MARK: - Property
 
