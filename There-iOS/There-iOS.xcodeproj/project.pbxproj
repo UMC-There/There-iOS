@@ -32,6 +32,7 @@
 		077A291F28AF91C700E77BF6 /* CustomChargeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A291E28AF91C700E77BF6 /* CustomChargeCell.swift */; };
 		077A292128AF9C5A00E77BF6 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A292028AF9C5A00E77BF6 /* SearchDetailViewController.swift */; };
 		077A292428AF9E7100E77BF6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A292328AF9E7100E77BF6 /* EditProfileViewController.swift */; };
+		077A292628AFA9FA00E77BF6 /* EditAuthorNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A292528AFA9FA00E77BF6 /* EditAuthorNoteViewController.swift */; };
 		079C894528AE1F2A00B45C7E /* CustomChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C894428AE1F2A00B45C7E /* CustomChatCell.swift */; };
 		07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68528A12104006D24FE /* AppDelegate.swift */; };
 		07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68728A12104006D24FE /* SceneDelegate.swift */; };
@@ -105,6 +106,7 @@
 		077A291E28AF91C700E77BF6 /* CustomChargeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChargeCell.swift; sourceTree = "<group>"; };
 		077A292028AF9C5A00E77BF6 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		077A292328AF9E7100E77BF6 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		077A292528AFA9FA00E77BF6 /* EditAuthorNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAuthorNoteViewController.swift; sourceTree = "<group>"; };
 		079C894428AE1F2A00B45C7E /* CustomChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatCell.swift; sourceTree = "<group>"; };
 		07A4F68228A12104006D24FE /* There-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "There-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A4F68528A12104006D24FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				077A292328AF9E7100E77BF6 /* EditProfileViewController.swift */,
+				077A292528AFA9FA00E77BF6 /* EditAuthorNoteViewController.swift */,
 			);
 			path = EditView;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				07A4F6AB28A12222006D24FE /* UIKitExtension.swift in Sources */,
 				074EF98528A1314E00D93ABC /* PostCollectionViewCell.swift in Sources */,
 				077A291D28AF8DA000E77BF6 /* ChargingListViewController.swift in Sources */,
+				077A292628AFA9FA00E77BF6 /* EditAuthorNoteViewController.swift in Sources */,
 				07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */,
 				07E9A5C528AE4BAE0034BE34 /* ChattingRoomViewControlelr.swift in Sources */,
 				07A4F6BB28A12300006D24FE /* ChatViewController.swift in Sources */,

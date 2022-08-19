@@ -223,8 +223,6 @@ private extension UploadViewController{
         selectImageLabel.snp.makeConstraints{
             $0.centerX.equalTo(uploadImageView.snp.centerX)
             $0.centerY.equalTo(uploadImageView.snp.centerY)
-
-            
         }
         
         postIntroLabel.snp.makeConstraints{

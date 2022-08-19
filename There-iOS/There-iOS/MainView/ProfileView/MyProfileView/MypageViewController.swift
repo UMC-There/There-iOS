@@ -20,6 +20,8 @@ class MypageViewController: UIViewController{
     
     let editProfileViewController = UINavigationController(rootViewController: EditProfileViewController(uploadImage: UIImage()))
 
+    let editAuthorNoteViewController = UINavigationController(rootViewController: EditAuthorNoteViewController(uploadImage: UIImage()))
+    
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 40.0
@@ -152,9 +154,11 @@ class MypageViewController: UIViewController{
         self.segmentedControl.selectedSegmentIndex = 0
         self.didChangeValue(segment: self.segmentedControl)
         
+        self.artistNoteButton.addTarget(self, action: #selector(didTapAuthorNoteEditButton), for: .touchUpInside)
         self.editProfileButton.addTarget(self, action: #selector(didTapProfileEditButton), for: .touchUpInside)
+        self.artistNoteButton.addTarget(self, action: #selector(didTapAuthorNoteEditButton), for: .touchUpInside)
+    }
         
-          }
          
 
     @objc private func didChangeValue(segment: UISegmentedControl) {
@@ -262,6 +266,10 @@ private extension MypageViewController{
     
     @objc func didTapProfileEditButton() {
         present(editProfileViewController, animated: true)
+    }
+    
+    @objc func didTapAuthorNoteEditButton() {
+        present(editAuthorNoteViewController, animated: true)
     }
     
     @objc func didTapPopUpButton() {

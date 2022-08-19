@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+
 
 class EditProfileViewController: UIViewController {
     
@@ -21,6 +23,7 @@ class EditProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Property
     
     private let uploadImage: UIImage
     
