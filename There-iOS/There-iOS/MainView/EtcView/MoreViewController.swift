@@ -20,7 +20,6 @@ class MoreViewController: UIViewController {
     }
 
     // MARK: - Property
-    
 
 
     private lazy var chargingAmountView: UIView = {
@@ -271,10 +270,13 @@ class MoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.addSubview(chargingAmountView)
-        view.addSubview(settingView)
-        view.addSubview(customerServiceView)
-        view.addSubview(contactUsView)
+        [
+            chargingAmountView,
+            settingView,
+            customerServiceView,
+            contactUsView
+            
+        ].forEach{view.addSubview($0)}
 
         chargingBtn.addTarget(self, action: #selector(clickedCharge), for: .touchUpInside)
         setup()

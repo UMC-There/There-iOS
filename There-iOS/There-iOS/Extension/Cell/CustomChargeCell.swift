@@ -10,6 +10,8 @@ import UIKit
 
 class CustomChargeCell: UITableViewCell {
     
+    // MARK: - Init
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -41,7 +43,7 @@ class CustomChargeCell: UITableViewCell {
         
     }
     
-    
+    // MARK: - Property
     
     private lazy var chargeTime: UILabel = {
        let time = UILabel()

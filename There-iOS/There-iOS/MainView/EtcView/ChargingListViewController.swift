@@ -24,6 +24,8 @@ class ChargingListViewController: UIViewController {
         return tableView
     }()
     
+    // MARK: - Function
+    
     private func configure() {
         tableView.dataSource = self
         tableView.rowHeight = 60
@@ -44,6 +46,7 @@ class ChargingListViewController: UIViewController {
     }
 }
 
+// MARK: - Extension
 
 extension ChargingListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {

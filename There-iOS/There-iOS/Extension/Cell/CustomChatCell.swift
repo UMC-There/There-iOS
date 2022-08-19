@@ -17,6 +17,37 @@ class CustomChatCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        [userImage, nickName, time, chatContents].forEach {
+            contentView.addSubview($0)
+        }
+        contentView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().offset(10)
+        }
+        userImage.snp.makeConstraints {
+            $0.top.leading.bottom.equalToSuperview().inset(10)
+//            $0.leading.equalToSuperview().offset(100)
+            $0.width.height.equalTo(60)
+        }
+        nickName.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(20)
+            $0.leading.equalTo(userImage.snp.trailing).offset(20)
+        }
+        chatContents.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(50)
+            $0.leading.equalTo(userImage.snp.trailing).offset(20)
+        }
+        time.snp.makeConstraints {
+            $0.leading.equalTo(contentView.snp.trailing).inset(100)
+            $0.top.equalToSuperview().offset(20)
+            
+        }
+    }
+    
+    // MARK: - Property
+    
     lazy var userImage: UIImageView = {
        let image = UIImageView()
         image.image = UIImage(named: "person")
@@ -54,35 +85,5 @@ class CustomChatCell: UITableViewCell {
         
         return contents
     }()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        [userImage, nickName, time, chatContents].forEach {
-            contentView.addSubview($0)
-        }
-        contentView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().offset(10)
-        }
-        userImage.snp.makeConstraints {
-            $0.top.leading.bottom.equalToSuperview().inset(10)
-//            $0.leading.equalToSuperview().offset(100)
-            $0.width.height.equalTo(70)
-        }
-        nickName.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
-            $0.leading.equalTo(userImage.snp.trailing).offset(20)
-        }
-        chatContents.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(50)
-            $0.leading.equalTo(userImage.snp.trailing).offset(20)
-        }
-        time.snp.makeConstraints {
-            $0.leading.equalTo(contentView.snp.trailing).inset(100)
-            $0.top.equalToSuperview().offset(20)
-            
-        }
-    }
-    
 
 }
