@@ -18,6 +18,7 @@ class MypageViewController: UIViewController{
     }
     
     var userFeedModel : UserFeedModel?
+    var dataReload = false
 
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -85,7 +86,7 @@ class MypageViewController: UIViewController{
      }()
     
     
-    private lazy var postCollectionView: UICollectionView = {
+    lazy var postCollectionView: UICollectionView = {
          let layout = UICollectionViewFlowLayout()
          layout.minimumLineSpacing = 0.5
          layout.minimumInteritemSpacing = 0.5
@@ -177,6 +178,10 @@ extension MypageViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if !dataReload{
+            return 0
+        }
+        
         return userFeedModel?.result.getUserPosts.count ?? 0 //포스트 개수만큼
     }
     
@@ -311,8 +316,15 @@ private extension MypageViewController{
        
     }
     
- 
-
 }
+
+extension MypageViewController{
+    func successAPI(_ result: UserFeedModel){
+        userFeedModel?.result.getUserPosts = result.result.getUserPosts
+        dataReload = true
+        postCollectionView.reloadData()
+    }
+}
+
 
 

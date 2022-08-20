@@ -9,7 +9,7 @@ import Alamofire
 //게시물 생성
 class UploadDataManager{
     func uploadDataManager(_ viewController: MypageViewController, _ parameter: UploadDataInput, _ userIdx: Int32){ //이거 맞나..
-        AF.request("3.39.57.176:8080/posts/users/\(userIdx)",
+        AF.request("http://3.39.57.176:8080/posts/users/\(userIdx)",
                    method: .post,
                    parameters: parameter,
                    encoder:JSONParameterEncoder.default, headers: nil)

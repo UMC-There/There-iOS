@@ -12,17 +12,18 @@ struct UserFeedModel: Codable {
     let code: Int
     let isSuccess: Bool
     let message: String
-    let result: FeedResult
+    var result: FeedResult
 }
 
 struct FeedResult: Codable {
-    let getUserPosts: [GetUserPosts]
-    let getUserRes: GetUserRes
+    var getUserPosts: [GetUserPosts]
+    var getUserRes: GetUserRes
 }
 
 struct GetUserPosts: Codable {
     let imgUrl: String?
     let postIdx: Int?
+    let isSelected: Bool? //선택해서 post detail로 들어가는 경우 추가
 }
 
 struct GetUserRes: Codable {

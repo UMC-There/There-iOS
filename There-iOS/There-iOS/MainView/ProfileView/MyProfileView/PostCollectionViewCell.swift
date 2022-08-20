@@ -14,8 +14,10 @@ class PostCollectionViewCell: UICollectionViewCell {
    func setupImage(with image: UIImage){
         addSubview(postImageView)
         postImageView.snp.makeConstraints{ $0.edges.equalToSuperview() }
+       /*
         postImageView.image = UIImage() //
         postImageView.backgroundColor = .tertiaryLabel //서버연동해서 이미지데이터받아오기
+        */
     }
     
 }

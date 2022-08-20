@@ -53,6 +53,11 @@
 		2F51284C28A4D6FE00BFD4A2 /* UploadDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284B28A4D6FE00BFD4A2 /* UploadDataModel.swift */; };
 		2F51284E28A4D72600BFD4A2 /* UploadDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284D28A4D72600BFD4A2 /* UploadDataInput.swift */; };
 		2F51285028A4F7F800BFD4A2 /* PostDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284F28A4F7F800BFD4A2 /* PostDetailModel.swift */; };
+		2FACEB7428AE4197009C2D0E /* UploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEB7328AE4197009C2D0E /* UploadDataManager.swift */; };
+		2FACEB7628AE4274009C2D0E /* UserFeedGetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEB7528AE4274009C2D0E /* UserFeedGetManager.swift */; };
+		2FACEB7828AE42F2009C2D0E /* PostDetailGetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEB7728AE42F2009C2D0E /* PostDetailGetManager.swift */; };
+		2FACEB7B28B0AC7E009C2D0E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 2FACEB7A28B0AC7E009C2D0E /* Then */; };
+		2FACEB7E28B0AE19009C2D0E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2FACEB7D28B0AE19009C2D0E /* SnapKit */; };
 		2FFDB62328AE1DC3006D2813 /* UserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFDB62228AE1DC3006D2813 /* UserFeedModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +123,9 @@
 		2F51284B28A4D6FE00BFD4A2 /* UploadDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataModel.swift; sourceTree = "<group>"; };
 		2F51284D28A4D72600BFD4A2 /* UploadDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataInput.swift; sourceTree = "<group>"; };
 		2F51284F28A4F7F800BFD4A2 /* PostDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailModel.swift; sourceTree = "<group>"; };
+		2FACEB7328AE4197009C2D0E /* UploadDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadDataManager.swift; sourceTree = "<group>"; };
+		2FACEB7528AE4274009C2D0E /* UserFeedGetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedGetManager.swift; sourceTree = "<group>"; };
+		2FACEB7728AE42F2009C2D0E /* PostDetailGetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailGetManager.swift; sourceTree = "<group>"; };
 		2FFDB62228AE1DC3006D2813 /* UserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedModel.swift; sourceTree = "<group>"; };
 		6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B19E80E5B22621CC89CB27 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FACEB7E28B0AE19009C2D0E /* SnapKit in Frameworks */,
 				07149CEF28A137B8000B894F /* Pods_There_iOS.framework in Frameworks */,
+				2FACEB7B28B0AC7E009C2D0E /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +346,9 @@
 			isa = PBXGroup;
 			children = (
 				2F51284F28A4F7F800BFD4A2 /* PostDetailModel.swift */,
+				2FACEB7728AE42F2009C2D0E /* PostDetailGetManager.swift */,
 				2FFDB62228AE1DC3006D2813 /* UserFeedModel.swift */,
+				2FACEB7528AE4274009C2D0E /* UserFeedGetManager.swift */,
 			);
 			path = PostGet;
 			sourceTree = "<group>";
@@ -344,6 +356,7 @@
 		2F51285428A5108700BFD4A2 /* PostPost */ = {
 			isa = PBXGroup;
 			children = (
+				2FACEB7328AE4197009C2D0E /* UploadDataManager.swift */,
 				2F51284D28A4D72600BFD4A2 /* UploadDataInput.swift */,
 				2F51284B28A4D6FE00BFD4A2 /* UploadDataModel.swift */,
 			);
@@ -386,6 +399,10 @@
 			dependencies = (
 			);
 			name = "There-iOS";
+			packageProductDependencies = (
+				2FACEB7A28B0AC7E009C2D0E /* Then */,
+				2FACEB7D28B0AE19009C2D0E /* SnapKit */,
+			);
 			productName = "There-iOS";
 			productReference = 07A4F68228A12104006D24FE /* There-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -414,6 +431,10 @@
 				Base,
 			);
 			mainGroup = 07A4F67928A12104006D24FE;
+			packageReferences = (
+				2FACEB7928B0AC7E009C2D0E /* XCRemoteSwiftPackageReference "Then" */,
+				2FACEB7C28B0AE19009C2D0E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 07A4F68328A12104006D24FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -498,8 +519,10 @@
 				07A4F6A528A121F1006D24FE /* CustomTabBar.swift in Sources */,
 				07A4F68A28A12104006D24FE /* ViewController.swift in Sources */,
 				07149CEB28A13690000B894F /* PostViewController.swift in Sources */,
+				2FACEB7828AE42F2009C2D0E /* PostDetailGetManager.swift in Sources */,
 				2FFDB62328AE1DC3006D2813 /* UserFeedModel.swift in Sources */,
 				074EF97528A1301600D93ABC /* CollectionTableViewCell.swift in Sources */,
+				2FACEB7428AE4197009C2D0E /* UploadDataManager.swift in Sources */,
 				07A4F6A928A12216006D24FE /* UIButton+.swift in Sources */,
 				2F51285028A4F7F800BFD4A2 /* PostDetailModel.swift in Sources */,
 				074EF98328A1313400D93ABC /* PortfolioTableViewCell.swift in Sources */,
@@ -523,6 +546,7 @@
 				07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */,
 				07A4F6BB28A12300006D24FE /* ChatViewController.swift in Sources */,
 				074EF97228A12F1900D93ABC /* SignUpDataModel.swift in Sources */,
+				2FACEB7628AE4274009C2D0E /* UserFeedGetManager.swift in Sources */,
 				07A4F6A128A121CA006D24FE /* CustomPostCell.swift in Sources */,
 				074EF97028A12EF300D93ABC /* SignUpService.swift in Sources */,
 			);
@@ -742,6 +766,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FACEB7928B0AC7E009C2D0E /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		2FACEB7C28B0AE19009C2D0E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FACEB7A28B0AC7E009C2D0E /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FACEB7928B0AC7E009C2D0E /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		2FACEB7D28B0AE19009C2D0E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FACEB7C28B0AE19009C2D0E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07A4F67A28A12104006D24FE /* Project object */;
 }

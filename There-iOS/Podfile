@@ -7,8 +7,6 @@ target 'There-iOS' do
 
   # Pods for There-iOS
 
-  pod 'SnapKit', '~> 5.6.0'
-  pod 'Then', '~> 3.0.0'
   pod 'RxSwift', '~> 6.5.0'
   pod 'RxCocoa', '~> 6.5.0'
   pod 'Alamofire', '~> 5.6.0'
