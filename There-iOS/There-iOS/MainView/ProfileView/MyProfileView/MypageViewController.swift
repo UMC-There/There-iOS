@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 import Then
+import Kingfisher
+
 
 class MypageViewController: UIViewController{
     
@@ -16,11 +18,14 @@ class MypageViewController: UIViewController{
         view.backgroundColor = bgColor
     }
     
-    let uploadViewController = UINavigationController(rootViewController: UploadViewController(uploadImage: UIImage()))
+    var userFeedModel : UserFeedModel?
+    var dataReload = false
+    
     
     let editProfileViewController = UINavigationController(rootViewController: EditProfileViewController(uploadImage: UIImage()))
 
-    let editAuthorNoteViewController = UINavigationController(rootViewController: EditAuthorNoteViewController(uploadImage: UIImage()))
+   let editAuthorNoteViewController = UINavigationController(rootViewController: EditAuthorNoteViewController(uploadImage: UIImage()))
+     
     
     private lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -153,10 +158,11 @@ class MypageViewController: UIViewController{
             
         self.segmentedControl.selectedSegmentIndex = 0
         self.didChangeValue(segment: self.segmentedControl)
-        
+        /*
         self.artistNoteButton.addTarget(self, action: #selector(didTapAuthorNoteEditButton), for: .touchUpInside)
         self.editProfileButton.addTarget(self, action: #selector(didTapProfileEditButton), for: .touchUpInside)
         self.artistNoteButton.addTarget(self, action: #selector(didTapAuthorNoteEditButton), for: .touchUpInside)
+         */
     }
         
          
@@ -172,29 +178,28 @@ class MypageViewController: UIViewController{
 extension MypageViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as? PostCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as? PostCollectionViewCell else {return UICollectionViewCell()}
         
-        cell?.setup(with: UIImage()) //named:"asset name" 하면 이미지 띄울 수 있음
-    
-        return cell ?? UICollectionViewCell()
+        let imageUrl = URL(string: userFeedModel?.result.getUserPosts[indexPath.row].imgUrl ?? "default")
+        cell.postImageView.kf.setImage(with: imageUrl)
+
+        //cell?.setupImage(with: UIImage) //named:"asset name" 하면 이미지 띄울 수 있음
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10 //무한대로 생성가능하게
+        if !dataReload{
+            return 0
+        }
+        
+        return userFeedModel?.result.getUserPosts.count ?? 0 //포스트 개수만큼
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//        print("click index=\(indexPath.row)")
-//        let cell = collectionView.cellForItem(at: indexPath)
-        
         let post = PostViewController(bgColor: UIColor.white)
         self.navigationController?.pushViewController(post, animated: true)
-        
     }
-    
-
-
     
 }
 
@@ -239,7 +244,7 @@ extension MypageViewController: UITableViewDelegate{
 
 
 
-
+//UI
 private extension MypageViewController{
     
     func setUpNavigationBar(){
@@ -261,8 +266,11 @@ private extension MypageViewController{
     }
     
     @objc func didTapUploadButton(){
-       present(uploadViewController, animated: true)
-    }
+           let uploadViewController = UploadViewController(uploadImage: UIImage())
+           uploadViewController.modalPresentationStyle = .fullScreen
+           navigationController?.show(uploadViewController, sender: nil)
+       }
+   
     
     @objc func didTapProfileEditButton() {
         present(editProfileViewController, animated: true)
@@ -271,6 +279,7 @@ private extension MypageViewController{
     @objc func didTapAuthorNoteEditButton() {
         present(editAuthorNoteViewController, animated: true)
     }
+    
     
     @objc func didTapPopUpButton() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -341,6 +350,14 @@ private extension MypageViewController{
  
     
 
+}
+
+extension MypageViewController{
+    func successAPI(_ result: UserFeedModel){
+        userFeedModel?.result.getUserPosts = result.result.getUserPosts
+        dataReload = true
+        postCollectionView.reloadData()
+    }
 }
 
     

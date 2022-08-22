@@ -120,10 +120,18 @@ final class UploadViewController: UIViewController {
         setUpLayOut()
         
         uploadImageView.image = uploadImage
-        if uploadImage != UIImage() {
+        /*if uploadImage != UIImage() {
             self.selectButton.isHidden = true
-        }
+        }*/
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+            //navigationBar 보이기
+        navigationController?.navigationBar.isHidden = false
+    }
+    
 }
 
 
@@ -136,24 +144,15 @@ extension UploadViewController : UIImagePickerControllerDelegate, UINavigationCo
         
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             selectImage = editedImage
-        }//info: pick한 정보를 가지고 있는 딕셔너리
+        }
         else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             selectImage = originalImage
         }
+        self.uploadImageView.image = selectImage ?? UIImage()
         
-        print(selectImage)
-        //let input = UploadDataInput(images: imageString, jsonList: String, userIdx: Int32) -> mypage
-        //완료를 눌렀을 때, Mypage.PostView.PostCell로 이미지 넘어가도록
-        
-        
-        picker.dismiss(animated: true) { [weak self] in //메모리위해 ..뒤에 self?
-            let uploadViewController = UploadViewController(uploadImage: selectImage ?? UIImage())
-            let navigationController = UINavigationController(rootViewController: uploadViewController)
-            //navigationController.modalPresentationStyle = .fullScreen
-            
-            self?.present(navigationController, animated: true)
-            
-        }//imagePicker 창닫고, completion: 게시물 작성창으로 넘김
+        picker.dismiss(animated: true){
+            self.selectButton.isHidden = true
+        }
     }
 }
 
@@ -164,6 +163,12 @@ extension UploadViewController: UITextViewDelegate {
         guard textView.textColor == .secondaryLabel else { return }
         textView.text = nil
         textView.textColor = .label
+    }
+    
+    //return 키 -> 키보드 내려가도록
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
     }
 }
 
@@ -176,27 +181,25 @@ private extension UploadViewController{
         navigationItem.title = "게시글"
         
         let didButton = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(didUploadPost))
-
-        didButton.tintColor = .black
+        //didButton.tintColor = .black
         navigationItem.rightBarButtonItem = didButton
     }
     
     @objc func closeView(){
-        dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
-    @objc func didUploadPost(){
-        print("upload")
-        dismiss(animated: true)
+    @objc func didUploadPost() -> UIImage{
+        self.navigationController?.popViewController(animated: true)
+        return (uploadImage)
+        
     }
     
     @objc func imgPick(){
-        present(imagePickerViewController, animated: true)
+        self.present(self.imagePickerViewController, animated: true)
     }
     
     func setUpLayOut(){
-        
-        
         
         [postTitleLabel, postTitleTextField, underLineView1, uploadImageView, selectButton, postIntroLabel,introImageView, postIntroTextView, hashTagTextfield, underLineView2].forEach{view.addSubview($0)}
         
@@ -230,6 +233,8 @@ private extension UploadViewController{
         selectButton.snp.makeConstraints{
             $0.centerX.equalTo(uploadImageView.snp.centerX)
             $0.centerY.equalTo(uploadImageView.snp.centerY)
+
+            
         }
         
         postIntroLabel.snp.makeConstraints{

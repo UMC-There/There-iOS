@@ -50,9 +50,15 @@
 		07A4F6B728A122B7006D24FE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6B628A122B7006D24FE /* MainTabBarController.swift */; };
 		07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6B828A122CE006D24FE /* NavigationViewController.swift */; };
 		07A4F6BB28A12300006D24FE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F6BA28A12300006D24FE /* ChatViewController.swift */; };
-		2F51284A28A4D6E200BFD4A2 /* UploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284928A4D6E200BFD4A2 /* UploadDataManager.swift */; };
-		2F51284C28A4D6FE00BFD4A2 /* UploadDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284B28A4D6FE00BFD4A2 /* UploadDataModel.swift */; };
-		2F51284E28A4D72600BFD4A2 /* UploadDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F51284D28A4D72600BFD4A2 /* UploadDataInput.swift */; };
+		2FACEBA528B3C7EC009C2D0E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2FACEBA428B3C7EC009C2D0E /* SnapKit */; };
+		2FACEBA828B3C899009C2D0E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 2FACEBA728B3C899009C2D0E /* Then */; };
+		2FACEBAC28B3CDF6009C2D0E /* PostDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEBAB28B3CDF6009C2D0E /* PostDetailModel.swift */; };
+		2FACEBAE28B3CE40009C2D0E /* PostDetailGetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEBAD28B3CE40009C2D0E /* PostDetailGetManager.swift */; };
+		2FACEBB028B3CE4F009C2D0E /* UserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEBAF28B3CE4F009C2D0E /* UserFeedModel.swift */; };
+		2FACEBB428B3D787009C2D0E /* UserFeedGetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEBB328B3D787009C2D0E /* UserFeedGetManager.swift */; };
+		2FACEBB628B3D81E009C2D0E /* UploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEBB528B3D81E009C2D0E /* UploadDataManager.swift */; };
+		2FACEBB828B3D88C009C2D0E /* UploadDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEBB728B3D88C009C2D0E /* UploadDataInput.swift */; };
+		2FACEBBA28B3D8A7009C2D0E /* UploadDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FACEBB928B3D8A7009C2D0E /* UploadDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -114,9 +120,13 @@
 		07A4F6B828A122CE006D24FE /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		07A4F6BA28A12300006D24FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		22722C1C4D5D09C328FAA5C6 /* Pods-There-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.release.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		2F51284928A4D6E200BFD4A2 /* UploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataManager.swift; sourceTree = "<group>"; };
-		2F51284B28A4D6FE00BFD4A2 /* UploadDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataModel.swift; sourceTree = "<group>"; };
-		2F51284D28A4D72600BFD4A2 /* UploadDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataInput.swift; sourceTree = "<group>"; };
+		2FACEBAB28B3CDF6009C2D0E /* PostDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailModel.swift; sourceTree = "<group>"; };
+		2FACEBAD28B3CE40009C2D0E /* PostDetailGetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailGetManager.swift; sourceTree = "<group>"; };
+		2FACEBAF28B3CE4F009C2D0E /* UserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedModel.swift; sourceTree = "<group>"; };
+		2FACEBB328B3D787009C2D0E /* UserFeedGetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedGetManager.swift; sourceTree = "<group>"; };
+		2FACEBB528B3D81E009C2D0E /* UploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataManager.swift; sourceTree = "<group>"; };
+		2FACEBB728B3D88C009C2D0E /* UploadDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataInput.swift; sourceTree = "<group>"; };
+		2FACEBB928B3D8A7009C2D0E /* UploadDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataModel.swift; sourceTree = "<group>"; };
 		6D386B0B995F0BF8159ED417 /* Pods_There_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_There_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B19E80E5B22621CC89CB27 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				07149CEF28A137B8000B894F /* Pods_There_iOS.framework in Frameworks */,
+				2FACEBA828B3C899009C2D0E /* Then in Frameworks */,
+				2FACEBA528B3C7EC009C2D0E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,15 +196,12 @@
 		074EF97F28A130E700D93ABC /* MyProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				074EF98028A1311600D93ABC /* MypageViewController.swift */,
+				074EF98828A1318100D93ABC /* UINavigationItems+.swift */,
 				074EF98228A1313400D93ABC /* PortfolioTableViewCell.swift */,
 				074EF98428A1314E00D93ABC /* PostCollectionViewCell.swift */,
 				074EF98628A1316700D93ABC /* ProfileDataView.swift */,
-				074EF98828A1318100D93ABC /* UINavigationItems+.swift */,
+				074EF98028A1311600D93ABC /* MypageViewController.swift */,
 				074EF98A28A1319A00D93ABC /* UploadViewController.swift */,
-				2F51284928A4D6E200BFD4A2 /* UploadDataManager.swift */,
-				2F51284B28A4D6FE00BFD4A2 /* UploadDataModel.swift */,
-				2F51284D28A4D72600BFD4A2 /* UploadDataInput.swift */,
 			);
 			path = MyProfileView;
 			sourceTree = "<group>";
@@ -317,6 +326,8 @@
 		07A4F6B428A1229C006D24FE /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				2FACEBAA28B3CDDA009C2D0E /* PostPOST */,
+				2FACEBA928B3CDB4009C2D0E /* PostGET */,
 				074EF97F28A130E700D93ABC /* MyProfileView */,
 				074EF97E28A130DD00D93ABC /* PostView */,
 			);
@@ -329,6 +340,27 @@
 				074EF96128A12E1000D93ABC /* SearchViewController.swift */,
 			);
 			path = SearchView;
+			sourceTree = "<group>";
+		};
+		2FACEBA928B3CDB4009C2D0E /* PostGET */ = {
+			isa = PBXGroup;
+			children = (
+				2FACEBAB28B3CDF6009C2D0E /* PostDetailModel.swift */,
+				2FACEBAD28B3CE40009C2D0E /* PostDetailGetManager.swift */,
+				2FACEBAF28B3CE4F009C2D0E /* UserFeedModel.swift */,
+				2FACEBB328B3D787009C2D0E /* UserFeedGetManager.swift */,
+			);
+			path = PostGET;
+			sourceTree = "<group>";
+		};
+		2FACEBAA28B3CDDA009C2D0E /* PostPOST */ = {
+			isa = PBXGroup;
+			children = (
+				2FACEBB528B3D81E009C2D0E /* UploadDataManager.swift */,
+				2FACEBB728B3D88C009C2D0E /* UploadDataInput.swift */,
+				2FACEBB928B3D8A7009C2D0E /* UploadDataModel.swift */,
+			);
+			path = PostPOST;
 			sourceTree = "<group>";
 		};
 		9261EA09D75AC4D6F75E6809 /* Pods */ = {
@@ -367,6 +399,10 @@
 			dependencies = (
 			);
 			name = "There-iOS";
+			packageProductDependencies = (
+				2FACEBA428B3C7EC009C2D0E /* SnapKit */,
+				2FACEBA728B3C899009C2D0E /* Then */,
+			);
 			productName = "There-iOS";
 			productReference = 07A4F68228A12104006D24FE /* There-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -395,6 +431,10 @@
 				Base,
 			);
 			mainGroup = 07A4F67928A12104006D24FE;
+			packageReferences = (
+				2FACEBA328B3C7EC009C2D0E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2FACEBA628B3C899009C2D0E /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 07A4F68328A12104006D24FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -464,9 +504,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F51284C28A4D6FE00BFD4A2 /* UploadDataModel.swift in Sources */,
+				2FACEBBA28B3D8A7009C2D0E /* UploadDataModel.swift in Sources */,
 				074EF97728A1304900D93ABC /* HomeViewController.swift in Sources */,
-				2F51284E28A4D72600BFD4A2 /* UploadDataInput.swift in Sources */,
 				074EF98B28A1319A00D93ABC /* UploadViewController.swift in Sources */,
 				074EF96A28A12E8F00D93ABC /* LoginService.swift in Sources */,
 				07A4F69F28A121B9006D24FE /* CustomButton.swift in Sources */,
@@ -475,7 +514,6 @@
 				07A4F6A328A121DD006D24FE /* CustomSnsButton.swift in Sources */,
 				074D675D28A3DB89006C00C1 /* CustomOptionCell.swift in Sources */,
 				07A4F6AF28A12253006D24FE /* NetworkResult.swift in Sources */,
-				2F51284A28A4D6E200BFD4A2 /* UploadDataManager.swift in Sources */,
 				074D675B28A3CBB3006C00C1 /* CustomPaymentCell.swift in Sources */,
 				07A4F6A528A121F1006D24FE /* CustomTabBar.swift in Sources */,
 				07A4F68A28A12104006D24FE /* ViewController.swift in Sources */,
@@ -484,7 +522,9 @@
 				07A4F6A928A12216006D24FE /* UIButton+.swift in Sources */,
 				074EF98328A1313400D93ABC /* PortfolioTableViewCell.swift in Sources */,
 				074EF96C28A12EAD00D93ABC /* LoginViewController.swift in Sources */,
+				2FACEBB628B3D81E009C2D0E /* UploadDataManager.swift in Sources */,
 				074EF96828A12E7400D93ABC /* LoginDataModel.swift in Sources */,
+				2FACEBB828B3D88C009C2D0E /* UploadDataInput.swift in Sources */,
 				074EF96628A12E5100D93ABC /* InitialViewController.swift in Sources */,
 				07A4F6B728A122B7006D24FE /* MainTabBarController.swift in Sources */,
 				074EF97B28A1308200D93ABC /* ViewPager.swift in Sources */,
@@ -492,17 +532,21 @@
 				07A4F6A728A12202006D24FE /* CustomTextField.swift in Sources */,
 				074EF98128A1311600D93ABC /* MypageViewController.swift in Sources */,
 				07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */,
+				2FACEBAE28B3CE40009C2D0E /* PostDetailGetManager.swift in Sources */,
 				074EF96228A12E1000D93ABC /* SearchViewController.swift in Sources */,
 				074EF96E28A12ED300D93ABC /* SignUpViewController.swift in Sources */,
 				074EF98728A1316700D93ABC /* ProfileDataView.swift in Sources */,
 				07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */,
 				074EF97D28A130A200D93ABC /* MoreViewController.swift in Sources */,
 				074EF98928A1318100D93ABC /* UINavigationItems+.swift in Sources */,
+				2FACEBB428B3D787009C2D0E /* UserFeedGetManager.swift in Sources */,
 				07A4F6AB28A12222006D24FE /* UIKitExtension.swift in Sources */,
 				074EF98528A1314E00D93ABC /* PostCollectionViewCell.swift in Sources */,
 				07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */,
 				07A4F6BB28A12300006D24FE /* ChatViewController.swift in Sources */,
+				2FACEBB028B3CE4F009C2D0E /* UserFeedModel.swift in Sources */,
 				074EF97228A12F1900D93ABC /* SignUpDataModel.swift in Sources */,
+				2FACEBAC28B3CDF6009C2D0E /* PostDetailModel.swift in Sources */,
 				07A4F6A128A121CA006D24FE /* CustomPostCell.swift in Sources */,
 				074EF97028A12EF300D93ABC /* SignUpService.swift in Sources */,
 			);
@@ -722,6 +766,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FACEBA328B3C7EC009C2D0E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		2FACEBA628B3C899009C2D0E /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FACEBA428B3C7EC009C2D0E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FACEBA328B3C7EC009C2D0E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2FACEBA728B3C899009C2D0E /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FACEBA628B3C899009C2D0E /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07A4F67A28A12104006D24FE /* Project object */;
 }
