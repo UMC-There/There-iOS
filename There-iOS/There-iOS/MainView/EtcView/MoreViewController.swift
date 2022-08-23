@@ -22,7 +22,7 @@ class MoreViewController: UIViewController {
 
     private lazy var chargingAmountView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGray5
+        view.backgroundColor = UIColor.rgb(red: 255, green: 222, blue: 1)
         
         return view
     }()
