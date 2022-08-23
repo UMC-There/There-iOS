@@ -107,8 +107,8 @@ class ChargeViewController: UIViewController {
         let btn = UIButton()
         
         btn.setTitle("충전하기", for: .normal)
-        btn.backgroundColor = .black
-        btn.setTitleColor(UIColor.white, for: .normal)
+        btn.backgroundColor = UIColor.rgb(red: 255, green: 222, blue: 1)
+        btn.setTitleColor(UIColor.black, for: .normal)
         btn.titleLabel?.font = .systemFont(ofSize: 22.0, weight: .medium)
         
         return btn
