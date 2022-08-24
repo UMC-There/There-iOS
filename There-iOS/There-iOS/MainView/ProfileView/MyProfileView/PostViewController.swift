@@ -22,6 +22,9 @@ class PostViewController: UIViewController {
     
     // MARK: - Property
     
+    let uploadViewController = UINavigationController(rootViewController: UploadViewController(uploadImage: UIImage()))
+
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.backgroundColor = .systemBackground
@@ -33,11 +36,32 @@ class PostViewController: UIViewController {
         return tableView
     }()
 
+    
+    private lazy var test: UILabel = {
+        let title = UILabel()
+        title.textColor = .label
+        title.numberOfLines = 5
+        title.font = .systemFont(ofSize: 15.0, weight: .light)
+        title.text = "테스트"
+        
+        return title
+    }()
+    
+    @objc func didTapUploadButton(){
+       present(uploadViewController, animated: true)
+    }
+    
+    @objc
+    func clickedHistory() {
+        let history = HistoryViewController()
+        
+        self.navigationController?.pushViewController(history, animated: true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-
+        
     }
 }
 
@@ -50,9 +74,12 @@ extension PostViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomPostCell", for: indexPath) as? CustomPostCell
         cell?.selectionStyle = .none
         cell?.setup()
+        cell?.historyUpload.addTarget(self, action: #selector(clickedHistory), for: .touchUpInside)
+        
 
         return cell ?? UITableViewCell()
     }
+
 }
 
 private extension PostViewController {
