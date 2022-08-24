@@ -50,10 +50,18 @@ class PostViewController: UIViewController {
     @objc func didTapUploadButton(){
        present(uploadViewController, animated: true)
     }
+    
+    @objc
+    func clickedHistory() {
+        let history = HistoryViewController()
+        
+        self.navigationController?.pushViewController(history, animated: true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        
     }
 }
 
@@ -66,9 +74,12 @@ extension PostViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomPostCell", for: indexPath) as? CustomPostCell
         cell?.selectionStyle = .none
         cell?.setup()
+        cell?.historyUpload.addTarget(self, action: #selector(clickedHistory), for: .touchUpInside)
+        
 
         return cell ?? UITableViewCell()
     }
+
 }
 
 private extension PostViewController {

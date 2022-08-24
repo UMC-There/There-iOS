@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07149CEB28A13690000B894F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07149CEA28A13690000B894F /* PostViewController.swift */; };
+		073116C028B6168700C126B7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073116BF28B6168700C126B7 /* HistoryViewController.swift */; };
 		074EF96228A12E1000D93ABC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96128A12E1000D93ABC /* SearchViewController.swift */; };
 		074EF96628A12E5100D93ABC /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96528A12E5100D93ABC /* InitialViewController.swift */; };
 		074EF96828A12E7400D93ABC /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074EF96728A12E7400D93ABC /* LoginDataModel.swift */; };
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		05E848DC97ED53AAA3DF0874 /* Pods-There-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-There-iOS.debug.xcconfig"; path = "Target Support Files/Pods-There-iOS/Pods-There-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		07149CEA28A13690000B894F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = "There-iOS/MainView/ProfileView/MyProfileView/PostViewController.swift"; sourceTree = SOURCE_ROOT; };
+		073116BF28B6168700C126B7 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = "There-iOS/MainView/ProfileView/EditView/HistoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		074EF96128A12E1000D93ABC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		074EF96528A12E5100D93ABC /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		074EF96728A12E7400D93ABC /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				07149CEA28A13690000B894F /* PostViewController.swift */,
+				073116BF28B6168700C126B7 /* HistoryViewController.swift */,
 			);
 			path = PostView;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */,
 				074EF96228A12E1000D93ABC /* SearchViewController.swift in Sources */,
 				074EF96E28A12ED300D93ABC /* SignUpViewController.swift in Sources */,
+				073116C028B6168700C126B7 /* HistoryViewController.swift in Sources */,
 				077A292128AF9C5A00E77BF6 /* SearchDetailViewController.swift in Sources */,
 				074EF98728A1316700D93ABC /* ProfileDataView.swift in Sources */,
 				07E9A5C728AE4DC10034BE34 /* ChargeViewController.swift in Sources */,

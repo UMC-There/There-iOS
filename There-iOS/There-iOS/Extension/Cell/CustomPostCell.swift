@@ -120,7 +120,7 @@ final class CustomPostCell: UITableViewCell {
         return label
     }()
     
-    private lazy var historyUpload: UIButton = {
+    lazy var historyUpload: UIButton = {
         let btn = UIButton()
         btn.setImage(systemName: "plus")
         
