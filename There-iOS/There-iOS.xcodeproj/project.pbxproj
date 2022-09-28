@@ -34,6 +34,12 @@
 		077A292128AF9C5A00E77BF6 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A292028AF9C5A00E77BF6 /* SearchDetailViewController.swift */; };
 		077A292428AF9E7100E77BF6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A292328AF9E7100E77BF6 /* EditProfileViewController.swift */; };
 		077A292628AFA9FA00E77BF6 /* EditAuthorNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A292528AFA9FA00E77BF6 /* EditAuthorNoteViewController.swift */; };
+		0783884D28E46F1400071B3F /* EtcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0783884C28E46F1400071B3F /* EtcView.swift */; };
+		0783884F28E4703E00071B3F /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0783884E28E4703E00071B3F /* SettingTableViewCell.swift */; };
+		0783885128E471A300071B3F /* FundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0783885028E471A300071B3F /* FundTableViewCell.swift */; };
+		0783885328E471DA00071B3F /* ChargingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0783885228E471DA00071B3F /* ChargingView.swift */; };
+		0783885528E471EC00071B3F /* ChargeHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0783885428E471EC00071B3F /* ChargeHistoryView.swift */; };
+		0783885728E4729800071B3F /* PurchaseHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0783885628E4729800071B3F /* PurchaseHistoryView.swift */; };
 		079C894528AE1F2A00B45C7E /* CustomChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C894428AE1F2A00B45C7E /* CustomChatCell.swift */; };
 		07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68528A12104006D24FE /* AppDelegate.swift */; };
 		07A4F68828A12104006D24FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A4F68728A12104006D24FE /* SceneDelegate.swift */; };
@@ -109,6 +115,12 @@
 		077A292028AF9C5A00E77BF6 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		077A292328AF9E7100E77BF6 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		077A292528AFA9FA00E77BF6 /* EditAuthorNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAuthorNoteViewController.swift; sourceTree = "<group>"; };
+		0783884C28E46F1400071B3F /* EtcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcView.swift; sourceTree = "<group>"; };
+		0783884E28E4703E00071B3F /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		0783885028E471A300071B3F /* FundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundTableViewCell.swift; sourceTree = "<group>"; };
+		0783885228E471DA00071B3F /* ChargingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingView.swift; sourceTree = "<group>"; };
+		0783885428E471EC00071B3F /* ChargeHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeHistoryView.swift; sourceTree = "<group>"; };
+		0783885628E4729800071B3F /* PurchaseHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHistoryView.swift; sourceTree = "<group>"; };
 		079C894428AE1F2A00B45C7E /* CustomChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatCell.swift; sourceTree = "<group>"; };
 		07A4F68228A12104006D24FE /* There-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "There-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A4F68528A12104006D24FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +227,23 @@
 			path = EditView;
 			sourceTree = "<group>";
 		};
+		0783884A28E46EF600071B3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0783884C28E46F1400071B3F /* EtcView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0783884B28E46F0200071B3F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0783884E28E4703E00071B3F /* SettingTableViewCell.swift */,
+				0783885028E471A300071B3F /* FundTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		07A4F67928A12104006D24FE = {
 			isa = PBXGroup;
 			children = (
@@ -309,7 +338,12 @@
 		07A4F6B128A1227F006D24FE /* EtcView */ = {
 			isa = PBXGroup;
 			children = (
+				0783884B28E46F0200071B3F /* Cell */,
+				0783884A28E46EF600071B3F /* View */,
 				074EF97C28A130A200D93ABC /* MoreViewController.swift */,
+				0783885428E471EC00071B3F /* ChargeHistoryView.swift */,
+				0783885628E4729800071B3F /* PurchaseHistoryView.swift */,
+				0783885228E471DA00071B3F /* ChargingView.swift */,
 				07E9A5C628AE4DC10034BE34 /* ChargeViewController.swift */,
 				077A291C28AF8DA000E77BF6 /* ChargingListViewController.swift */,
 			);
@@ -524,9 +558,12 @@
 				07A4F6AD28A12243006D24FE /* APIConstants.swift in Sources */,
 				07CF639528A910E60082DB45 /* KakaoAuthVM.swift in Sources */,
 				079C894528AE1F2A00B45C7E /* CustomChatCell.swift in Sources */,
+				0783885528E471EC00071B3F /* ChargeHistoryView.swift in Sources */,
+				0783884D28E46F1400071B3F /* EtcView.swift in Sources */,
 				07A4F6AF28A12253006D24FE /* NetworkResult.swift in Sources */,
 				07A4F6A528A121F1006D24FE /* CustomTabBar.swift in Sources */,
 				07A4F68A28A12104006D24FE /* ViewController.swift in Sources */,
+				0783885328E471DA00071B3F /* ChargingView.swift in Sources */,
 				07149CEB28A13690000B894F /* PostViewController.swift in Sources */,
 				074EF97528A1301600D93ABC /* CollectionTableViewCell.swift in Sources */,
 				07A4F6A928A12216006D24FE /* UIButton+.swift in Sources */,
@@ -535,6 +572,7 @@
 				074EF96C28A12EAD00D93ABC /* LoginViewController.swift in Sources */,
 				074EF96828A12E7400D93ABC /* LoginDataModel.swift in Sources */,
 				074EF96628A12E5100D93ABC /* InitialViewController.swift in Sources */,
+				0783885128E471A300071B3F /* FundTableViewCell.swift in Sources */,
 				07A4F6B728A122B7006D24FE /* MainTabBarController.swift in Sources */,
 				074EF97B28A1308200D93ABC /* ViewPager.swift in Sources */,
 				077A292428AF9E7100E77BF6 /* EditProfileViewController.swift in Sources */,
@@ -544,6 +582,7 @@
 				07A4F68628A12104006D24FE /* AppDelegate.swift in Sources */,
 				074EF96228A12E1000D93ABC /* SearchViewController.swift in Sources */,
 				074EF96E28A12ED300D93ABC /* SignUpViewController.swift in Sources */,
+				0783884F28E4703E00071B3F /* SettingTableViewCell.swift in Sources */,
 				073116C028B6168700C126B7 /* HistoryViewController.swift in Sources */,
 				077A292128AF9C5A00E77BF6 /* SearchDetailViewController.swift in Sources */,
 				074EF98728A1316700D93ABC /* ProfileDataView.swift in Sources */,
@@ -556,6 +595,7 @@
 				077A291D28AF8DA000E77BF6 /* ChargingListViewController.swift in Sources */,
 				077A292628AFA9FA00E77BF6 /* EditAuthorNoteViewController.swift in Sources */,
 				07A4F6B928A122CE006D24FE /* NavigationViewController.swift in Sources */,
+				0783885728E4729800071B3F /* PurchaseHistoryView.swift in Sources */,
 				07E9A5C528AE4BAE0034BE34 /* ChattingRoomViewControlelr.swift in Sources */,
 				07A4F6BB28A12300006D24FE /* ChatViewController.swift in Sources */,
 				074EF97228A12F1900D93ABC /* SignUpDataModel.swift in Sources */,

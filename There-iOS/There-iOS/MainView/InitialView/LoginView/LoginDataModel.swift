@@ -21,7 +21,7 @@ struct LoginData: Codable {
 
 struct LoginResult: Codable {
     let jwt: String
-    let userIndx: Int
+    let userIdx: Int
 }
 
 

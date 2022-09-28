@@ -17,6 +17,7 @@ class KakaoAuthVM: ObservableObject {
     static var password: String?
     static var email: String?
     static var accessToken: String!
+    @Published var success: Bool = false
     
     @Published var isLoggedIn: Bool = false
     
@@ -55,7 +56,8 @@ class KakaoAuthVM: ObservableObject {
                         //do something
                         _ = oauthToken
                         continuation.resume(returning: true)
-                        self.getUsrInfo()
+//                        LoginViewController.clickedKakao(status: success)
+//                        self.getUsrInfo()
                     }
                 }
         }

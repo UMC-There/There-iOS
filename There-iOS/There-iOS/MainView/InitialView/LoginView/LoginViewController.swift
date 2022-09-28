@@ -12,7 +12,6 @@ import Alamofire
 import Combine
 
 
-
 class LoginViewController: UIViewController {
     
     // 공통 인스턴스에 있는 통신하는 메서드를 호출해서 받은 데이터를 실질적으로 가공함
@@ -113,9 +112,11 @@ class LoginViewController: UIViewController {
     }
     
     @objc
-    private func clickedKakao() {
+    private func clickedKakao(status: Bool) {
         print("Kakao Login btn clicked")
         kakaoAuthVM.kakaoLogin()
+        
+
     }
 
     

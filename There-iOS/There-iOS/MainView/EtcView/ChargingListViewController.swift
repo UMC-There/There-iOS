@@ -41,8 +41,9 @@ class ChargingListViewController: UIViewController {
         
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
-
         }
+        
+        
     }
 }
 

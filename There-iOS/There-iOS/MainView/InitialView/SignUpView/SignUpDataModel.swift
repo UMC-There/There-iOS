@@ -15,7 +15,7 @@ struct SignUpResponse: Codable {
     // 회원가입 성공 시 data가 넘어오고, 실패 시 data가 안넘어옴
 }
 
-struct SignUpData: Codable {
+struct SignUpData: Codable {  
     let name: String
     let email: String
     let password: String
