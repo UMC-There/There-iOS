@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>3</integer>
 		</dict>
 		<key>SnapKitPlayground (Playground) 10.xcscheme</key>
 		<dict>
@@ -82,7 +82,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>5</integer>
 		</dict>
 		<key>SnapKitPlayground (Playground) 20.xcscheme</key>
 		<dict>
@@ -158,7 +158,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>
