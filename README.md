@@ -1,5 +1,7 @@
 # There-iOS
-
+---
+## Comprehensive art community serving as a gateway to becoming an artist
+---
 ## Screen
 ### - Launch 
 ### - Search
